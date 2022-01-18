@@ -76,7 +76,6 @@ img {
 #visual .inner .slide {
   width: 100%;
   height: 600px;
-  float: right;
   overflow: hidden;
   position: relative;
 }
@@ -142,17 +141,27 @@ img {
 #introducing .inner {
   width: 1180px;
   margin: 0 auto;
-  background: beige;
-  display: flex;
+  position: relative;
 }
 #introducing .inner article {
-  width: 50%;
+  width: 100%;
+}
+#introducing .inner article .pic {
+  height: 330px;
 }
 #introducing .inner article .pic:nth-of-type(1) {
   width: calc(25% + 200px);
 }
 #introducing .inner article .pic:nth-of-type(2) {
-  width: 70%;
+  width: 30%;
+  margin-left: 25%;
+}
+#introducing .inner article .txt {
+  width: 35%;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
 }
 
 /*# sourceMappingURL=style.css.map */
