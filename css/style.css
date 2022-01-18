@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+.hidden {
+  position: absolute;
+  top: -9999px;
+  opacity: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
