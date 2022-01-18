@@ -71,7 +71,7 @@ img {
   height: 80vh;
 }
 #visual .slide {
-  width: 100%;
+  width: 80%;
   height: 100%;
   float: right;
   overflow: hidden;
@@ -133,6 +133,25 @@ img {
 }
 #visual .paging span {
   letter-spacing: 4px;
+}
+
+#introducing .inner {
+  width: 1180px;
+  margin: 0 auto;
+  background: beige;
+  display: flex;
+}
+#introducing .inner article {
+  width: 50%;
+}
+#introducing .inner article .pic {
+  height: 40vh;
+}
+#introducing .inner article .pic:nth-of-type(1) {
+  width: 63.5%;
+}
+#introducing .inner article .pic:nth-of-type(2) {
+  width: 70%;
 }
 
 /*# sourceMappingURL=style.css.map */
