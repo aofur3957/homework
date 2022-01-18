@@ -152,6 +152,42 @@
                 position: absolute;
                 top: 50%; right: 0;
                 transform: translateY(-50%);
+
+                h1 {
+                    margin-bottom: 20px;
+                    font: 40px/1.4 'arial';
+
+                    span {
+                        display: block;
+                        margin-bottom: 20px;
+                        font: 14px/1 'arial';
+                    }
+                }
+
+                p {
+                    margin-bottom: 15px;
+                    font: 15px/1.7 'arial';
+                }
+
+                a {
+                    font: 12px/1 'arial'; 
+                    color: #888;
+                }
+            }
+        }
+    }
+}
+
+#project {
+    
+    .inner {
+        width: 100%;
+
+        .slide {
+            width: 100%;
+
+            ul {
+                width: calc(1180px + 60px * 3);
             }
         }
     }

@@ -163,5 +163,32 @@ img {
   right: 0;
   transform: translateY(-50%);
 }
+#introducing .inner article .txt h1 {
+  margin-bottom: 20px;
+  font: 40px/1.4 "arial";
+}
+#introducing .inner article .txt h1 span {
+  display: block;
+  margin-bottom: 20px;
+  font: 14px/1 "arial";
+}
+#introducing .inner article .txt p {
+  margin-bottom: 15px;
+  font: 15px/1.7 "arial";
+}
+#introducing .inner article .txt a {
+  font: 12px/1 "arial";
+  color: #888;
+}
+
+#project .inner {
+  width: 100%;
+}
+#project .inner .slide {
+  width: 100%;
+}
+#project .inner .slide ul {
+  width: 1360px;
+}
 
 /*# sourceMappingURL=style.css.map */
