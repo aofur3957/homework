@@ -43,26 +43,48 @@
 
 #visual {
     padding: 0 5vw;
-
+    padding-top: 1vw;
+    width: 100%; height: 80vh;
+    
     .slide {
-        width: 100%; height: 80vh;
+        width: 100%; height: 100%;
         float: right;
         overflow: hidden;
         
         ul {
             width: 300%; height: 100%;
-
+           
             li {
                 width: 33.333%; height: 100%;
                 float: left;
                 position: relative;
 
+
                 .txt {
                     width: 30%;
                     position: absolute;
-                    top: 50%;
+                    top: 20%;
                     left: 0;
-                    transform: translateY(-70%);
+
+                    h1 {
+                        margin-bottom: 20px;
+                        font: bold 60px/1.1 'arial';
+                        
+                        span {
+                            display: block;
+                            margin-bottom: 20px;
+                            font: 14px/1 'arial';
+                        }
+                    }
+
+                    p {
+                        margin-bottom: 15px;
+                        font: 15px/1.7 'arial';
+                    }
+                    a {
+                        font: 12px/1 'arial'; 
+                        color: #888;
+                    }
                 }
                 .pic {
                     width: 80%; height: 100%;

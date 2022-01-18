@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 ul, ol, li {
@@ -64,10 +65,13 @@ img {
 
 #visual {
   padding: 0 5vw;
+  padding-top: 1vw;
+  width: 100%;
+  height: 80vh;
 }
 #visual .slide {
   width: 100%;
-  height: 80vh;
+  height: 100%;
   float: right;
   overflow: hidden;
 }
@@ -84,9 +88,25 @@ img {
 #visual .slide ul li .txt {
   width: 30%;
   position: absolute;
-  top: 50%;
+  top: 20%;
   left: 0;
-  transform: translateY(-70%);
+}
+#visual .slide ul li .txt h1 {
+  margin-bottom: 20px;
+  font: bold 60px/1.1 "arial";
+}
+#visual .slide ul li .txt h1 span {
+  display: block;
+  margin-bottom: 20px;
+  font: 14px/1 "arial";
+}
+#visual .slide ul li .txt p {
+  margin-bottom: 15px;
+  font: 15px/1.7 "arial";
+}
+#visual .slide ul li .txt a {
+  font: 12px/1 "arial";
+  color: #888;
 }
 #visual .slide ul li .pic {
   width: 80%;
