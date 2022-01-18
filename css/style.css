@@ -186,9 +186,51 @@ img {
 }
 #project .inner .slide {
   width: 100%;
+  height: 700px;
 }
 #project .inner .slide ul {
-  width: 1360px;
+  width: 4960px;
+  height: 100%;
+}
+#project .inner .slide ul::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+#project .inner .slide ul li {
+  width: 1180px;
+  margin-left: 20px;
+  float: left;
+  height: 100%;
+}
+#project .inner .slide ul li article {
+  height: 100%;
+  position: relative;
+}
+#project .inner .slide ul li article .txt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25%;
+  padding: 40px 40px;
+  background: #333;
+  color: #fff;
+}
+#project .inner .slide ul li article .txt h1 {
+  margin-bottom: 20px;
+  font: 30px/1.4 "arial";
+}
+#project .inner .slide ul li article .txt h1 span {
+  display: block;
+  margin-bottom: 20px;
+  font: 14px/1 "arial";
+}
+#project .inner .slide ul li article .txt .des p {
+  font: 17px/2 "arial";
+  color: #666;
+}
+#project .inner .slide ul li article .txt .des p strong {
+  color: #999;
 }
 
 /*# sourceMappingURL=style.css.map */
