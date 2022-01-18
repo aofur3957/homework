@@ -64,6 +64,7 @@ img {
 }
 
 #visual {
+  position: relative;
   padding: 0 5vw;
   padding-top: 1vw;
   width: 100%;
@@ -112,6 +113,26 @@ img {
   width: 80%;
   height: 100%;
   float: right;
+}
+#visual .paging {
+  position: absolute;
+  bottom: 0;
+  left: 23%;
+  width: 200px;
+  height: 70px;
+  line-height: 50px;
+  background: #fff;
+  font-size: 0;
+}
+#visual .paging button, #visual .paging span {
+  display: inline-block;
+  width: 33.3333%;
+  height: 100%;
+  font: 13px/1 "arial";
+  text-align: center;
+}
+#visual .paging span {
+  letter-spacing: 4px;
 }
 
 /*# sourceMappingURL=style.css.map */
