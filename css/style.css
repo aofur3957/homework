@@ -189,7 +189,6 @@ img {
   width: 100%;
   height: 700px;
   position: relative;
-  border: 1px solid #333;
 }
 #project .inner .slide ul {
   width: 4960px;
@@ -249,7 +248,7 @@ img {
 }
 
 #service {
-  padding: 80px 0 40px;
+  padding: 100px 0 50px;
 }
 #service .inner {
   width: 1180px;
@@ -296,7 +295,7 @@ img {
 }
 
 #news {
-  padding: 40px 0;
+  padding: 50px 0;
 }
 #news .inner {
   width: 1180px;
@@ -372,7 +371,7 @@ img {
 }
 
 #member {
-  padding: 40px 0;
+  padding: 50px 0 100px;
 }
 #member .inner {
   width: 1180px;
@@ -390,6 +389,7 @@ img {
 }
 #member .inner > div article {
   width: 30%;
+  position: relative;
 }
 #member .inner > div article .pic {
   overflow: hidden;
@@ -405,6 +405,22 @@ img {
 }
 #member .inner > div article p {
   color: #bbb;
+}
+#member .inner > div article ul {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#member .inner > div article ul li {
+  padding: 0 10px 10px 0;
+}
+#member .inner > div article ul li a {
+  font-size: 18px;
+  color: #888;
+}
+
+footer {
+  background: #fafafa;
 }
 
 /*# sourceMappingURL=style.css.map */
