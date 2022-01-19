@@ -45,8 +45,30 @@ fieldset {
   background: #fff;
 }
 #header h1 {
+  position: relative;
   float: left;
   font: bold 35px/1 "arial";
+}
+#header h1::before {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  width: 1px;
+  height: 40px;
+  background: #bbb;
+}
+#header h1::after {
+  content: "mordern architecture service";
+  position: absolute;
+  width: 250px;
+  top: 130px;
+  left: 0%;
+  font: 12px/1 "arial";
+  transform-origin: 8% top;
+  transform: rotate(90deg);
+  letter-spacing: 2px;
+  color: #bbb;
 }
 #header nav {
   float: right;
@@ -465,17 +487,22 @@ footer .inner address div {
 footer .inner address div strong {
   display: block;
   margin-bottom: 30px;
-  font: bold 14px/1 "arial";
+  font: bold 15px/1 "arial";
   letter-spacing: 2px;
   color: #444;
 }
-footer .inner address div p, footer .inner address div small, footer .inner address div a {
-  font: normal 15px/1.7 "arial";
+footer .inner address div p, footer .inner address div small {
+  font: normal 16px/1.7 "arial";
   color: #aaa;
 }
-footer .inner address div p em, footer .inner address div small em, footer .inner address div a em {
+footer .inner address div p em, footer .inner address div small em {
   font: bold normal 15px/1 "arial";
   color: #444;
+}
+footer .inner address div a {
+  margin-right: 20px;
+  font: 18px/1 "arial";
+  color: #777;
 }
 footer .inner address div:last-of-type {
   text-align: right;

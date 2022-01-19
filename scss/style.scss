@@ -14,8 +14,32 @@
     background: #fff;
     
     h1 {
+        position: relative;
         float: left;
         font: bold 35px/1 'arial';
+
+        &::before { 
+            content: '';
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            width: 1px;
+            height: 40px;
+            background: #bbb;
+        }
+
+        &::after {
+            content: 'mordern architecture service';
+            position: absolute;
+            width: 250px;
+            top: 130px;
+            left: 0%;
+            font: 12px/1 'arial';
+            transform-origin: 8% top;
+            transform: rotate(90deg);
+            letter-spacing: 2px;
+            color: #bbb;
+        }
     }
     nav {
         float: right;
@@ -501,19 +525,25 @@ footer {
                 strong {
                     display: block;
                     margin-bottom: 30px;
-                    font: bold 14px/1 'arial';                    
+                    font: bold 15px/1 'arial';                    
                     letter-spacing: 2px;
                     color: #444;
                 }
 
-                p, small, a {
-                    font: normal 15px/1.7 'arial';
+                p, small {
+                    font: normal 16px/1.7 'arial';
                     color: #aaa;
 
                     em {
                         font: bold normal 15px/1 'arial';
                         color: #444;
                     }
+                }
+
+                a { 
+                    margin-right: 20px;
+                    font: 18px/1 'arial';
+                    color: #777; 
                 }
 
                 &:last-of-type {
