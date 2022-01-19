@@ -182,15 +182,21 @@ img {
 }
 
 #project .inner {
-  width: 100%;
+  width: 1180px;
+  margin: 0 auto;
 }
 #project .inner .slide {
   width: 100%;
   height: 700px;
+  position: relative;
+  border: 1px solid #333;
 }
 #project .inner .slide ul {
   width: 4960px;
   height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 #project .inner .slide ul::after {
   content: " ";
@@ -202,6 +208,9 @@ img {
   margin-left: 20px;
   float: left;
   height: 100%;
+}
+#project .inner .slide ul li:first-of-type {
+  margin-left: 0;
 }
 #project .inner .slide ul li article {
   height: 100%;

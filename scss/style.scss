@@ -181,15 +181,21 @@
 #project {
     
     .inner {
-        width: 100%;
+        width: 1180px;
+        margin: 0 auto;
 
         .slide {
             width: 100%;
             height: 700px;
+            position: relative;
+            border: 1px solid #333;
 
             ul {
                 width: calc((1180px + 60px) * 4);
                 height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
                 
                 &::after {
                     content: ' '; display: block; clear: both;
@@ -201,6 +207,9 @@
                     float: left;
                     height: 100%;
 
+                    &:first-of-type {
+                        margin-left: 0;
+                    }
                     article {
                         height: 100%;
                         position: relative;
