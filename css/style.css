@@ -248,4 +248,51 @@ img {
   color: #eee;
 }
 
+#service {
+  padding: 80px 0;
+}
+#service .inner {
+  width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#service .inner div {
+  width: 45%;
+}
+#service .inner div h1 {
+  margin-bottom: 20px;
+  font: normal 35px/1.3 "arial";
+}
+#service .inner div h1 span {
+  display: block;
+  margin-bottom: 20px;
+  font: 14px/1 "arial";
+}
+#service .inner div a {
+  display: block;
+  font: 12px/1 "arial";
+  color: #888;
+}
+#service .inner ul {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#service .inner ul li {
+  width: 45%;
+  list-style-type: square;
+  border-bottom: 1px solid #bbb;
+  color: #bbb;
+}
+#service .inner ul li a {
+  display: block;
+  text-transform: uppercase;
+  color: #bbb;
+  height: 55px;
+  font: 15px/55px "arial";
+}
+
 /*# sourceMappingURL=style.css.map */
