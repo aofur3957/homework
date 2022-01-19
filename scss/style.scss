@@ -459,4 +459,67 @@
 
 footer {
     background: #fafafa;
+
+    .inner {
+        width: 1180px;
+        margin: 0 auto;
+        padding: 50px 0;
+        
+        .connect {
+            margin-bottom: 70px;
+            font-size: 0;
+        
+            legend {
+                font: 14px/1 'arial'; 
+                margin-bottom: 20px;
+            }
+            input{
+                margin-right: 2%;
+                width: 23.5%;
+                height: 40px;
+                background: #fafafa;
+                border: none;
+                border-bottom: 1px solid #ccc;
+                font: 16px/1 'arial';
+                color: #a09c9c
+            }
+            button {
+                width: 23.5%;
+                height: 40px;
+                background: #333;
+                color: #fff;
+            }
+        }
+
+        address {
+            display: flex;
+            font-style: normal;
+
+            div {
+                width: 25%;
+
+                strong {
+                    display: block;
+                    margin-bottom: 30px;
+                    font: bold 14px/1 'arial';                    
+                    letter-spacing: 2px;
+                    color: #444;
+                }
+
+                p, small, a {
+                    font: normal 15px/1.7 'arial';
+                    color: #aaa;
+
+                    em {
+                        font: bold normal 15px/1 'arial';
+                        color: #444;
+                    }
+                }
+
+                &:last-of-type {
+                    text-align: right;
+                }
+            }
+        }
+    }
 }

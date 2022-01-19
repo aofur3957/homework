@@ -24,6 +24,10 @@ img {
   object-fit: cover;
 }
 
+fieldset {
+  border: none;
+}
+
 .hidden {
   position: absolute;
   top: -9999px;
@@ -421,6 +425,60 @@ img {
 
 footer {
   background: #fafafa;
+}
+footer .inner {
+  width: 1180px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+footer .inner .connect {
+  margin-bottom: 70px;
+  font-size: 0;
+}
+footer .inner .connect legend {
+  font: 14px/1 "arial";
+  margin-bottom: 20px;
+}
+footer .inner .connect input {
+  margin-right: 2%;
+  width: 23.5%;
+  height: 40px;
+  background: #fafafa;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font: 16px/1 "arial";
+  color: #a09c9c;
+}
+footer .inner .connect button {
+  width: 23.5%;
+  height: 40px;
+  background: #333;
+  color: #fff;
+}
+footer .inner address {
+  display: flex;
+  font-style: normal;
+}
+footer .inner address div {
+  width: 25%;
+}
+footer .inner address div strong {
+  display: block;
+  margin-bottom: 30px;
+  font: bold 14px/1 "arial";
+  letter-spacing: 2px;
+  color: #444;
+}
+footer .inner address div p, footer .inner address div small, footer .inner address div a {
+  font: normal 15px/1.7 "arial";
+  color: #aaa;
+}
+footer .inner address div p em, footer .inner address div small em, footer .inner address div a em {
+  font: bold normal 15px/1 "arial";
+  color: #444;
+}
+footer .inner address div:last-of-type {
+  text-align: right;
 }
 
 /*# sourceMappingURL=style.css.map */
