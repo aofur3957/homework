@@ -249,7 +249,7 @@ img {
 }
 
 #service {
-  padding: 80px 0;
+  padding: 80px 0 40px;
 }
 #service .inner {
   width: 1180px;
@@ -293,6 +293,118 @@ img {
   color: #bbb;
   height: 55px;
   font: 15px/55px "arial";
+}
+
+#news {
+  padding: 40px 0;
+}
+#news .inner {
+  width: 1180px;
+  margin: 0 auto;
+}
+#news .inner article {
+  width: 50%;
+  float: left;
+  height: 250px;
+  position: relative;
+  background: #000;
+}
+#news .inner article:nth-of-type(1) {
+  height: 500px;
+}
+#news .inner article:nth-of-type(2) {
+  display: flex;
+  flex-direction: row-reverse;
+}
+#news .inner article:nth-of-type(2) img {
+  width: 50%;
+}
+#news .inner article:nth-of-type(2) div {
+  width: 50%;
+  height: 100%;
+}
+#news .inner article:nth-of-type(3) {
+  padding: 35px 40px;
+}
+#news .inner article > h1 {
+  font: bold 13px/1 "arial";
+  letter-spacing: 2px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+#news .inner article > h1 i {
+  font-size: 22px;
+  color: dodgerblue;
+}
+#news .inner article > p {
+  margin-bottom: 20px;
+  color: #777;
+}
+#news .inner article em, #news .inner article span {
+  display: block;
+  color: #aaa;
+  font-style: normal;
+  line-height: 1.6;
+}
+#news .inner article div {
+  width: 50%;
+  height: 50%;
+  padding: 25px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+}
+#news .inner article div span {
+  display: block;
+  font: 15px/1 "arial";
+  color: #999;
+  margin-bottom: 10px;
+}
+#news .inner article div h1 {
+  margin-bottom: 20px;
+  font: bold 27px/1.2 "arial";
+  color: #333;
+}
+#news .inner article div a {
+  font: 12px/1 "arial";
+  color: #888;
+}
+
+#member {
+  padding: 40px 0;
+}
+#member .inner {
+  width: 1180px;
+  margin: 0 auto;
+}
+#member .inner h1 {
+  display: block;
+  margin-bottom: 40px;
+  font: 14px/1 "arial";
+}
+#member .inner > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#member .inner > div article {
+  width: 30%;
+}
+#member .inner > div article .pic {
+  overflow: hidden;
+  filter: grayscale(1);
+  margin-bottom: 35px;
+}
+#member .inner > div article .pic img {
+  transform: translateY(25%) scale(1.5, 1.5);
+}
+#member .inner > div article h2 {
+  font: bold 25px/1 "arial";
+  margin-bottom: 20px;
+}
+#member .inner > div article p {
+  color: #bbb;
 }
 
 /*# sourceMappingURL=style.css.map */
