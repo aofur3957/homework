@@ -221,7 +221,7 @@ img {
   top: 0;
   left: 0;
   width: 25%;
-  padding: 40px 40px;
+  padding: 50px 40px;
   background: #333;
   color: #fff;
 }
@@ -240,6 +240,12 @@ img {
 }
 #project .inner .slide ul li article .txt .des p strong {
   color: #999;
+}
+#project .inner .slide ul li article .txt a {
+  display: inline-block;
+  margin-top: 25px;
+  font: 12px/1 "arial";
+  color: #eee;
 }
 
 /*# sourceMappingURL=style.css.map */
