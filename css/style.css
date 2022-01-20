@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Koh+Santepheap:wght@100;300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100;200;300;400;500;600;700&family=Koh+Santepheap:wght@100;300;400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -129,7 +129,7 @@ fieldset {
 #visual .inner .slide ul li .txt h1 span {
   display: block;
   margin-bottom: 20px;
-  font: bold 14px/1 "arial";
+  font: bold 14px/1 "Advent Pro";
   color: #666;
   letter-spacing: 1.5px;
 }
@@ -138,8 +138,9 @@ fieldset {
   font: 15px/1.7 "arial";
 }
 #visual .inner .slide ul li .txt a {
-  font: 12px/1 "arial";
-  color: #888;
+  font: 500 14px/1 "Advent Pro";
+  color: #777;
+  letter-spacing: 1px;
 }
 #visual .inner .slide ul li .pic {
   width: 75%;
