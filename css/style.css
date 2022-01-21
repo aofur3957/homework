@@ -41,8 +41,142 @@ fieldset {
   clear: both;
 }
 
+#header_sub {
+  position: relative;
+  padding: 2vh 5vw 10vh;
+  background: #fff;
+}
+#header_sub h1 {
+  position: absolute;
+  top: 2vh;
+  left: 5vw;
+  font: bold 35px/1 "arial";
+  z-index: 10;
+}
+#header_sub h1::before {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  width: 1px;
+  height: 40px;
+  background: #bbb;
+}
+#header_sub h1::after {
+  content: "mordern architecture service";
+  position: absolute;
+  width: 250px;
+  top: 130px;
+  left: 0%;
+  font: 12px/1 "arial";
+  transform-origin: 8% top;
+  transform: rotate(90deg);
+  letter-spacing: 2px;
+  color: #bbb;
+}
+#header_sub nav {
+  text-align: center;
+}
+#header_sub nav ul {
+  display: inline-block;
+  margin-top: 5px;
+}
+#header_sub nav ul li {
+  float: left;
+  margin-left: 30px;
+}
+#header_sub nav ul li a {
+  font: 17px/1 "arial";
+  color: #aaa;
+}
+
+section .content .sub_visual {
+  position: relative;
+  min-height: 300px;
+  background: #fafafa;
+  z-index: 1;
+}
+section .content .sub_visual .inner {
+  width: 1180px;
+  margin: 0 auto;
+  position: relative;
+}
+section .content .sub_visual .inner h1 {
+  position: absolute;
+  top: -35px;
+  left: 0;
+  font: bold 70px/1 "arial";
+}
+
+#footer_sub {
+  background: #fafafa;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+#footer_sub .inner {
+  width: 1180px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+#footer_sub .inner .connect {
+  margin-bottom: 70px;
+  font-size: 0;
+}
+#footer_sub .inner .connect legend {
+  font: 14px/1 "arial";
+  margin-bottom: 20px;
+}
+#footer_sub .inner .connect input {
+  margin-right: 2%;
+  width: 23.5%;
+  height: 40px;
+  background: #fafafa;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font: 16px/1 "arial";
+  color: #a09c9c;
+}
+#footer_sub .inner .connect button {
+  width: 23.5%;
+  height: 40px;
+  background: #333;
+  color: #fff;
+}
+#footer_sub .inner address {
+  display: flex;
+  font-style: normal;
+}
+#footer_sub .inner address div {
+  width: 25%;
+}
+#footer_sub .inner address div strong {
+  display: block;
+  margin-bottom: 30px;
+  font: bold 15px/1 "arial";
+  letter-spacing: 2px;
+  color: #444;
+}
+#footer_sub .inner address div p, #footer_sub .inner address div small {
+  font: normal 16px/1.7 "arial";
+  color: #aaa;
+}
+#footer_sub .inner address div p em, #footer_sub .inner address div small em {
+  font: bold normal 15px/1 "arial";
+  color: #444;
+}
+#footer_sub .inner address div a {
+  margin-right: 20px;
+  font: 18px/1 "arial";
+  color: #777;
+}
+#footer_sub .inner address div:last-of-type {
+  text-align: right;
+}
+
 #header {
-  padding: 1vw 5vw;
+  padding: 2vh 5vw;
   background: #fff;
 }
 #header h1 {
@@ -75,7 +209,7 @@ fieldset {
   float: right;
 }
 #header nav ul {
-  margin-top: 10px;
+  margin-top: 5px;
 }
 #header nav ul::after {
   content: "";
@@ -93,7 +227,6 @@ fieldset {
 
 #visual {
   position: relative;
-  padding-top: 1vw;
   width: 100%;
 }
 #visual .inner {
