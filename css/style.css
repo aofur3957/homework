@@ -254,6 +254,27 @@ section .content .sub_content {
   color: #fff;
 }
 
+figure {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+figure button {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font: 20px/1 "arial";
+  color: #fff;
+}
+
 #header {
   padding: 2vh 5vw;
   background: #fff;
