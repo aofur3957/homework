@@ -1,0 +1,45 @@
+#gallery {
+    .content {
+        .sub_content {
+            .inner {
+                width: 1180px;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                
+                article {
+                    margin-bottom: 100px;
+                    width: 32%;
+                    
+                    h1 {
+                        width: 90%;
+                        font: 400 22px/1.3 'arial';
+                        margin-bottom: 15px;
+                    }
+
+                    .wrap {
+                        margin-bottom: 50px;
+                        p {
+                            float: left;
+                            margin-right: 20px;
+                            width: 35%;
+                            font: 13px/1 'arial';
+                        }
+                    }
+                    
+                    .pic {
+                        margin-bottom: 70px;
+                        filter: grayscale(1);
+                    }
+
+                    a {
+                        font: 16px/1 'Advent Pro';
+                        color: #444;
+                    }
+                }
+            }
+            
+        }
+    }
+}

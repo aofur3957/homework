@@ -107,13 +107,13 @@ section .content .sub_visual .inner h1 {
   left: 0;
   font: bold 70px/1 "arial";
 }
+section .content .sub_content {
+  padding: 150px 0;
+}
 
 #footer_sub {
   background: #fafafa;
-  position: fixed;
   width: 100%;
-  bottom: 0;
-  left: 0;
 }
 #footer_sub .inner {
   width: 1180px;
@@ -173,6 +173,85 @@ section .content .sub_visual .inner h1 {
 }
 #footer_sub .inner address div:last-of-type {
   text-align: right;
+}
+
+#gallery .content .sub_content .inner {
+  width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#gallery .content .sub_content .inner article {
+  margin-bottom: 100px;
+  width: 32%;
+}
+#gallery .content .sub_content .inner article h1 {
+  width: 90%;
+  font: 400 22px/1.3 "arial";
+  margin-bottom: 15px;
+}
+#gallery .content .sub_content .inner article .wrap {
+  margin-bottom: 50px;
+}
+#gallery .content .sub_content .inner article .wrap p {
+  float: left;
+  margin-right: 20px;
+  width: 35%;
+  font: 13px/1 "arial";
+}
+#gallery .content .sub_content .inner article .pic {
+  margin-bottom: 70px;
+  filter: grayscale(1);
+}
+#gallery .content .sub_content .inner article a {
+  font: 16px/1 "Advent Pro";
+  color: #444;
+}
+
+#youtube .sub_content .inner {
+  width: 1180px;
+  margin: 0 auto;
+}
+#youtube .sub_content .inner h2 {
+  font: 40px/1 "Koh Santepheap";
+  padding-bottom: 70px;
+  border-bottom: 1px solid #ddd;
+}
+#youtube .sub_content .inner article {
+  width: 100%;
+  padding: 40px 0;
+  display: flex;
+  border-bottom: 1px solid #ddd;
+}
+#youtube .sub_content .inner article .pic {
+  width: 33.333%;
+}
+#youtube .sub_content .inner article p {
+  display: flex;
+  align-items: center;
+  width: 33.333%;
+  padding: 0 4vw;
+  font: 35px/1.2 "Koh Santepheap";
+  text-decoration: underline;
+}
+#youtube .sub_content .inner article .btn {
+  width: 33.333%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#youtube .sub_content .inner article .btn a {
+  font: 20px/1 "Advent Pro";
+  color: crimson;
+}
+#youtube .sub_content .inner article .btn a i {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background: crimson;
+  color: #fff;
 }
 
 #header {

@@ -1,0 +1,56 @@
+#youtube {
+    .sub_content {
+        .inner {
+            width: 1180px;
+            margin: 0 auto;
+
+            h2 {
+                font: 40px/1 'Koh Santepheap';
+                padding-bottom: 70px;
+                border-bottom: 1px solid #ddd;
+            }
+
+            article {
+                width: 100%;
+                padding: 40px 0;
+                display: flex;
+                border-bottom: 1px solid #ddd;
+
+                .pic {
+                    width: 33.333%;
+                }
+
+                p {
+                    display: flex;
+                    align-items: center;
+                    width: 33.333%;
+                    padding: 0 4vw;
+                    font: 35px/1.2 'Koh Santepheap';
+                    // background: pink;
+                    text-decoration: underline;
+                }
+
+                .btn {
+                    width: 33.333%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    a {
+                        font: 20px/1 'Advent Pro';
+                        color: crimson;
+
+                        i {
+                            width: 30px;
+                            height: 30px;
+                            line-height: 30px;
+                            text-align: center;
+                            background: crimson;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
