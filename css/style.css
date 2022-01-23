@@ -233,36 +233,55 @@ section .content .sub_content .inner {
   color: #fff;
 }
 
-#gallery .content .sub_content .inner {
+#gallery .content .sub_content .gallery {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-#gallery .content .sub_content .inner article {
+#gallery .content .sub_content .gallery article {
   margin-bottom: 100px;
   width: 32%;
 }
-#gallery .content .sub_content .inner article h1 {
+#gallery .content .sub_content .gallery article h1 {
   width: 90%;
   font: 400 22px/1.3 "arial";
   margin-bottom: 15px;
 }
-#gallery .content .sub_content .inner article .wrap {
+#gallery .content .sub_content .gallery article .wrap {
   margin-bottom: 50px;
 }
-#gallery .content .sub_content .inner article .wrap p {
+#gallery .content .sub_content .gallery article .wrap p {
   float: left;
   margin-right: 20px;
   width: 35%;
   font: 13px/1 "arial";
 }
-#gallery .content .sub_content .inner article .pic {
+#gallery .content .sub_content .gallery article .pic {
+  display: block;
   margin-bottom: 70px;
   filter: grayscale(1);
 }
-#gallery .content .sub_content .inner article a {
+#gallery .content .sub_content .gallery article a {
   font: 16px/1 "Advent Pro";
   color: #444;
+}
+#gallery .content .sub_content .gallery aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  padding: 70px;
+}
+#gallery .content .sub_content .gallery aside span {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  color: #fff;
+  font: 25px/1 "arial";
+  cursor: pointer;
 }
 
 #youtube .sub_content .inner h2 {

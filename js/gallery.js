@@ -8,6 +8,8 @@ method: flickr.interestingness.getList
 
 https://live.staticflickr.com/{server-id}/{id}_{secret}_{size-suffix}.jpg
 */
+const gallery = document.querySelector('.gallery');
+
 const base = 'https://www.flickr.com/services/rest/?';
 const method = 'flickr.interestingness.getList';
 const api_key = '6695bb82cf9a3db1962df3f386dd83e8';
@@ -28,6 +30,9 @@ fetch(url1)
     let htmls = '';
     items.map(item=>{
         
+        let imgSrc = `https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_w.jpg`
+        let imgBigSrc = `https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_b.jpg`
+        
         htmls +=  `
                     <article>
                         <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam, similique!</h1>
@@ -41,11 +46,36 @@ fetch(url1)
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                             </p>
                         </div>
-                        <div class="pic">
-                            <img src="img/city.jpg" alt="">
-                        </div>
-                        <a href="#">view more</a>
+                        <a class="pic" href="${imgBigSrc}">
+                            <img src=${imgSrc} alt="">
+                        </a>
+                        <a href="${imgBigSrc}">view more</a>
                     </article>
                         `
     })
+    gallery.innerHTML = htmls;
+})
+
+gallery.addEventListener('click', e=>{
+    e.preventDefault();
+
+    if(!e.target.closest('a')) return;
+    
+    const imgBigSrc = e.target.closest('a').getAttribute('href');
+    // console.log(imgBigSrc);
+    const pop = document.createElement('aside');
+    pop.classList.add('pop');
+    let htmls = `
+                       <img src=${imgBigSrc} alt="">
+                       <span class="btnClose">close</span> 
+                    `
+    pop.innerHTML = htmls;
+    gallery.append(pop);
+})
+
+gallery.addEventListener('click', e=>{
+    const pop = document.querySelector('.pop');
+    const btnClose = pop.querySelector('.btnClose');
+
+    if(e.target === btnClose) pop.remove();
 })

@@ -1,7 +1,7 @@
 #gallery {
     .content {
         .sub_content {
-            .inner {
+            .gallery {
                 display: flex;
                 justify-content: space-between;
                 flex-wrap: wrap;
@@ -27,6 +27,7 @@
                     }
                     
                     .pic {
+                        display: block;
                         margin-bottom: 70px;
                         filter: grayscale(1);
                     }
@@ -34,6 +35,24 @@
                     a {
                         font: 16px/1 'Advent Pro';
                         color: #444;
+                    }
+                }
+
+                aside {
+                    position: fixed;
+                    top: 0; left: 0;
+                    width: 100%; height: 100vh;
+                    background: rgba(0,0,0,0.8);
+                    z-index: 1000;
+                    padding: 70px;
+
+                    span {
+                        position: absolute;
+                        top: 25px;
+                        right: 30px;
+                        color: #fff;
+                        font: 25px/1 'arial';
+                        cursor: pointer;
                     }
                 }
             }
