@@ -1,0 +1,45 @@
+#community {
+    .sub_content{
+        .inner {
+            table {
+                margin: 0 0 50px;
+                width: 100%;
+                background: beige;
+                border-top: 2px solid #000;
+                border-collapse: collapse;
+
+                caption {
+                    margin-bottom: 60px;
+                    font: 26px/1 'Koh Santepheap' ;
+                }
+                
+                th, td {
+                    padding: 20px;
+                    border-bottom: 1px solid #999;
+                }
+            }
+
+            .paging {
+                display: flex;
+                justify-content: center;
+                font-size: 0;
+
+                a {
+                    display:inline-block;
+                    margin-left: -1px;
+                    width: 30px;
+                    height: 30px;
+                    border: 1px solid #888;
+                    color: #444;
+                    text-align: center;
+                    font: 13px/30px 'arial';
+
+                    &.on {
+                        background: #555;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}

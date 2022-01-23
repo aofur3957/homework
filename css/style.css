@@ -110,6 +110,11 @@ section .content .sub_visual .inner h1 {
 section .content .sub_content {
   padding: 150px 0;
 }
+section .content .sub_content .inner {
+  width: 1180px;
+  margin: 0 auto;
+  position: relative;
+}
 
 #footer_sub {
   background: #fafafa;
@@ -175,9 +180,42 @@ section .content .sub_content {
   text-align: right;
 }
 
+#community .sub_content .inner table {
+  margin: 0 0 50px;
+  width: 100%;
+  background: beige;
+  border-top: 2px solid #000;
+  border-collapse: collapse;
+}
+#community .sub_content .inner table caption {
+  margin-bottom: 60px;
+  font: 26px/1 "Koh Santepheap";
+}
+#community .sub_content .inner table th, #community .sub_content .inner table td {
+  padding: 20px;
+  border-bottom: 1px solid #999;
+}
+#community .sub_content .inner .paging {
+  display: flex;
+  justify-content: center;
+  font-size: 0;
+}
+#community .sub_content .inner .paging a {
+  display: inline-block;
+  margin-left: -1px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #888;
+  color: #444;
+  text-align: center;
+  font: 13px/30px "arial";
+}
+#community .sub_content .inner .paging a.on {
+  background: #555;
+  color: #fff;
+}
+
 #gallery .content .sub_content .inner {
-  width: 1180px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -209,10 +247,6 @@ section .content .sub_content {
   color: #444;
 }
 
-#youtube .sub_content .inner {
-  width: 1180px;
-  margin: 0 auto;
-}
 #youtube .sub_content .inner h2 {
   font: 40px/1 "Koh Santepheap";
   padding-bottom: 70px;

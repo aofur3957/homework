@@ -73,6 +73,12 @@ section {
         }
         .sub_content {
             padding: 150px 0;
+
+            .inner {
+                width: 1180px;
+                margin: 0 auto;
+                position: relative;
+            }
         }
     }
 }
