@@ -907,4 +907,305 @@ footer .inner address div:last-of-type {
   text-align: right;
 }
 
+/* tablet */
+@media screen and (max-width: 1460px) {
+  #header h1::before {
+    display: none;
+  }
+  #header h1::after {
+    display: none;
+  }
+
+  #project .inner .swiper .swiper-button-prev {
+    justify-content: flex-start;
+    margin-left: -100px;
+    top: calc(100% - 60px);
+    margin-top: 0;
+  }
+  #project .inner .swiper .swiper-button-prev i {
+    padding-right: 10px;
+  }
+  #project .inner .swiper .swiper-button-next {
+    justify-content: flex-end;
+    margin-right: -100px;
+    top: calc(100% - 60px);
+    margin-top: 0;
+  }
+  #project .inner .swiper .swiper-button-next i {
+    padding-left: 10px;
+  }
+}
+@media screen and (max-width: 1179px) {
+  #header nav {
+    display: none;
+  }
+
+  #visual .inner {
+    width: 100%;
+    padding: 0 20px;
+  }
+  #visual .inner .slide ul li .txt {
+    width: 60%;
+  }
+  #visual .inner .slide ul li .txt h1 {
+    font: bold 50px/1.1 "Koh Santepheap";
+  }
+  #visual .inner .slide ul li .txt p {
+    font: 16px/1.7 "arial";
+  }
+
+  #introducing .inner {
+    width: 100%;
+    padding: 10px;
+  }
+  #introducing .inner article {
+    width: 100%;
+  }
+  #introducing .inner article .pic {
+    height: 280px;
+  }
+  #introducing .inner article .pic:nth-of-type(1) {
+    width: 50%;
+  }
+  #introducing .inner article .pic:nth-of-type(2) {
+    width: 50%;
+  }
+  #introducing .inner article .txt {
+    width: 35%;
+    right: 12vw;
+  }
+  #introducing .inner article .txt h1 {
+    font: 28px/1.2 "Koh Santepheap";
+  }
+  #introducing .inner article .txt a {
+    color: #fff;
+  }
+
+  #project .inner .swiper .swiper-wrapper .swiper-slide {
+    width: 100%;
+  }
+
+  #service .inner {
+    width: 100%;
+    padding: 0 20px;
+  }
+  #service .inner div {
+    width: 45%;
+  }
+  #service .inner div h1 {
+    margin-bottom: 60px;
+    font: normal 30px/1.3 "Koh Santepheap";
+  }
+  #service .inner div a {
+    font: 14px/1 "arial";
+  }
+  #service .inner ul {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  #service .inner ul li {
+    width: 45%;
+    list-style-type: square;
+    border-bottom: 1px solid #bbb;
+    color: #bbb;
+  }
+  #service .inner ul li a {
+    display: block;
+    text-transform: uppercase;
+    color: #bbb;
+    height: 55px;
+    font: 15px/55px "arial";
+  }
+
+  #news {
+    padding: 50px 0;
+  }
+  #news .inner {
+    width: 1180px;
+    margin: 0 auto;
+  }
+  #news .inner article {
+    width: 50%;
+    float: left;
+    height: 250px;
+    position: relative;
+    background: #000;
+  }
+  #news .inner article:nth-of-type(1) {
+    height: 500px;
+  }
+  #news .inner article:nth-of-type(2) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  #news .inner article:nth-of-type(2) img {
+    width: 50%;
+  }
+  #news .inner article:nth-of-type(2) div {
+    width: 50%;
+    height: 100%;
+  }
+  #news .inner article:nth-of-type(3) {
+    padding: 35px 40px;
+  }
+  #news .inner article > h1 {
+    font: bold 13px/1 "arial";
+    letter-spacing: 2px;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  #news .inner article > h1 i {
+    font-size: 22px;
+    color: dodgerblue;
+  }
+  #news .inner article > p {
+    margin-bottom: 20px;
+    color: #777;
+  }
+  #news .inner article em, #news .inner article span {
+    display: block;
+    color: #aaa;
+    font-style: normal;
+    line-height: 1.6;
+  }
+  #news .inner article div {
+    width: 50%;
+    height: 50%;
+    padding: 25px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+  }
+  #news .inner article div span {
+    display: block;
+    font: 15px/1 "arial";
+    color: #999;
+    margin-bottom: 10px;
+  }
+  #news .inner article div h1 {
+    margin-bottom: 20px;
+    font: bold 27px/1.2 "Koh Santepheap";
+    color: #333;
+  }
+  #news .inner article div a {
+    font: 12px/1 "arial";
+    color: #888;
+  }
+
+  #member {
+    padding: 50px 0 100px;
+  }
+  #member .inner {
+    width: 1180px;
+    margin: 0 auto;
+  }
+  #member .inner h1 {
+    display: block;
+    margin-bottom: 40px;
+    font: 14px/1 "arial";
+  }
+  #member .inner > div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  #member .inner > div article {
+    width: 30%;
+    position: relative;
+  }
+  #member .inner > div article .pic {
+    overflow: hidden;
+    filter: grayscale(1);
+    margin-bottom: 35px;
+  }
+  #member .inner > div article .pic img {
+    transform: translateY(25%) scale(1.5, 1.5);
+  }
+  #member .inner > div article h2 {
+    font: bold 25px/1 "arial";
+    margin-bottom: 20px;
+  }
+  #member .inner > div article p {
+    color: #bbb;
+  }
+  #member .inner > div article ul {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  #member .inner > div article ul li {
+    padding: 0 10px 10px 0;
+  }
+  #member .inner > div article ul li a {
+    font-size: 18px;
+    color: #888;
+  }
+
+  footer {
+    background: #fafafa;
+  }
+  footer .inner {
+    width: 1180px;
+    margin: 0 auto;
+    padding: 50px 0;
+  }
+  footer .inner .connect {
+    margin-bottom: 70px;
+    font-size: 0;
+  }
+  footer .inner .connect legend {
+    font: 14px/1 "arial";
+    margin-bottom: 20px;
+  }
+  footer .inner .connect input {
+    margin-right: 2%;
+    width: 23.5%;
+    height: 40px;
+    background: #fafafa;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    font: 16px/1 "arial";
+    color: #a09c9c;
+  }
+  footer .inner .connect button {
+    width: 23.5%;
+    height: 40px;
+    background: #333;
+    color: #fff;
+  }
+  footer .inner address {
+    display: flex;
+    font-style: normal;
+  }
+  footer .inner address div {
+    width: 25%;
+  }
+  footer .inner address div strong {
+    display: block;
+    margin-bottom: 30px;
+    font: bold 15px/1 "arial";
+    letter-spacing: 2px;
+    color: #444;
+  }
+  footer .inner address div p, footer .inner address div small {
+    font: normal 16px/1.7 "arial";
+    color: #aaa;
+  }
+  footer .inner address div p em, footer .inner address div small em {
+    font: bold normal 15px/1 "arial";
+    color: #444;
+  }
+  footer .inner address div a {
+    margin-right: 20px;
+    font: 18px/1 "arial";
+    color: #777;
+  }
+  footer .inner address div:last-of-type {
+    text-align: right;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
