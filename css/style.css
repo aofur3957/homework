@@ -180,27 +180,45 @@ section .content .sub_content .inner {
   text-align: right;
 }
 
-#community .sub_content .inner table {
-  margin: 0 0 50px;
+#community .content .sub_content {
+  background: #fafafa;
+}
+#community .content .sub_content .inner table {
+  margin: 0 0 70px;
   width: 100%;
-  background: beige;
   border-top: 2px solid #000;
   border-collapse: collapse;
 }
-#community .sub_content .inner table caption {
+#community .content .sub_content .inner table caption {
   margin-bottom: 60px;
   font: 26px/1 "Koh Santepheap";
 }
-#community .sub_content .inner table th, #community .sub_content .inner table td {
-  padding: 20px;
+#community .content .sub_content .inner table th, #community .content .sub_content .inner table td {
   border-bottom: 1px solid #999;
+  padding: 25px 20px;
 }
-#community .sub_content .inner .paging {
+#community .content .sub_content .inner table th {
+  font: bold 17px/1 "arial";
+  color: #444;
+}
+#community .content .sub_content .inner table th:nth-of-type(2) {
+  width: 70%;
+}
+#community .content .sub_content .inner table td {
+  text-align: center;
+  font: normal 15px/1 "arial";
+  color: #777;
+}
+#community .content .sub_content .inner table td:nth-of-type(2) {
+  text-align: left;
+  color: #444;
+}
+#community .content .sub_content .inner .paging {
   display: flex;
   justify-content: center;
   font-size: 0;
 }
-#community .sub_content .inner .paging a {
+#community .content .sub_content .inner .paging a {
   display: inline-block;
   margin-left: -1px;
   width: 30px;
@@ -208,9 +226,9 @@ section .content .sub_content .inner {
   border: 1px solid #888;
   color: #444;
   text-align: center;
-  font: 13px/30px "arial";
+  font: normal 13px/30px "arial";
 }
-#community .sub_content .inner .paging a.on {
+#community .content .sub_content .inner .paging a.on {
   background: #555;
   color: #fff;
 }
@@ -307,6 +325,69 @@ figure button {
   right: 30px;
   font: 20px/1 "arial";
   color: #fff;
+}
+
+#location h2 {
+  margin-bottom: 50px;
+  text-align: center;
+  font: 30px/1 "Koh Santepheap";
+}
+#location #map {
+  width: 100%;
+  height: 600px;
+  margin-bottom: 30px;
+  border: 1px solid #333;
+}
+#location h3 {
+  margin-bottom: 20px;
+  font: 23px/1 "Koh Santepheap";
+}
+#location article {
+  width: 49%;
+  padding: 20px;
+  height: 250px;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  float: left;
+  border: 1px solid #e5e5e5;
+  cursor: pointer;
+}
+#location article:nth-of-type(even) {
+  margin-right: 0;
+}
+#location article img {
+  width: 50%;
+  float: left;
+}
+#location article dl, #location article strong {
+  float: left;
+  padding-left: 30px;
+  font: 20px/1 "arial";
+}
+#location article dl {
+  width: 50%;
+}
+#location article dl div {
+  margin-bottom: 15px;
+}
+#location article dl div::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#location article dl div dt {
+  display: inline-block;
+  padding-right: 10px;
+  color: #333;
+  font: 16px/1 "arial";
+}
+#location article dl div dd {
+  display: inline-block;
+  color: #666;
+  font: 14px/1 "arial";
+}
+#location article strong {
+  margin-bottom: 15px;
 }
 
 #header {
