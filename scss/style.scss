@@ -12,12 +12,12 @@
 @import "join.scss";
 
 #header {
-    padding: 2vh 5vw;
+    padding: 2.5vh 0 2vh;
     background: #fff;
     
     h1 {
-        position: relative;
-        float: left;
+        position: absolute;
+        top: 2vh; left: 5vw;
 
         a {
             font: bold 35px/1 'arial';
@@ -48,28 +48,34 @@
             color: #bbb;
         }
     }
-    nav {
-        float: right;
 
-        ul {
-            margin-top: 5px;
-
-            &::after {
-                content: '';
-                display: block;
-                clear: both;
-            }
-            li {
-                float: left;
-                margin-left: 30px;
-
-                a {
-                    font: 17px/1 'arial';
-                    color: #aaa
+    .inner {
+        width: 1180px;
+        margin: 0 auto;
+        nav {
+            float: right;
+    
+            ul {
+                margin-top: 5px;
+    
+                &::after {
+                    content: '';
+                    display: block;
+                    clear: both;
+                }
+                li {
+                    float: left;
+                    margin-left: 30px;
+    
+                    a {
+                        font: 17px/1 'arial';
+                        color: #aaa
+                    }
                 }
             }
         }
     }
+   
     .hambergur {
         display: none;
         float: right;
@@ -105,6 +111,17 @@
             margin-top: -2px;
             background: #333;
             text-indent: -9999px;
+        }
+    }
+
+    .login {
+        position: absolute;
+        top: 1vh; right: 5vw;
+
+        a {
+            color: #333;
+            font: 15px/1 'arial';
+            margin-left: 5px;
         }
     }
 }
