@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Join</title>
     <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/join.js"></script>
 </head>
 <body>
     <header id="header_sub">
@@ -31,12 +32,62 @@
             </div>
             <div class="sub_content">
                 <div class="inner">
-                    <h2>Join</h2>
-                    <form action="#" method="get">
+                    <h2>JOIN</h2>
+                    <form action="#" method="get" id="join_form">
                         <fieldset>
                             <legend class="hidden">회원가입</legend>
                             <table>
                                 <caption class="hidden">회원정보 입력</caption>
+                                <tr>
+                                    <th><label for="id">USER ID</label></th>
+                                    <td>
+                                        <input type="text" id="id" name="id"  placeholder="아이디를 입력해 주세요" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><label for="pwd1">PASSWORD</label></th>
+                                    <td>
+                                        <input type="password" id="pwd1" name="pwd1"  placeholder="비밀번호를 입력해 주세요" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><label for="pwd2">RE-PASSWORD</label></th>
+                                    <td>
+                                        <input type="password" id="pwd2" name="pwd2"  placeholder="비밀번호를 재입력해 주세요" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><label for="name">NAME</label></th>
+                                    <td>
+                                        <input type="text" id="name" name="name"  placeholder="이름을 입력해 주세요" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><label for="email">EMAIL</label></th>
+                                    <td>
+                                        <input type="text" id="email" name="email"  placeholder="이메일을 입력해 주세요" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><label for="phone">PHONE</label></th>
+                                    <td>
+                                        <input type="text" id="phone" name="phone"  placeholder="휴대폰번호를 입력해 주세요" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>EVENT INFO RECEPTION</th>
+                                    <td>
+                                        <input type="radio" id="yes" name="reception"> 
+                                        <label for="yes">수신</label>
+                                        <input type="radio" id="no" name="reception">
+                                        <label for="no">미수신</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">
+                                        <button>회원가입</button>
+                                    </th>
+                                </tr>
                             </table>
                         </fieldset>
                     </form>

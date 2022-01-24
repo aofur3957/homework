@@ -413,6 +413,43 @@ figure button {
   margin-bottom: 15px;
 }
 
+#join .sub_content .inner h2 {
+  margin-bottom: 50px;
+  text-align: center;
+  font: 40px/1 "Koh Santepheap";
+}
+#join .sub_content .inner #join_form table {
+  width: 60%;
+  margin: 0 auto;
+  border-top: 5px solid salmon;
+}
+#join .sub_content .inner #join_form table th {
+  width: 20%;
+  padding: 30px 0;
+  font: 16px/1 "arial";
+}
+#join .sub_content .inner #join_form table td input[type=text],
+#join .sub_content .inner #join_form table td input[type=password] {
+  width: 50%;
+  height: 50px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  background: fff;
+}
+#join .sub_content .inner #join_form table td input[type=text]::placeholder,
+#join .sub_content .inner #join_form table td input[type=password]::placeholder {
+  padding-left: 10px;
+}
+#join .sub_content .inner #join_form table td label[for=yes] {
+  margin-right: 10px;
+}
+#join .sub_content .inner #join_form table button {
+  width: 50%;
+  height: 50px;
+  background: #333;
+  color: #fff;
+}
+
 #header {
   padding: 2.5vh 0 2vh;
   background: #fff;
