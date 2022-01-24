@@ -53,6 +53,10 @@ fieldset {
   font: bold 35px/1 "arial";
   z-index: 10;
 }
+#header_sub h1 a {
+  font: bold 35px/1 "arial";
+  color: #333;
+}
 #header_sub h1::before {
   content: "";
   position: absolute;
@@ -416,7 +420,10 @@ figure button {
 #header h1 {
   position: relative;
   float: left;
+}
+#header h1 a {
   font: bold 35px/1 "arial";
+  color: #333;
 }
 #header h1::before {
   content: "";
@@ -766,7 +773,7 @@ figure button {
 #news .inner article {
   width: 50%;
   float: left;
-  height: 250px;
+  min-height: 250px;
   position: relative;
   background: #000;
 }
@@ -982,7 +989,7 @@ footer .inner address div:last-of-type {
 
   #visual .inner {
     width: 100%;
-    padding: 0 20px;
+    padding: 0 10px;
   }
   #visual .inner .slide ul li .txt {
     width: 60%;
@@ -1012,7 +1019,7 @@ footer .inner address div:last-of-type {
   }
   #introducing .inner article .txt {
     width: 35%;
-    right: 12vw;
+    right: 2vw;
   }
   #introducing .inner article .txt h1 {
     font: 28px/1.2 "Koh Santepheap";
@@ -1021,6 +1028,9 @@ footer .inner address div:last-of-type {
     color: #fff;
   }
 
+  #project .inner .swiper {
+    height: 600px;
+  }
   #project .inner .swiper .swiper-wrapper .swiper-slide {
     width: 100%;
   }
@@ -1037,14 +1047,14 @@ footer .inner address div:last-of-type {
 
   #service .inner {
     width: 100%;
-    padding: 0 20px;
+    padding: 0 10px;
   }
   #service .inner div {
     width: 45%;
   }
   #service .inner div h1 {
     margin-bottom: 60px;
-    font: normal 30px/1.3 "Koh Santepheap";
+    font: normal 28px/1.3 "Koh Santepheap";
   }
   #service .inner div a {
     font: 14px/1 "arial";
@@ -1063,18 +1073,10 @@ footer .inner address div:last-of-type {
 
   #member .inner {
     width: 100%;
-    padding: 0 20px;
-  }
-  #member .inner > div {
-    width: 100%;
-    flex-direction: column;
-    justify-content: flex-start;
+    padding: 0 10px;
   }
   #member .inner > div article {
-    width: 100%;
-  }
-  #member .inner > div article p {
-    margin-bottom: 50px;
+    width: 32%;
   }
 
   footer .inner {
@@ -1102,14 +1104,10 @@ footer .inner address div:last-of-type {
     text-align: left;
   }
 }
-@media screen and (max-width: 539px) {
-  #header nav {
-    display: none;
-  }
-
+@media screen and (max-width: 768px) {
   #visual .inner {
     width: 100%;
-    padding: 0 20px;
+    padding: 0 10px;
   }
   #visual .inner .slide ul li .txt {
     width: 60%;
@@ -1121,25 +1119,8 @@ footer .inner address div:last-of-type {
     font: 16px/1.7 "arial";
   }
 
-  #introducing .inner {
-    width: 100%;
-    padding: 10px;
-  }
-  #introducing .inner article {
-    width: 100%;
-  }
-  #introducing .inner article .pic {
-    height: 280px;
-  }
-  #introducing .inner article .pic:nth-of-type(1) {
-    width: 50%;
-  }
-  #introducing .inner article .pic:nth-of-type(2) {
-    width: 50%;
-  }
   #introducing .inner article .txt {
-    width: 35%;
-    right: 12vw;
+    right: 10vw;
   }
   #introducing .inner article .txt h1 {
     font: 28px/1.2 "Koh Santepheap";
@@ -1148,52 +1129,15 @@ footer .inner address div:last-of-type {
     color: #fff;
   }
 
-  #project .inner .swiper .swiper-wrapper .swiper-slide {
-    width: 100%;
-  }
-  #project .inner .swiper .swiper-wrapper .swiper-slide .txt {
-    width: 100%;
-    background: transparent;
-  }
-  #project .inner .swiper .swiper-wrapper .swiper-slide .txt .des {
-    display: none;
-  }
-  #project .inner .swiper .swiper-wrapper .swiper-slide .txt a {
-    font: 14px/1 "arial";
-  }
-
-  #service .inner {
-    width: 100%;
-    padding: 0 20px;
-  }
-  #service .inner div {
+  #service .inner ul {
     width: 45%;
+    display: block;
   }
-  #service .inner div h1 {
-    margin-bottom: 60px;
-    font: normal 30px/1.3 "Koh Santepheap";
-  }
-  #service .inner div a {
-    font: 14px/1 "arial";
+  #service .inner ul li {
+    width: 100%;
   }
 
-  #news .inner {
-    width: 100%;
-  }
-  #news .inner article {
-    width: 100%;
-  }
-  #news .inner article a {
-    font: 12px/1 "arial";
-    color: #888;
-  }
-
-  #member .inner {
-    width: 100%;
-    padding: 0 20px;
-  }
   #member .inner > div {
-    width: 100%;
     flex-direction: column;
     justify-content: flex-start;
   }
@@ -1203,30 +1147,102 @@ footer .inner address div:last-of-type {
   #member .inner > div article p {
     margin-bottom: 50px;
   }
-
-  footer .inner {
+}
+@media screen and (max-width: 539px) {
+  #visual .inner {
     width: 100%;
-    padding: 50px 20px;
+    padding: 0 10px;
   }
+  #visual .inner .slide ul li .txt {
+    width: 70%;
+    left: 10%;
+  }
+  #visual .inner .slide ul li .txt a {
+    font-weight: 700;
+    color: #333;
+  }
+  #visual .inner .slide ul li .pic {
+    width: 100%;
+  }
+  #visual .inner .slide .paging {
+    left: 10%;
+  }
+
+  #introducing {
+    padding: 50px 0;
+  }
+  #introducing .inner article .pic:nth-of-type(1) {
+    float: left;
+    width: 80%;
+  }
+  #introducing .inner article .pic:nth-of-type(2) {
+    float: right;
+    width: 80%;
+    margin-left: 0;
+  }
+  #introducing .inner article .txt {
+    float: left;
+    width: 100%;
+    margin-top: 50px;
+    position: static;
+    transform: translateY(0);
+    text-align: center;
+  }
+  #introducing .inner article .txt a {
+    color: #888;
+  }
+  #introducing .inner article::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  #service .inner {
+    display: block;
+  }
+  #service .inner div {
+    width: 100%;
+    text-align: center;
+  }
+  #service .inner ul {
+    width: 90%;
+    display: block;
+  }
+  #service .inner ul li {
+    width: 100%;
+  }
+
+  #news .inner {
+    width: 100%;
+  }
+  #news .inner article:nth-of-type(1) {
+    height: 250px;
+  }
+  #news .inner article div {
+    height: 100%;
+  }
+  #news .inner article div h1 {
+    font-size: 16px;
+  }
+
   footer .inner .connect input {
-    width: 49%;
+    width: 100%;
     margin-bottom: 20px;
   }
-  footer .inner .connect input:nth-of-type(2) {
-    margin-right: 0;
-  }
   footer .inner .connect button {
-    width: 49%;
+    width: 100%;
   }
   footer .inner address {
-    flex-wrap: wrap;
+    flex-direction: column;
   }
   footer .inner address div {
-    width: 50%;
+    width: 100%;
+    display: flex;
     margin-bottom: 50px;
+    justify-content: space-between;
   }
-  footer .inner address div:last-of-type {
-    text-align: left;
+  footer .inner address div strong {
+    line-height: 1.7;
   }
 }
 

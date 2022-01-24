@@ -9,6 +9,11 @@
         font: bold 35px/1 'arial';
         z-index: 10;
 
+        a {
+            font: bold 35px/1 'arial';
+            color: #333;
+        }
+
         &::before { 
             content: '';
             position: absolute;
