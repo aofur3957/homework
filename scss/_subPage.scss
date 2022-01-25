@@ -163,3 +163,86 @@ section {
         }
     }
 }
+
+@media screen and (max-width: 1179px){
+    #header_sub {
+        nav {
+            display: none;
+        }
+        .hambergur {
+            display: block;
+        }
+    }
+    
+    #footer_sub {
+    
+        .inner {
+            width: 100%;
+            padding: 50px 20px;
+            
+            .connect {
+            
+                input{
+                    width: 49%;
+                    margin-bottom: 20px;
+
+                    &:nth-of-type(2){
+                        margin-right: 0;
+                    }
+                }
+                
+                button {
+                    width: 49%;
+                }
+            }
+    
+            address {
+                flex-wrap: wrap;
+    
+                div {
+                    width: 50%;
+                    margin-bottom: 50px;
+    
+                    &:last-of-type {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 539px){
+    #footer_sub {
+    
+        .inner {
+            .connect {
+            
+                input{
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+                
+                button {
+                    width: 100%;
+                }
+            }
+    
+            address {
+                flex-direction: column;
+    
+                div {
+                    width: 100%;
+                    display: flex;
+                    margin-bottom: 50px;
+                    justify-content: space-between;
+                    strong { 
+                        line-height: 1.7; 
+                    }
+                    p { 
+                    }
+                }
+            }
+        }
+    }
+}
