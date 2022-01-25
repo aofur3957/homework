@@ -531,6 +531,39 @@ section .content .sub_content .inner {
     clear: both;
   }
 }
+@media screen and (max-width: 539px) {
+  #department .sub_content .slogun .inner strong {
+    font-size: 50px;
+  }
+  #department .sub_content .about .txt {
+    font-size: 20px;
+  }
+  #department .sub_content .introCeo article .profile {
+    width: 100%;
+  }
+  #department .sub_content .introCeo article .profile h3 {
+    font: 40px/1.2 "Koh Santepheap";
+  }
+  #department .sub_content .introCeo article .profile .des p {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  #department .sub_content .introMember .tit h2 {
+    font-size: 34px;
+  }
+  #department .sub_content .introMember .role .profile {
+    width: 47.5%;
+    height: 380px;
+  }
+  #department .sub_content .introMember .role .profile:nth-of-type(2n) {
+    margin-right: 0;
+  }
+  #department .sub_content .introMember .role::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
 #community .content .sub_content {
   background: #fafafa;
 }

@@ -387,3 +387,70 @@
         }
     }
 }
+
+@media screen and (max-width: 539px){
+    #department {
+        
+        .sub_content {
+            .slogun {
+                .inner {
+                    strong {
+                        font-size: 50px;
+                    }
+                }
+            }
+
+            .about {
+                .txt {
+                    font-size: 20px;
+                }
+            }
+            
+    
+            .introCeo {
+                article {
+                    .profile {
+                        width: 100%;
+    
+                        h3 {
+                            font: 40px/1.2 'Koh Santepheap';
+                        }
+
+                        .des {
+                            p {
+                                width: 100%;
+                                margin-bottom: 25px;
+                            }
+                        }
+                    }
+                }
+    
+            }
+    
+            .introMember {
+                .tit {
+                    h2 {
+                        font-size: 34px;
+                    }
+                }
+    
+                .role {
+                    .profile {
+                        width: 47.5%;
+                        height: 380px;
+
+                        &:nth-of-type(2n) {
+                            margin-right: 0;
+                        }
+                    }
+    
+                    &::after {
+                        content: '';
+                        display: block;
+                        clear: both;
+                    }
+                }
+            }
+        }
+    }
+}
