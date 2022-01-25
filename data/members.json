@@ -1,0 +1,44 @@
+{
+    "data" : [
+        {
+            "name" : "Sabrina C.",
+            "position" : "Executive Vice President, Archi tect, 10+years experience, ",
+            "pic" : "img/member1.jpg"
+        },
+        {
+            "name" : "Geirge B.",
+            "position" : "Tecnical Lead, Architect, 7+years experience",
+            "pic" : "img/member5.jpg"
+        },
+        {
+            "name" : "Tom T.",
+            "position" : "Senior Director, Architect, 6+years experience",
+            "pic" : "img/member3.jpg"
+        },
+        {
+            "name" : "Jane M.",
+            "position" : "Staff, Architect, 2+years experience",
+            "pic" : "img/member4.jpg"
+        },
+        {
+            "name" : "Richard G.",
+            "position" : "Vice President, Designer, 8+years experience",
+            "pic" : "img/member2.jpg"
+        },
+        {
+            "name" : "Gregor H.",
+            "position" : "Senior Manager, Designer, 7+years experience",
+            "pic" : "img/member6.jpg"
+        },
+        {
+            "name" : "Mike A.",
+            "position" : "Staff, Designer, 7+years experience",
+            "pic" : "img/member7.jpg"
+        },
+        {
+            "name" : "Anna L.",
+            "position" : "Staff, Designer, 7+years experience",
+            "pic" : "img/member8.jpg"
+        }
+    ]
+}

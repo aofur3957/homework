@@ -1,0 +1,398 @@
+#department {
+    .sub_visual {
+        img {
+            position: absolute;
+            bottom: 0; right: 0;
+            width: 75%;
+            height: auto;
+        }
+    }
+    .sub_content {
+        padding: 0;
+        .slogun {
+            position: relative;
+            padding: 150px 0;
+            background: #444;
+            
+            .inner {
+                strong {
+                    display: block;
+                    text-align: center;
+                    font: 300 110px/1 'Koh Santepheap';
+                    letter-spacing: -5px;
+                    color: #fff;
+                }
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 94%;
+                left: 50%;
+                width: 2px;
+                height: 150px;
+                background: #333;
+
+            }
+        }
+        .about {
+            padding: 150px 0;
+
+            .txt {
+                padding: 0 0 150px;
+                text-align: center;
+                font: 25px/1.2 'arial';
+            }
+        }
+
+        .introCeo {
+            height: 1100px;
+            margin-bottom: 150px;
+
+            h2 {
+                display: inline-block;
+                margin-bottom: 20px;
+                font: 50px/1 'Koh Santepheap';
+
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    height: 4px;
+                    background: crimson;
+                    margin-top: 10px;
+                }
+            }
+
+            article {
+                display: flex;
+                justify-content: space-between;
+
+                .pic {
+                    width: 45%;
+                    height: 1000px;
+                }
+
+                .profile {
+                    width: 45%;
+
+                    h3 {
+                        margin-bottom: 30px;
+                        font: 80px/1.2 'Koh Santepheap';
+
+                        span { display: block; }
+                    }
+
+                    .des {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 50px;
+
+                        p {
+                            width: 40%;
+                            font: normal 17px/1.3 'arial';
+                            color: #888;
+                        }
+                    }
+
+                    .works {
+                        h3 {
+                            margin-bottom: 50px;
+                            font: 25px/1 'Koh Santepheap';
+                        }
+
+                        >div {
+                            display: flex;
+                            justify-content: space-between;
+                            
+                            .work {
+                                width: 32%;
+                                height: 400px;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .introMember {
+            .tit {
+                h2 {
+                    display: inline-block;
+                    float: left;
+                    font: 50px/1 'Koh Santepheap';
+    
+                    &::after {
+                        content: '';
+                        display: block;
+                        width: 40%;
+                        height: 4px;
+                        background: crimson;
+                        margin-top: 10px;
+                    }
+                }
+    
+                p {
+                    width: 50%;
+                    margin-bottom: 40px;
+                    float: right;
+                    font: 18px/1.4 'arial';
+                    color: #888;
+                }
+
+                &::after {
+                    content: '';
+                    display: block;
+                    clear: both;
+                }
+            }
+
+            h3 {
+                margin-bottom: 40px;
+                font: bold 20px/1 'arial';
+                color: #444;
+            }
+
+            .role {
+                width: 100%;
+                
+                .profile {
+                    float: left;
+                    width: 21.25%;
+                    margin-right:5%;
+                    margin-bottom: 70px;
+                    text-align: center;
+
+                    &:nth-of-type(4n) {
+                        margin-right: 0;
+                    }
+
+                    .pic {
+                        width: 100%;
+                        height: 240px;
+                        margin-bottom: 20px;
+                        overflow: hidden;
+                        border-radius: 50%;
+                        filter: grayscale(1);
+                    }
+
+                    strong {
+                        display: block;
+                        margin-bottom: 15px;
+                        text-align: center;
+                        font: 700 30px/1 'Koh Santepheap';
+                    }
+
+                    p {
+                        font: 16px/1.3 'arial';
+                        color: #888;
+                    }
+                }
+
+                &::after {
+                    content: '';
+                    display: block;
+                    clear: both;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1179px){
+    #department {
+        .sub_visual {
+            .inner {
+                width: 100%;
+            }
+        }
+        .sub_content {
+            .slogun {
+                .inner {
+                    width: 100%;
+                    padding: 0 10px;
+
+                    strong {
+                        font-size: 90px;
+                    }
+                }
+            }
+            
+            .about {
+                .inner {
+                    width: 100%;
+                    padding: 0 10px;
+                }
+            }
+    
+            .introCeo {
+                margin-bottom: 150px;
+                article {
+                    .profile {
+                        width: 45%;
+    
+                        h3 {
+                            font: 60px/1.2 'Koh Santepheap';
+                        }
+    
+                        .works {
+                            h3 {
+                                margin-bottom: 50px;
+                                font: 25px/1 'Koh Santepheap';
+                            }
+    
+                            >div {
+                                display: flex;
+                                justify-content: space-between;
+                                
+                                .work {
+                                    width: 48%;
+                                    height: 400px;
+
+                                    &:last-of-type { display: none; }
+                                }
+                            }
+                        }
+                    }
+                }
+    
+            }
+    
+            .introMember {
+                h3 {
+                    margin-bottom: 40px;
+                    font: bold 20px/1 'arial';
+                    color: #444;
+                }
+    
+                .role {
+                    width: 100%;
+                    
+                    .profile {
+                        float: left;
+                        width: 21.25%;
+                        height: 21.25%;
+                        margin-right:5%;
+                        margin-bottom: 70px;
+                        text-align: center;
+    
+                        &:nth-of-type(4n) {
+                            margin-right: 0;
+                        }
+    
+                        .pic {
+                            width: 100%;
+                            height: 240px;
+                            margin-bottom: 20px;
+                            overflow: hidden;
+                            border-radius: 50%;
+                            filter: grayscale(1);
+                        }
+    
+                        strong {
+                            display: block;
+                            margin-bottom: 15px;
+                            text-align: center;
+                            font: 700 30px/1 'Koh Santepheap';
+                        }
+    
+                        p {
+                            font: 16px/1.3 'arial';
+                            color: #888;
+                        }
+                    }
+    
+                    &::after {
+                        content: '';
+                        display: block;
+                        clear: both;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    #department {
+        
+        .sub_content {
+            .slogun {
+                .inner {
+                    strong {
+                        font-size: 70px;
+                    }
+                }
+            }
+            
+    
+            .introCeo {
+                height: auto;
+                margin-bottom: 150px;
+                article {
+                    flex-direction: column;
+                    .pic {
+                        margin-bottom: 20px;
+                        height: 400px;
+                        width: 100%;
+                    }
+                    .profile {
+                        width: 100%;
+    
+                        h3 {
+                            font: 60px/1.2 'Koh Santepheap';
+                            text-align: center;
+                        }
+
+                        .des {
+                            p {
+                                width: 45%;
+                                margin-bottom: 25px;
+                            }
+                        }
+                    }
+                }
+    
+            }
+    
+            .introMember {
+                h3 {
+                    margin-bottom: 40px;
+                    font: bold 20px/1 'arial';
+                    color: #444;
+                }
+    
+                .role {
+                    .profile {
+                        .pic {
+                            width: 100%;
+                            margin-bottom: 20px;
+                            overflow: hidden;
+                            border-radius: 50%;
+                            filter: grayscale(1);
+                        }
+    
+                        strong {
+                            display: block;
+                            margin-bottom: 15px;
+                            text-align: center;
+                            font: 700 30px/1 'Koh Santepheap';
+                        }
+    
+                        p {
+                            font: 16px/1.3 'arial';
+                            color: #888;
+                        }
+                    }
+    
+                    &::after {
+                        content: '';
+                        display: block;
+                        clear: both;
+                    }
+                }
+            }
+        }
+    }
+}

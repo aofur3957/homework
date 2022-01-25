@@ -96,12 +96,14 @@ fieldset {
 
 section .content .sub_visual {
   position: relative;
+  height: 400px;
   min-height: 300px;
-  background: #fafafa;
+  background: #678c9e;
   z-index: 1;
 }
 section .content .sub_visual .inner {
   width: 1180px;
+  height: 100%;
   margin: 0 auto;
   position: relative;
 }
@@ -184,6 +186,306 @@ section .content .sub_content .inner {
   text-align: right;
 }
 
+#department .sub_visual img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 75%;
+  height: auto;
+}
+#department .sub_content {
+  padding: 0;
+}
+#department .sub_content .slogun {
+  position: relative;
+  padding: 150px 0;
+  background: #444;
+}
+#department .sub_content .slogun .inner strong {
+  display: block;
+  text-align: center;
+  font: 300 110px/1 "Koh Santepheap";
+  letter-spacing: -5px;
+  color: #fff;
+}
+#department .sub_content .slogun::after {
+  content: "";
+  position: absolute;
+  top: 94%;
+  left: 50%;
+  width: 2px;
+  height: 150px;
+  background: #333;
+}
+#department .sub_content .about {
+  padding: 150px 0;
+}
+#department .sub_content .about .txt {
+  padding: 0 0 150px;
+  text-align: center;
+  font: 25px/1.2 "arial";
+}
+#department .sub_content .introCeo {
+  height: 1100px;
+  margin-bottom: 150px;
+}
+#department .sub_content .introCeo h2 {
+  display: inline-block;
+  margin-bottom: 20px;
+  font: 50px/1 "Koh Santepheap";
+}
+#department .sub_content .introCeo h2::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: crimson;
+  margin-top: 10px;
+}
+#department .sub_content .introCeo article {
+  display: flex;
+  justify-content: space-between;
+}
+#department .sub_content .introCeo article .pic {
+  width: 45%;
+  height: 1000px;
+}
+#department .sub_content .introCeo article .profile {
+  width: 45%;
+}
+#department .sub_content .introCeo article .profile h3 {
+  margin-bottom: 30px;
+  font: 80px/1.2 "Koh Santepheap";
+}
+#department .sub_content .introCeo article .profile h3 span {
+  display: block;
+}
+#department .sub_content .introCeo article .profile .des {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+#department .sub_content .introCeo article .profile .des p {
+  width: 40%;
+  font: normal 17px/1.3 "arial";
+  color: #888;
+}
+#department .sub_content .introCeo article .profile .works h3 {
+  margin-bottom: 50px;
+  font: 25px/1 "Koh Santepheap";
+}
+#department .sub_content .introCeo article .profile .works > div {
+  display: flex;
+  justify-content: space-between;
+}
+#department .sub_content .introCeo article .profile .works > div .work {
+  width: 32%;
+  height: 400px;
+}
+#department .sub_content .introMember .tit h2 {
+  display: inline-block;
+  float: left;
+  font: 50px/1 "Koh Santepheap";
+}
+#department .sub_content .introMember .tit h2::after {
+  content: "";
+  display: block;
+  width: 40%;
+  height: 4px;
+  background: crimson;
+  margin-top: 10px;
+}
+#department .sub_content .introMember .tit p {
+  width: 50%;
+  margin-bottom: 40px;
+  float: right;
+  font: 18px/1.4 "arial";
+  color: #888;
+}
+#department .sub_content .introMember .tit::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#department .sub_content .introMember h3 {
+  margin-bottom: 40px;
+  font: bold 20px/1 "arial";
+  color: #444;
+}
+#department .sub_content .introMember .role {
+  width: 100%;
+}
+#department .sub_content .introMember .role .profile {
+  float: left;
+  width: 21.25%;
+  margin-right: 5%;
+  margin-bottom: 70px;
+  text-align: center;
+}
+#department .sub_content .introMember .role .profile:nth-of-type(4n) {
+  margin-right: 0;
+}
+#department .sub_content .introMember .role .profile .pic {
+  width: 100%;
+  height: 240px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 50%;
+  filter: grayscale(1);
+}
+#department .sub_content .introMember .role .profile strong {
+  display: block;
+  margin-bottom: 15px;
+  text-align: center;
+  font: 700 30px/1 "Koh Santepheap";
+}
+#department .sub_content .introMember .role .profile p {
+  font: 16px/1.3 "arial";
+  color: #888;
+}
+#department .sub_content .introMember .role::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+@media screen and (max-width: 1179px) {
+  #department .sub_visual .inner {
+    width: 100%;
+  }
+  #department .sub_content .slogun .inner {
+    width: 100%;
+    padding: 0 10px;
+  }
+  #department .sub_content .slogun .inner strong {
+    font-size: 90px;
+  }
+  #department .sub_content .about .inner {
+    width: 100%;
+    padding: 0 10px;
+  }
+  #department .sub_content .introCeo {
+    margin-bottom: 150px;
+  }
+  #department .sub_content .introCeo article .profile {
+    width: 45%;
+  }
+  #department .sub_content .introCeo article .profile h3 {
+    font: 60px/1.2 "Koh Santepheap";
+  }
+  #department .sub_content .introCeo article .profile .works h3 {
+    margin-bottom: 50px;
+    font: 25px/1 "Koh Santepheap";
+  }
+  #department .sub_content .introCeo article .profile .works > div {
+    display: flex;
+    justify-content: space-between;
+  }
+  #department .sub_content .introCeo article .profile .works > div .work {
+    width: 48%;
+    height: 400px;
+  }
+  #department .sub_content .introCeo article .profile .works > div .work:last-of-type {
+    display: none;
+  }
+  #department .sub_content .introMember h3 {
+    margin-bottom: 40px;
+    font: bold 20px/1 "arial";
+    color: #444;
+  }
+  #department .sub_content .introMember .role {
+    width: 100%;
+  }
+  #department .sub_content .introMember .role .profile {
+    float: left;
+    width: 21.25%;
+    height: 21.25%;
+    margin-right: 5%;
+    margin-bottom: 70px;
+    text-align: center;
+  }
+  #department .sub_content .introMember .role .profile:nth-of-type(4n) {
+    margin-right: 0;
+  }
+  #department .sub_content .introMember .role .profile .pic {
+    width: 100%;
+    height: 240px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 50%;
+    filter: grayscale(1);
+  }
+  #department .sub_content .introMember .role .profile strong {
+    display: block;
+    margin-bottom: 15px;
+    text-align: center;
+    font: 700 30px/1 "Koh Santepheap";
+  }
+  #department .sub_content .introMember .role .profile p {
+    font: 16px/1.3 "arial";
+    color: #888;
+  }
+  #department .sub_content .introMember .role::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+@media screen and (max-width: 768px) {
+  #department .sub_content .slogun .inner strong {
+    font-size: 70px;
+  }
+  #department .sub_content .introCeo {
+    height: auto;
+    margin-bottom: 150px;
+  }
+  #department .sub_content .introCeo article {
+    flex-direction: column;
+  }
+  #department .sub_content .introCeo article .pic {
+    margin-bottom: 20px;
+    height: 400px;
+    width: 100%;
+  }
+  #department .sub_content .introCeo article .profile {
+    width: 100%;
+  }
+  #department .sub_content .introCeo article .profile h3 {
+    font: 60px/1.2 "Koh Santepheap";
+    text-align: center;
+  }
+  #department .sub_content .introCeo article .profile .des p {
+    width: 45%;
+    margin-bottom: 25px;
+  }
+  #department .sub_content .introMember h3 {
+    margin-bottom: 40px;
+    font: bold 20px/1 "arial";
+    color: #444;
+  }
+  #department .sub_content .introMember .role .profile .pic {
+    width: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 50%;
+    filter: grayscale(1);
+  }
+  #department .sub_content .introMember .role .profile strong {
+    display: block;
+    margin-bottom: 15px;
+    text-align: center;
+    font: 700 30px/1 "Koh Santepheap";
+  }
+  #department .sub_content .introMember .role .profile p {
+    font: 16px/1.3 "arial";
+    color: #888;
+  }
+  #department .sub_content .introMember .role::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
 #community .content .sub_content {
   background: #fafafa;
 }
