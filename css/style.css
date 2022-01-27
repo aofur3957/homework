@@ -905,38 +905,16 @@ figure button {
   #youtube .sub_content .slogun strong {
     font: 70px/400px "arial";
   }
-  #youtube .sub_content .inner {
-    padding: 150px 10px;
-    width: 100%;
+  #youtube .sub_content .inner #video article .pic {
+    width: 48%;
   }
-  #youtube .sub_content .inner .channel::after {
-    content: "";
-    display: block;
-    clear: both;
+  #youtube .sub_content .inner #video article p {
+    width: 48%;
+    padding: 0 7vw;
+    font: 30px/1.2 "Koh Santepheap";
   }
-  #youtube .sub_content .inner .channel .imac {
-    width: 85%;
-    height: 0;
-    padding-top: 100%;
-    margin-bottom: 50px;
-  }
-  #youtube .sub_content .inner .channel .imac .screen {
-    width: 67.5%;
-    height: 31%;
-  }
-  #youtube .sub_content .inner .channel .sns {
-    position: static;
-    width: 30%;
-    margin-right: 5%;
-    float: left;
-  }
-  #youtube .sub_content .inner .channel .sns.sns2 {
-    transform: translateX(0);
-    text-align: left;
-  }
-  #youtube .sub_content .inner .channel .sns.sns3 {
-    text-align: left;
-    margin-right: 0;
+  #youtube .sub_content .inner #video article .btn {
+    display: none;
   }
 }
 #location h2 {

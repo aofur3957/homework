@@ -257,42 +257,21 @@ figure {
                 }
             }
             .inner {
-                padding: 150px 10px;
-                width: 100%;
-                
-                .channel {
-    
-                    &::after {
-                        content: '';
-                        display: block;
-                        clear: both;
-                    }
-    
-                    .imac {
-                        width: 85%;
-                        height: 0;
-                        padding-top:100%; 
-                        margin-bottom: 50px;
-    
-                        .screen {
-                            width: 67.5%;
-                            height: 31%;
+                #video {
+                    article {
+        
+                        .pic {
+                            width: 48%;
                         }
-                    }
-    
-                    .sns {
-                        position: static;
-                        width: 30%;
-                        margin-right: 5%;
-                        float: left;
-                        
-                        &.sns2 { 
-                            transform: translateX(0);
-                            text-align: left;
+        
+                        p {
+                            width: 48%;
+                            padding: 0 7vw;
+                            font: 30px/1.2 'Koh Santepheap';
                         }
-                        &.sns3 { 
-                            text-align: left;  
-                            margin-right: 0;
+        
+                        .btn {
+                            display: none;
                         }
                     }
                 }
