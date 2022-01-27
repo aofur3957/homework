@@ -11,6 +11,8 @@ const maxResults = 6;
 const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=${part}&key=${key}&playlistId=${playlistId}&maxResults=${maxResults}`;
 
 const video = document.querySelector('#video');
+const slogun = document.querySelector('.slogun');
+
 
 fetch(url)
 .then(response=>{
@@ -72,3 +74,26 @@ video.addEventListener('click', e=>{
         if(e.target === btnClose) figure.remove();
     }
 })
+
+const delay = 2000;
+setInterval(()=>{
+    let sloguns = slogun.querySelectorAll('strong');
+    let arr_sloguns = Array.from(sloguns);
+    arr_sloguns.some((slogun, index)=>{
+        if(sloguns[0].classList.contains('on')){
+            for(let el of sloguns){
+                el.classList.remove('on');
+            }
+            sloguns[1].classList.add('on');
+            return true;
+        }else if(sloguns[1].classList.contains('on')){
+            for(let el of sloguns){
+                el.classList.remove('on');
+            }
+            sloguns[0].classList.add('on');
+            return true;
+        }
+    })
+}, delay)
+
+
