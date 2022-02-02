@@ -4,13 +4,18 @@
             background: #fafafa;
             
             .slogunSection {
-                span {
-                    display: block;
-                    width: 800px;
+                .slogun {
+                    width: 600px;
                     margin: 0 auto;
-                    background: #eee;
-                    font: 70px/1.8 'arial';
-                    letter-spacing: 50px;
+                    position: relative;
+                    min-height: 60px;
+                    background: pink;
+                }
+                span {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    font: 60px/1 'arial';
                 }
             }
 

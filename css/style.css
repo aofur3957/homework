@@ -570,13 +570,18 @@ section .content .sub_content .inner {
 #community .content .sub_content {
   background: #fafafa;
 }
-#community .content .sub_content .slogunSection span {
-  display: block;
-  width: 800px;
+#community .content .sub_content .slogunSection .slogun {
+  width: 600px;
   margin: 0 auto;
-  background: #eee;
-  font: 70px/1.8 "arial";
-  letter-spacing: 50px;
+  position: relative;
+  min-height: 60px;
+  background: pink;
+}
+#community .content .sub_content .slogunSection span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font: 60px/1 "arial";
 }
 #community .content .sub_content .inner table {
   margin: 0 0 70px;
