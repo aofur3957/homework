@@ -2,7 +2,18 @@
     .content {
         .sub_content{
             background: #fafafa;
-    
+            
+            .slogunSection {
+                span {
+                    display: block;
+                    width: 800px;
+                    margin: 0 auto;
+                    background: #eee;
+                    font: 70px/1.8 'arial';
+                    letter-spacing: 50px;
+                }
+            }
+
             .inner {
                 table {
                     margin: 0 0 70px;

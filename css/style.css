@@ -570,6 +570,14 @@ section .content .sub_content .inner {
 #community .content .sub_content {
   background: #fafafa;
 }
+#community .content .sub_content .slogunSection span {
+  display: block;
+  width: 800px;
+  margin: 0 auto;
+  background: #eee;
+  font: 70px/1.8 "arial";
+  letter-spacing: 50px;
+}
 #community .content .sub_content .inner table {
   margin: 0 0 70px;
   width: 100%;
