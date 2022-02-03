@@ -569,56 +569,181 @@ section .content .sub_content .inner {
 }
 #community .content .sub_content {
   background: #fafafa;
+  padding: 0;
+}
+#community .content .sub_content .slogunSection {
+  padding: 120px 0;
 }
 #community .content .sub_content .slogunSection .slogun {
   width: 600px;
   margin: 0 auto;
   position: relative;
-  min-height: 60px;
-  background: pink;
+  min-height: 140px;
 }
-#community .content .sub_content .slogunSection span {
+#community .content .sub_content .slogunSection .slogun span {
+  position: absolute;
+  width: 12.5%;
+  top: 0;
+  font: 60px/140px "arial";
+  text-align: center;
+}
+#community .content .sub_content .slogunSection .slogun.line1 span:nth-of-type(1) {
+  left: 12.5%;
+  color: crimson;
+  font-weight: bold;
+}
+#community .content .sub_content .slogunSection .slogun.line1 span:nth-of-type(2) {
+  left: 25%;
+}
+#community .content .sub_content .slogunSection .slogun.line1 span:nth-of-type(3) {
+  left: 50%;
+}
+#community .content .sub_content .slogunSection .slogun.line1 span:nth-of-type(4) {
+  left: 62.5%;
+}
+#community .content .sub_content .slogunSection .slogun.line1 span:nth-of-type(5) {
+  left: 75%;
+}
+#community .content .sub_content .slogunSection .slogun.line2 span:nth-of-type(1) {
+  left: 0;
+  color: crimson;
+}
+#community .content .sub_content .slogunSection .slogun.line2 span:nth-of-type(2) {
+  left: 12.5%;
+}
+#community .content .sub_content .slogunSection .slogun.line2 span:nth-of-type(3) {
+  left: 25%;
+}
+#community .content .sub_content .slogunSection .slogun.line2 span:nth-of-type(4) {
+  left: 37.5%;
+}
+#community .content .sub_content .slogunSection .slogun.line2 span:nth-of-type(5) {
+  left: 62.5%;
+}
+#community .content .sub_content .slogunSection .slogun.line2 span:nth-of-type(6) {
+  left: 75%;
+}
+#community .content .sub_content .slogunSection .slogun.line2 span:nth-of-type(7) {
+  left: 87.5%;
+}
+#community .content .sub_content .slogunSection .slogun.line3 span:nth-of-type(1) {
+  left: 0;
+  color: crimson;
+}
+#community .content .sub_content .slogunSection .slogun.line3 span:nth-of-type(2) {
+  left: 12.5%;
+}
+#community .content .sub_content .slogunSection .slogun.line3 span:nth-of-type(3) {
+  left: 25%;
+}
+#community .content .sub_content .slogunSection .slogun.line3 span:nth-of-type(4) {
+  left: 37.5%;
+}
+#community .content .sub_content .slogunSection .slogun.line3 span:nth-of-type(5) {
+  left: 50%;
+}
+#community .content .sub_content .slogunSection .slogun.line3 span:nth-of-type(6) {
+  left: 62.5%;
+}
+#community .content .sub_content .slogunSection .slogun.line3 span:nth-of-type(7) {
+  left: 75%;
+}
+#community .content .sub_content .slogunSection .slogun.line3 span:nth-of-type(8) {
+  left: 87.5%;
+}
+#community .content .sub_content .slogunSection .slogun.line3 span:nth-of-type(9) {
+  left: 120%;
+  color: crimson;
+}
+#community .content .sub_content .faqHeaderSection {
+  padding: 50px 0 150px;
+  background: #333;
+  text-align: center;
+}
+#community .content .sub_content .faqHeaderSection h2 {
+  margin-bottom: 25px;
+  font: 300 40px/1 "Koh Santepheap";
+  color: #fff;
+}
+#community .content .sub_content .faqHeaderSection p {
+  font: 24px/1.2 "Advent Pro";
+  color: #fff;
+}
+#community .content .sub_content .faqBodySection .inner #tab {
+  padding: 150px 0;
+  position: relative;
+}
+#community .content .sub_content .faqBodySection .inner #tab dt {
   position: absolute;
   top: 0;
-  left: 0;
-  font: 60px/1 "arial";
+  width: 25%;
+  background: #eee;
+  text-align: center;
+  transform: translateY(-50%);
+  border-radius: 10px;
 }
-#community .content .sub_content .inner table {
+#community .content .sub_content .faqBodySection .inner #tab dt button {
+  width: 100%;
+  padding: 50px;
+  font: bold 20px/1 "arial";
+}
+#community .content .sub_content .faqBodySection .inner #tab dt.on {
+  background: pink;
+}
+#community .content .sub_content .faqBodySection .inner #tab dt:nth-of-type(1) {
+  left: 0%;
+}
+#community .content .sub_content .faqBodySection .inner #tab dt:nth-of-type(2) {
+  left: 25%;
+}
+#community .content .sub_content .faqBodySection .inner #tab dt:nth-of-type(3) {
+  left: 50%;
+}
+#community .content .sub_content .faqBodySection .inner #tab dt:nth-of-type(4) {
+  left: 75%;
+}
+#community .content .sub_content .faqBodySection .inner #tab dd {
+  display: none;
+}
+#community .content .sub_content .faqBodySection .inner #tab dd.on {
+  display: block;
+}
+#community .content .sub_content .faqBodySection .inner table {
   margin: 0 0 70px;
   width: 100%;
   border-top: 2px solid #000;
   border-collapse: collapse;
 }
-#community .content .sub_content .inner table caption {
+#community .content .sub_content .faqBodySection .inner table caption {
   margin-bottom: 60px;
   font: 26px/1 "Koh Santepheap";
 }
-#community .content .sub_content .inner table th, #community .content .sub_content .inner table td {
+#community .content .sub_content .faqBodySection .inner table th, #community .content .sub_content .faqBodySection .inner table td {
   border-bottom: 1px solid #999;
   padding: 25px 20px;
 }
-#community .content .sub_content .inner table th {
+#community .content .sub_content .faqBodySection .inner table th {
   font: bold 17px/1 "arial";
   color: #444;
 }
-#community .content .sub_content .inner table th:nth-of-type(2) {
+#community .content .sub_content .faqBodySection .inner table th:nth-of-type(2) {
   width: 70%;
 }
-#community .content .sub_content .inner table td {
+#community .content .sub_content .faqBodySection .inner table td {
   text-align: center;
   font: normal 15px/1 "arial";
   color: #777;
 }
-#community .content .sub_content .inner table td:nth-of-type(2) {
+#community .content .sub_content .faqBodySection .inner table td:nth-of-type(2) {
   text-align: left;
   color: #444;
 }
-#community .content .sub_content .inner .paging {
+#community .content .sub_content .faqBodySection .inner .paging {
   display: flex;
   justify-content: center;
   font-size: 0;
 }
-#community .content .sub_content .inner .paging a {
+#community .content .sub_content .faqBodySection .inner .paging a {
   display: inline-block;
   margin-left: -1px;
   width: 30px;
@@ -628,7 +753,7 @@ section .content .sub_content .inner {
   text-align: center;
   font: normal 13px/30px "arial";
 }
-#community .content .sub_content .inner .paging a.on {
+#community .content .sub_content .faqBodySection .inner .paging a.on {
   background: #555;
   color: #fff;
 }

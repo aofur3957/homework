@@ -2,80 +2,219 @@
     .content {
         .sub_content{
             background: #fafafa;
+            padding: 0;
             
             .slogunSection {
+                padding: 120px 0;
+
                 .slogun {
                     width: 600px;
                     margin: 0 auto;
                     position: relative;
-                    min-height: 60px;
-                    background: pink;
-                }
-                span {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    font: 60px/1 'arial';
+                    min-height: 140px;
+                    span {
+                        position: absolute;
+                        width: 12.5%;
+                        top: 0;
+                        font: 60px/140px 'arial';
+                        text-align: center;
+                    }
+                    &.line1 span {
+                        &:nth-of-type(1){
+                            left: 12.5%;
+                            color: crimson;
+                            font-weight: bold;
+                        }
+                        &:nth-of-type(2){
+                            left: 25%;
+                        }
+                        &:nth-of-type(3){
+                            left: 50%;
+                        }
+                        &:nth-of-type(4){
+                            left: 62.5%;
+                        }
+                        &:nth-of-type(5){
+                            left: 75%;
+                        }
+                    }
+                    &.line2 span {
+                        &:nth-of-type(1) {
+                            left: 0;
+                            color: crimson;
+                        }
+                        &:nth-of-type(2) {
+                            left: 12.5%;
+                        }
+                        &:nth-of-type(3) {
+                            left: 25%;
+                        }
+                        &:nth-of-type(4) {
+                            left: 37.5%;
+                        }
+                        &:nth-of-type(5) {
+                            left: 62.5%
+                        }
+                        &:nth-of-type(6) {
+                            left: 75%;
+                        }
+                        &:nth-of-type(7) {
+                            left: 87.5%;
+                        }
+                    }
+                    &.line3 span {
+                        &:nth-of-type(1){
+                            left: 0;
+                            color: crimson;
+                        }
+                        &:nth-of-type(2){
+                            left: 12.5%;
+                        }
+                        &:nth-of-type(3){
+                            left: 25%;
+                        }
+                        &:nth-of-type(4){
+                            left: 37.5%;
+                        }
+                        &:nth-of-type(5){
+                            left: 50%;
+                        }
+                        &:nth-of-type(6){
+                            left: 62.5%;
+                        }
+                        &:nth-of-type(7){
+                            left: 75%;
+                        }
+                        &:nth-of-type(8){
+                            left: 87.5%;
+                        }
+                        &:nth-of-type(9){
+                            left: 120%;
+                            color: crimson;
+                        }
+                    }
                 }
             }
 
-            .inner {
-                table {
-                    margin: 0 0 70px;
-                    width: 100%;
-                    border-top: 2px solid #000;
-                    border-collapse: collapse;
-    
-                    caption {
-                        margin-bottom: 60px;
-                        font: 26px/1 'Koh Santepheap' ;
-                    }
-                   
-                    th, td {
-                        border-bottom: 1px solid #999;
-                        padding: 25px 20px;
-                        
-                    }
+            .faqHeaderSection {
+                padding: 50px 0 150px;
+                background: #333;
+                text-align: center;
 
-                    th {
-                        font: bold 17px/1 'arial';
-                        color: #444;
-
-                        &:nth-of-type(2) {
-                            width: 70%;
-                        }
-                    }
-
-                    td {
-                        text-align: center;
-                        font: normal 15px/1 'arial';
-                        color: #777;
-                        
-                        &:nth-of-type(2) {
-                            text-align: left;
-                            color: #444;
-                        }
-                    }
+                h2 {
+                    margin-bottom: 25px;
+                    font: 300 40px/1 'Koh Santepheap';
+                    color: #fff;
                 }
-    
-                .paging {
-                    display: flex;
-                    justify-content: center;
-                    font-size: 0;
-    
-                    a {
-                        display:inline-block;
-                        margin-left: -1px;
-                        width: 30px;
-                        height: 30px;
-                        border: 1px solid #888;
-                        color: #444;
-                        text-align: center;
-                        font: normal 13px/30px 'arial';
 
-                        &.on {
-                            background: #555;
-                            color: #fff;
+                p {
+                    font:  24px/1.2 'Advent Pro';
+                    color: #fff;
+                }
+            }
+            .faqBodySection {
+                .inner {
+                    #tab {
+                        padding: 150px 0;
+                        position: relative;
+                        
+                        dt {
+                            position: absolute;
+                            top: 0;
+                            width: 25%;
+                            background: #eee;
+                            text-align: center;
+                            transform: translateY(-50%);
+                            border-radius: 10px;
+
+                            button {
+                                width: 100%;
+                                padding: 50px;
+                                font: bold 20px/1 'arial';
+                            }
+
+                            &.on { background: pink; }
+
+                            &:nth-of-type(1) {
+                                left: calc((100 / 4) * 0%);
+                            }
+                            &:nth-of-type(2) {
+                                left: calc((100 / 4) * 1%);
+                            }
+                            &:nth-of-type(3) {
+                                left: calc((100 / 4) * 2%);
+                            }
+                            &:nth-of-type(4) {
+                                left: calc((100 / 4) * 3%);
+                            }
+                        }
+
+                        dd {
+                            display: none;
+                            
+                            &.on {
+                                display: block;
+                            }
+                        }
+
+                    }
+                    table {
+                        margin: 0 0 70px;
+                        width: 100%;
+                        border-top: 2px solid #000;
+                        border-collapse: collapse;
+
+                        caption {
+                            margin-bottom: 60px;
+                            font: 26px/1 'Koh Santepheap' ;
+                        }
+                    
+                        th, td {
+                            border-bottom: 1px solid #999;
+                            padding: 25px 20px;
+                            
+                        }
+
+                        th {
+                            font: bold 17px/1 'arial';
+                            color: #444;
+
+                            &:nth-of-type(2) {
+                                width: 70%;
+                            }
+                        }
+
+                        td {
+                            text-align: center;
+                            font: normal 15px/1 'arial';
+                            color: #777;
+                            
+                            &:nth-of-type(2) {
+                                text-align: left;
+                                color: #444;
+                            }
+                        }
+                    }
+
+                    .paging {
+                        display: flex;
+                        justify-content: center;
+                        font-size: 0;
+
+                        a {
+                            display:inline-block;
+                            margin-left: -1px;
+                            width: 30px;
+                            height: 30px;
+                            border: 1px solid #888;
+                            color: #444;
+                            text-align: center;
+                            font: normal 13px/30px 'arial';
+
+                            &.on {
+                                background: #555;
+                                color: #fff;
+                            }
                         }
                     }
                 }
