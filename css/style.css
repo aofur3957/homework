@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100;200;300;400;500;600;700&family=Koh+Santepheap:wght@100;300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100;200;300;400;500;600;700&family=Koh+Santepheap:wght@100;300;400;700&family=Nanum+Gothic:wght@400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -669,23 +669,51 @@ section .content .sub_content .inner {
   font: 24px/1.2 "Advent Pro";
   color: #fff;
 }
+#community .content .sub_content .faqBodySection {
+  padding-bottom: 150px;
+}
+#community .content .sub_content .faqBodySection .inner .count {
+  padding: 200px 0 20px;
+}
 #community .content .sub_content .faqBodySection .inner #tab {
-  padding: 150px 0;
   position: relative;
 }
 #community .content .sub_content .faqBodySection .inner #tab dt {
   position: absolute;
-  top: 0;
+  top: -300px;
   width: 25%;
   background: #eee;
   text-align: center;
-  transform: translateY(-50%);
   border-radius: 10px;
 }
 #community .content .sub_content .faqBodySection .inner #tab dt button {
   width: 100%;
   padding: 50px;
   font: bold 20px/1 "arial";
+}
+#community .content .sub_content .faqBodySection .inner #tab dt button svg {
+  width: 80%;
+  margin-bottom: 20px;
+}
+#community .content .sub_content .faqBodySection .inner #tab dt button svg .cls-1 {
+  fill: #333;
+}
+#community .content .sub_content .faqBodySection .inner #tab dt button svg .cls-2 {
+  fill: none;
+  stroke: #333;
+  stroke-width: 15px;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 50;
+}
+#community .content .sub_content .faqBodySection .inner #tab dt button svg .cls-3 {
+  fill: none;
+  stroke: #333;
+  stroke-miterlimit: 10;
+  stroke-width: 15px;
+  stroke-dasharray: 50;
+}
+#community .content .sub_content .faqBodySection .inner #tab dt button svg .cls-4 {
+  fill: brown;
 }
 #community .content .sub_content .faqBodySection .inner #tab dt.on {
   background: pink;
@@ -707,6 +735,62 @@ section .content .sub_content .inner {
 }
 #community .content .sub_content .faqBodySection .inner #tab dd.on {
   display: block;
+}
+#community .content .sub_content .faqBodySection .inner #tab dd ul {
+  border-top: 2px solid #333;
+  border-bottom: 2px solid #333;
+}
+#community .content .sub_content .faqBodySection .inner #tab dd ul li {
+  border-top: 1px solid #ccc;
+}
+#community .content .sub_content .faqBodySection .inner #tab dd ul li:first-of-type {
+  border-top: none;
+}
+#community .content .sub_content .faqBodySection .inner #tab dd ul li a {
+  position: relative;
+  display: block;
+  padding-left: 25px;
+  font-size: 0;
+  color: #333;
+}
+#community .content .sub_content .faqBodySection .inner #tab dd ul li a::before {
+  display: inline-block;
+  content: "Q";
+  width: 35px;
+  height: 35px;
+  margin-right: 20px;
+  color: #fff;
+  background: #0f204c;
+  border-radius: 50%;
+  text-align: center;
+  font: 16px/35px "arial";
+  vertical-align: middle;
+}
+#community .content .sub_content .faqBodySection .inner #tab dd ul li a::after {
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  content: "\f078";
+  transform: translateY(-50%);
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #bbb;
+  font-size: 25px;
+}
+#community .content .sub_content .faqBodySection .inner #tab dd ul li a span {
+  margin-right: 200px;
+  font: 16px/5 "arial";
+  vertical-align: middle;
+  color: #0f204c;
+}
+#community .content .sub_content .faqBodySection .inner #tab dd ul li a p {
+  display: inline-block;
+  font: 16px/5 "Nanum Gothic";
+  vertical-align: middle;
+  color: #555;
+}
+#community .content .sub_content .faqBodySection .inner #tab dd ul li a div {
+  display: none;
 }
 #community .content .sub_content .faqBodySection .inner table {
   margin: 0 0 70px;

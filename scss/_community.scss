@@ -113,24 +113,53 @@
                 }
             }
             .faqBodySection {
+                padding-bottom: 150px;
+
                 .inner {
+                    .count {
+                        padding: 200px 0 20px;
+                    }
                     #tab {
-                        padding: 150px 0;
                         position: relative;
                         
                         dt {
                             position: absolute;
-                            top: 0;
+                            top: -300px;
                             width: 25%;
                             background: #eee;
                             text-align: center;
-                            transform: translateY(-50%);
                             border-radius: 10px;
 
                             button {
                                 width: 100%;
                                 padding: 50px;
                                 font: bold 20px/1 'arial';
+
+                                svg {
+                                    width: 80%;
+                                    margin-bottom: 20px;
+
+                                    .cls-1 {
+                                        fill: #333;
+                                    }
+                                    .cls-2 {
+                                        fill: none;
+                                        stroke: #333;
+                                        stroke-width: 15px;
+                                        stroke-miterlimit: 10;
+                                        stroke-dasharray: 50;
+                                    }
+                                    .cls-3 {
+                                        fill: none;
+                                        stroke: #333;
+                                        stroke-miterlimit: 10;
+                                        stroke-width: 15px;
+                                        stroke-dasharray: 50;
+                                    }
+                                    .cls-4 {
+                                        fill: brown;
+                                    }
+                                }
                             }
 
                             &.on { background: pink; }
@@ -151,9 +180,75 @@
 
                         dd {
                             display: none;
-                            
+
                             &.on {
                                 display: block;
+                            }
+
+                            strong {}
+
+                            ul {
+                                border-top: 2px solid #333;
+                                border-bottom: 2px solid #333;
+                                
+                                li {
+                                    border-top: 1px solid #ccc;
+                                    
+                                    &:first-of-type {
+                                        border-top: none;
+                                    }
+                                    
+                                    a {
+                                        position: relative;
+                                        display: block;
+                                        padding-left: 25px;
+                                        font-size: 0;
+                                        color: #333;
+                                        
+                                        &::before {
+                                            display: inline-block;
+                                            content: 'Q';
+                                            width: 35px;
+                                            height: 35px;
+                                            margin-right: 20px;
+                                            color: #fff;
+                                            background: #0f204c;
+                                            border-radius: 50%;
+                                            text-align: center;
+                                            font: 16px/35px 'arial';
+                                            vertical-align: middle;
+                                        }
+
+                                        &::after {
+                                            position: absolute;
+                                            top: 50%;
+                                            right: 25px;
+                                            content: '\f078';
+                                            transform: translateY(-50%);
+                                            font-family: 'Font Awesome 5 Free';
+                                            font-weight: 900;
+                                            color: #bbb;
+                                            font-size: 25px;
+                                        }
+                                        
+                                        span {
+                                            margin-right: 200px;
+                                            font: 16px/5 'arial';
+                                            vertical-align: middle;
+                                            color: #0f204c;
+                                        }
+                                        p {
+                                            display: inline-block;
+                                            font: 16px/5 'Nanum Gothic';
+                                            vertical-align: middle;
+                                            color: #555;
+                                        }
+                                        div {
+                                            display: none;
+                                        }
+                                    }
+                                    
+                                }
                             }
                         }
 
