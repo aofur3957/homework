@@ -656,7 +656,7 @@ section .content .sub_content .inner {
   color: crimson;
 }
 #community .content .sub_content .faqHeaderSection {
-  padding: 50px 0 150px;
+  padding: 50px 0 250px;
   background: #333;
   text-align: center;
 }
@@ -680,7 +680,7 @@ section .content .sub_content .inner {
 }
 #community .content .sub_content .faqBodySection .inner #tab dt {
   position: absolute;
-  top: -300px;
+  top: -400px;
   width: 25%;
   background: #eee;
   text-align: center;
@@ -688,11 +688,13 @@ section .content .sub_content .inner {
 }
 #community .content .sub_content .faqBodySection .inner #tab dt button {
   width: 100%;
-  padding: 50px;
+  padding: 40px;
   font: bold 20px/1 "arial";
 }
 #community .content .sub_content .faqBodySection .inner #tab dt button svg {
-  width: 80%;
+  display: block;
+  margin: 0 auto;
+  width: 60%;
   margin-bottom: 20px;
 }
 #community .content .sub_content .faqBodySection .inner #tab dt button svg .cls-1 {
@@ -703,14 +705,17 @@ section .content .sub_content .inner {
   stroke: #333;
   stroke-width: 15px;
   stroke-miterlimit: 10;
-  stroke-dasharray: 50;
+  stroke-dasharray: 830;
+  stroke-dashoffset: 830;
+  animation: face 1s linear 1 both;
 }
 #community .content .sub_content .faqBodySection .inner #tab dt button svg .cls-3 {
   fill: none;
   stroke: #333;
   stroke-miterlimit: 10;
   stroke-width: 15px;
-  stroke-dasharray: 50;
+  stroke-dasharray: 160;
+  animation: mouth 1s linear 1s 1 both;
 }
 #community .content .sub_content .faqBodySection .inner #tab dt button svg .cls-4 {
   fill: brown;
@@ -842,6 +847,22 @@ section .content .sub_content .inner {
   color: #fff;
 }
 
+@keyframes face {
+  0% {
+    stroke-dashoffset: 830;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes mouth {
+  0% {
+    stroke-dashoffset: 160;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
 #gallery .content .sub_content .gallery {
   display: flex;
   justify-content: space-between;
