@@ -113,9 +113,6 @@ section .content .sub_visual .inner h1 {
   left: 0;
   font: bold 70px/1 "arial";
 }
-section .content .sub_content {
-  padding: 150px 0;
-}
 section .content .sub_content .inner {
   width: 1180px;
   margin: 0 auto;
@@ -567,105 +564,120 @@ section .content .sub_content .inner {
     clear: both;
   }
 }
+#community .content .sub_visual {
+  position: relative;
+}
+#community .content .sub_visual .inner img {
+  position: absolute;
+  bottom: -120px;
+  right: -70px;
+  width: 84.745%;
+  height: auto;
+  object-fit: none;
+}
 #community .content .sub_content {
   background: #fafafa;
   padding: 0;
+  position: relative;
+  z-index: 100;
 }
 #community .content .sub_content .slogunSection {
   padding: 120px 0;
 }
-#community .content .sub_content .slogunSection .slogun {
+#community .content .sub_content .slogunSection .inner .slogun {
   width: 600px;
   margin: 0 auto;
   position: relative;
   min-height: 140px;
 }
-#community .content .sub_content .slogunSection .slogun span {
+#community .content .sub_content .slogunSection .inner .slogun span {
   position: absolute;
   width: 12.5%;
   top: 0;
   font: 60px/140px "arial";
   text-align: center;
 }
-#community .content .sub_content .slogunSection .slogun.line1 span:nth-of-type(1) {
+#community .content .sub_content .slogunSection .inner .slogun.line1 span:nth-of-type(1) {
   left: 12.5%;
   color: crimson;
   font-weight: bold;
 }
-#community .content .sub_content .slogunSection .slogun.line1 span:nth-of-type(2) {
+#community .content .sub_content .slogunSection .inner .slogun.line1 span:nth-of-type(2) {
   left: 25%;
 }
-#community .content .sub_content .slogunSection .slogun.line1 span:nth-of-type(3) {
+#community .content .sub_content .slogunSection .inner .slogun.line1 span:nth-of-type(3) {
   left: 50%;
 }
-#community .content .sub_content .slogunSection .slogun.line1 span:nth-of-type(4) {
+#community .content .sub_content .slogunSection .inner .slogun.line1 span:nth-of-type(4) {
   left: 62.5%;
 }
-#community .content .sub_content .slogunSection .slogun.line1 span:nth-of-type(5) {
+#community .content .sub_content .slogunSection .inner .slogun.line1 span:nth-of-type(5) {
   left: 75%;
 }
-#community .content .sub_content .slogunSection .slogun.line2 span:nth-of-type(1) {
+#community .content .sub_content .slogunSection .inner .slogun.line2 span:nth-of-type(1) {
   left: 0;
   color: crimson;
 }
-#community .content .sub_content .slogunSection .slogun.line2 span:nth-of-type(2) {
+#community .content .sub_content .slogunSection .inner .slogun.line2 span:nth-of-type(2) {
   left: 12.5%;
 }
-#community .content .sub_content .slogunSection .slogun.line2 span:nth-of-type(3) {
+#community .content .sub_content .slogunSection .inner .slogun.line2 span:nth-of-type(3) {
   left: 25%;
 }
-#community .content .sub_content .slogunSection .slogun.line2 span:nth-of-type(4) {
+#community .content .sub_content .slogunSection .inner .slogun.line2 span:nth-of-type(4) {
   left: 37.5%;
 }
-#community .content .sub_content .slogunSection .slogun.line2 span:nth-of-type(5) {
+#community .content .sub_content .slogunSection .inner .slogun.line2 span:nth-of-type(5) {
   left: 62.5%;
 }
-#community .content .sub_content .slogunSection .slogun.line2 span:nth-of-type(6) {
+#community .content .sub_content .slogunSection .inner .slogun.line2 span:nth-of-type(6) {
   left: 75%;
 }
-#community .content .sub_content .slogunSection .slogun.line2 span:nth-of-type(7) {
+#community .content .sub_content .slogunSection .inner .slogun.line2 span:nth-of-type(7) {
   left: 87.5%;
 }
-#community .content .sub_content .slogunSection .slogun.line3 span:nth-of-type(1) {
+#community .content .sub_content .slogunSection .inner .slogun.line3 span:nth-of-type(1) {
   left: 0;
   color: crimson;
 }
-#community .content .sub_content .slogunSection .slogun.line3 span:nth-of-type(2) {
+#community .content .sub_content .slogunSection .inner .slogun.line3 span:nth-of-type(2) {
   left: 12.5%;
 }
-#community .content .sub_content .slogunSection .slogun.line3 span:nth-of-type(3) {
+#community .content .sub_content .slogunSection .inner .slogun.line3 span:nth-of-type(3) {
   left: 25%;
 }
-#community .content .sub_content .slogunSection .slogun.line3 span:nth-of-type(4) {
+#community .content .sub_content .slogunSection .inner .slogun.line3 span:nth-of-type(4) {
   left: 37.5%;
 }
-#community .content .sub_content .slogunSection .slogun.line3 span:nth-of-type(5) {
+#community .content .sub_content .slogunSection .inner .slogun.line3 span:nth-of-type(5) {
   left: 50%;
 }
-#community .content .sub_content .slogunSection .slogun.line3 span:nth-of-type(6) {
+#community .content .sub_content .slogunSection .inner .slogun.line3 span:nth-of-type(6) {
   left: 62.5%;
 }
-#community .content .sub_content .slogunSection .slogun.line3 span:nth-of-type(7) {
+#community .content .sub_content .slogunSection .inner .slogun.line3 span:nth-of-type(7) {
   left: 75%;
 }
-#community .content .sub_content .slogunSection .slogun.line3 span:nth-of-type(8) {
+#community .content .sub_content .slogunSection .inner .slogun.line3 span:nth-of-type(8) {
   left: 87.5%;
 }
-#community .content .sub_content .slogunSection .slogun.line3 span:nth-of-type(9) {
+#community .content .sub_content .slogunSection .inner .slogun.line3 span:nth-of-type(9) {
   left: 120%;
   color: crimson;
 }
 #community .content .sub_content .faqHeaderSection {
-  padding: 50px 0 250px;
   background: #333;
+}
+#community .content .sub_content .faqHeaderSection .inner {
+  padding: 50px 0 250px;
   text-align: center;
 }
-#community .content .sub_content .faqHeaderSection h2 {
+#community .content .sub_content .faqHeaderSection .inner h2 {
   margin-bottom: 25px;
   font: 300 40px/1 "Koh Santepheap";
   color: #fff;
 }
-#community .content .sub_content .faqHeaderSection p {
+#community .content .sub_content .faqHeaderSection .inner p {
   font: 24px/1.2 "Advent Pro";
   color: #fff;
 }
@@ -743,11 +755,15 @@ section .content .sub_content .inner {
   display: block;
 }
 #community .content .sub_content .faqBodySection .inner #tab dd ul {
+  margin-bottom: 70px;
   border-top: 2px solid #333;
   border-bottom: 2px solid #333;
 }
 #community .content .sub_content .faqBodySection .inner #tab dd ul li {
   border-top: 1px solid #ccc;
+}
+#community .content .sub_content .faqBodySection .inner #tab dd ul li.on .con {
+  display: block;
 }
 #community .content .sub_content .faqBodySection .inner #tab dd ul li:first-of-type {
   border-top: none;
@@ -791,22 +807,41 @@ section .content .sub_content .inner {
 }
 #community .content .sub_content .faqBodySection .inner #tab dd ul li a p {
   display: inline-block;
-  font: 16px/5 "Nanum Gothic";
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 50%;
+  font: 700 16px/5 "Nanum Gothic";
   vertical-align: middle;
   color: #555;
 }
-#community .content .sub_content .faqBodySection .inner #tab dd ul li a div {
+#community .content .sub_content .faqBodySection .inner #tab dd ul li div {
   display: none;
+  position: relative;
+  padding: 25px 50px 25px 80px;
+  background: #eee;
+  font: 17px/1.3 "arial";
+  color: #555;
+}
+#community .content .sub_content .faqBodySection .inner #tab dd ul li div::before {
+  position: absolute;
+  top: 20px;
+  left: 25px;
+  content: "A";
+  width: 35px;
+  height: 35px;
+  margin-right: 20px;
+  color: #fff;
+  background: crimson;
+  border-radius: 50%;
+  text-align: center;
+  font: 16px/35px "arial";
 }
 #community .content .sub_content .faqBodySection .inner table {
-  margin: 0 0 70px;
+  margin-bottom: 70px;
   width: 100%;
   border-top: 2px solid #000;
   border-collapse: collapse;
-}
-#community .content .sub_content .faqBodySection .inner table caption {
-  margin-bottom: 60px;
-  font: 26px/1 "Koh Santepheap";
 }
 #community .content .sub_content .faqBodySection .inner table th, #community .content .sub_content .faqBodySection .inner table td {
   border-bottom: 1px solid #999;
@@ -866,6 +901,111 @@ section .content .sub_content .inner {
   }
   100% {
     stroke-dashoffset: 0;
+  }
+}
+@media screen and (max-width: 1179px) {
+  #header_sub nav {
+    display: none;
+  }
+  #header_sub .hambergur {
+    display: block;
+  }
+
+  #community .content .sub_visual .inner {
+    width: 100%;
+  }
+  #community .content .sub_visual .inner h1 {
+    left: 10px;
+  }
+  #community .content .sub_visual .inner img {
+    right: 10px;
+    min-height: 450px;
+    object-fit: cover;
+  }
+  #community .content .sub_content .slogunSection .inner {
+    width: 100%;
+    padding: 0 10px;
+  }
+  #community .content .sub_content .slogunSection .inner .slogun.line3 span:nth-of-type(9) {
+    left: 100%;
+  }
+  #community .content .sub_content .faqHeaderSection .inner {
+    width: 100%;
+    padding: 50px 10px 250px;
+  }
+  #community .content .sub_content .faqBodySection .inner {
+    width: 100%;
+    padding: 0 10px;
+  }
+  #community .content .sub_content .faqBodySection .inner #tab dd {
+    display: none;
+  }
+  #community .content .sub_content .faqBodySection .inner #tab dd ul li a span {
+    margin-right: 170px;
+  }
+  #community .content .sub_content .faqBodySection .inner table th, #community .content .sub_content .faqBodySection .inner table td {
+    border-bottom: 1px solid #999;
+    padding: 25px 20px;
+  }
+  #community .content .sub_content .faqBodySection .inner table th {
+    font: bold 17px/1 "arial";
+    color: #444;
+  }
+  #community .content .sub_content .faqBodySection .inner table th:nth-of-type(2) {
+    width: 70%;
+  }
+  #community .content .sub_content .faqBodySection .inner table td {
+    text-align: center;
+    font: normal 15px/1 "arial";
+    color: #777;
+  }
+  #community .content .sub_content .faqBodySection .inner table td:nth-of-type(2) {
+    text-align: left;
+    color: #444;
+  }
+  #community .content .sub_content .faqBodySection .inner .paging {
+    display: flex;
+    justify-content: center;
+    font-size: 0;
+  }
+  #community .content .sub_content .faqBodySection .inner .paging a {
+    display: inline-block;
+    margin-left: -1px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #888;
+    color: #444;
+    text-align: center;
+    font: normal 13px/30px "arial";
+  }
+  #community .content .sub_content .faqBodySection .inner .paging a.on {
+    background: #555;
+    color: #fff;
+  }
+
+  #footer_sub .inner {
+    width: 100%;
+    padding: 50px 20px;
+  }
+  #footer_sub .inner .connect input {
+    width: 49%;
+    margin-bottom: 20px;
+  }
+  #footer_sub .inner .connect input:nth-of-type(2) {
+    margin-right: 0;
+  }
+  #footer_sub .inner .connect button {
+    width: 49%;
+  }
+  #footer_sub .inner address {
+    flex-wrap: wrap;
+  }
+  #footer_sub .inner address div {
+    width: 50%;
+    margin-bottom: 50px;
+  }
+  #footer_sub .inner address div:last-of-type {
+    text-align: left;
   }
 }
 #gallery .content .sub_content .gallery {
@@ -1165,22 +1305,185 @@ figure button {
     display: none;
   }
 }
-#location h2 {
-  margin-bottom: 50px;
-  text-align: center;
-  font: 30px/1 "Koh Santepheap";
+#location .company {
+  margin: 150px 0;
+  height: 600px;
+  position: relative;
 }
-#location #map {
+#location .company::before {
+  content: "LOCATION";
+  position: absolute;
+  top: -5vh;
+  left: 40%;
+  transform: rotate(90deg);
+  transform-origin: left bottom;
+  font: 80px/1 "Koh Santepheap";
+  color: #aaa;
+}
+#location .company .inner {
+  height: 100%;
+}
+#location .company .inner::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#location .company .inner .info {
+  width: 50%;
+  float: left;
+}
+#location .company .inner .info h2 {
+  margin-bottom: 20px;
+  font: 50px/1 "Koh Santepheap";
+}
+#location .company .inner .info > p {
+  margin-bottom: 35px;
+  font: 17px/1.4 "arial";
+}
+#location .company .inner .info article {
+  width: 60%;
+  margin-bottom: 35px;
+}
+#location .company .inner .info article h3 {
+  margin-bottom: 10px;
+  font: 400 18px/1 "Koh Santepheap";
+}
+#location .company .inner .info article p {
+  margin-bottom: 12px;
+  font: 15px/1.3 "arial";
+}
+#location .company .inner .info article span {
+  font: 14px/1 "arial";
+  color: crimson;
+}
+#location .company .inner .info article span i {
+  width: 28px;
+  height: 28px;
+  margin-right: 10px;
+  background: #eee;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 14px;
+  line-height: 28px;
+}
+#location .company .inner .pic {
+  float: left;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#location .company .inner .pic article {
+  float: left;
+  overflow: hidden;
+  width: 48%;
+  border-radius: 20px;
+}
+#location .company .inner .pic article:first-of-type {
+  align-self: flex-end;
+  margin-bottom: 30px;
+  height: 55%;
+}
+#location .company .inner .pic article:last-of-type {
+  align-self: flex-start;
+  margin-top: 30px;
+  height: 70%;
+}
+#location .customer {
+  padding: 150px 0;
+  background: #333;
+}
+#location .customer h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  font: 50px/1 "Koh Santepheap";
+  color: #fff;
+}
+#location .customer p {
+  width: 50%;
+  margin: 0 auto 50px;
+  text-align: center;
+  color: #fff;
+}
+#location .customer #info {
+  width: 60%;
+  height: 100%;
+  margin: 0 auto;
+  font-size: 0;
+  text-align: right;
+}
+#location .customer #info input {
+  width: 49%;
+  padding: 5px 10px;
+  margin-bottom: 20px;
+  margin-right: 2%;
+  height: 35px;
+}
+#location .customer #info input::placeholder {
+  font: 16px/1 "arial";
+}
+#location .customer #info input:nth-of-type(even) {
+  margin-right: 0;
+}
+#location .customer #info textarea {
+  width: 100%;
+  height: 130px;
+  margin-bottom: 20px;
+  padding: 5px 10px;
+}
+#location .customer #info textarea::placeholder {
+  font: 16px/1 "arial";
+}
+#location .customer #info button {
+  display: inline-block;
+  width: 150px;
+  height: 30px;
+  background: #bbb;
+  border-radius: 15px;
+  font: 14px/1 "arial";
+  color: #333;
+}
+#location #mapWrap {
+  position: relative;
+}
+#location #mapWrap #map {
   width: 100%;
   height: 600px;
-  margin-bottom: 30px;
   border: 1px solid #333;
+  filter: grayscale(1);
 }
-#location h3 {
+#location #mapWrap .zoomControl {
+  overflow: hidden;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border-radius: 10px;
+}
+#location #mapWrap .zoomControl span {
+  display: block;
+  width: 45px;
+  height: 45px;
+  background: #333;
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.5s;
+}
+#location #mapWrap .zoomControl span:hover {
+  background: #555;
+}
+#location #mapWrap .zoomControl span:first-of-type {
+  border-bottom: 1px solid #000;
+}
+#location .store {
+  padding: 150px 0;
+}
+#location .store h2 {
   margin-bottom: 20px;
   font: 23px/1 "Koh Santepheap";
 }
-#location article {
+#location .store article {
   width: 49%;
   padding: 20px;
   height: 250px;
@@ -1190,41 +1493,41 @@ figure button {
   border: 1px solid #e5e5e5;
   cursor: pointer;
 }
-#location article:nth-of-type(even) {
+#location .store article:nth-of-type(even) {
   margin-right: 0;
 }
-#location article img {
+#location .store article img {
   width: 50%;
   float: left;
 }
-#location article dl, #location article strong {
+#location .store article dl, #location .store article strong {
   float: left;
   padding-left: 30px;
   font: 20px/1 "arial";
 }
-#location article dl {
+#location .store article dl {
   width: 50%;
 }
-#location article dl div {
+#location .store article dl div {
   margin-bottom: 15px;
 }
-#location article dl div::after {
+#location .store article dl div::after {
   content: "";
   display: block;
   clear: both;
 }
-#location article dl div dt {
+#location .store article dl div dt {
   display: inline-block;
   padding-right: 10px;
   color: #333;
   font: 16px/1 "arial";
 }
-#location article dl div dd {
+#location .store article dl div dd {
   display: inline-block;
   color: #666;
   font: 14px/1 "arial";
 }
-#location article strong {
+#location .store article strong {
   margin-bottom: 15px;
 }
 

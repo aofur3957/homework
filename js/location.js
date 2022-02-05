@@ -1,7 +1,8 @@
 /*
 key : 9c03dc4ca7f0907cbe4777780120f513
 */
-const spots = document.querySelectorAll('article');
+const store = document.querySelector('.store');
+const spots = store.querySelectorAll('article');
 
 const mapContainer = document.getElementById('map');
 const mapOptions = {
@@ -50,6 +51,19 @@ spots.forEach((spot, index)=>{
     })
 })
 
+setZoomable(false);
+
+function setZoomable(zoomable){
+    map.setZoomable(zoomable);
+}
+
+function zoomIn(){
+    map.setLevel(map.getLevel() - 1);
+}
+
+function zoomOut(){
+    map.setLevel(map.getLevel() + 1);
+}
 
 
 

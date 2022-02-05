@@ -1,117 +1,138 @@
 #community {
     .content {
+        .sub_visual {
+            position: relative;
+            
+            .inner {
+                img {
+                position: absolute;
+                bottom: -120px; right: -70px;
+                width: 84.745%;
+                height: auto;
+                object-fit: none;
+            }
+            }
+        }
+
         .sub_content{
             background: #fafafa;
             padding: 0;
+            position: relative;
+            z-index: 100;
             
             .slogunSection {
                 padding: 120px 0;
-
-                .slogun {
-                    width: 600px;
-                    margin: 0 auto;
-                    position: relative;
-                    min-height: 140px;
-                    span {
-                        position: absolute;
-                        width: 12.5%;
-                        top: 0;
-                        font: 60px/140px 'arial';
-                        text-align: center;
-                    }
-                    &.line1 span {
-                        &:nth-of-type(1){
-                            left: 12.5%;
-                            color: crimson;
-                            font-weight: bold;
+                
+                .inner {
+                    .slogun {
+                        width: 600px;
+                        margin: 0 auto;
+                        position: relative;
+                        min-height: 140px;
+                        span {
+                            position: absolute;
+                            width: 12.5%;
+                            top: 0;
+                            font: 60px/140px 'arial';
+                            text-align: center;
                         }
-                        &:nth-of-type(2){
-                            left: 25%;
+                        &.line1 span {
+                            &:nth-of-type(1){
+                                left: 12.5%;
+                                color: crimson;
+                                font-weight: bold;
+                            }
+                            &:nth-of-type(2){
+                                left: 25%;
+                            }
+                            &:nth-of-type(3){
+                                left: 50%;
+                            }
+                            &:nth-of-type(4){
+                                left: 62.5%;
+                            }
+                            &:nth-of-type(5){
+                                left: 75%;
+                            }
                         }
-                        &:nth-of-type(3){
-                            left: 50%;
+                        &.line2 span {
+                            &:nth-of-type(1) {
+                                left: 0;
+                                color: crimson;
+                            }
+                            &:nth-of-type(2) {
+                                left: 12.5%;
+                            }
+                            &:nth-of-type(3) {
+                                left: 25%;
+                            }
+                            &:nth-of-type(4) {
+                                left: 37.5%;
+                            }
+                            &:nth-of-type(5) {
+                                left: 62.5%
+                            }
+                            &:nth-of-type(6) {
+                                left: 75%;
+                            }
+                            &:nth-of-type(7) {
+                                left: 87.5%;
+                            }
                         }
-                        &:nth-of-type(4){
-                            left: 62.5%;
-                        }
-                        &:nth-of-type(5){
-                            left: 75%;
-                        }
-                    }
-                    &.line2 span {
-                        &:nth-of-type(1) {
-                            left: 0;
-                            color: crimson;
-                        }
-                        &:nth-of-type(2) {
-                            left: 12.5%;
-                        }
-                        &:nth-of-type(3) {
-                            left: 25%;
-                        }
-                        &:nth-of-type(4) {
-                            left: 37.5%;
-                        }
-                        &:nth-of-type(5) {
-                            left: 62.5%
-                        }
-                        &:nth-of-type(6) {
-                            left: 75%;
-                        }
-                        &:nth-of-type(7) {
-                            left: 87.5%;
-                        }
-                    }
-                    &.line3 span {
-                        &:nth-of-type(1){
-                            left: 0;
-                            color: crimson;
-                        }
-                        &:nth-of-type(2){
-                            left: 12.5%;
-                        }
-                        &:nth-of-type(3){
-                            left: 25%;
-                        }
-                        &:nth-of-type(4){
-                            left: 37.5%;
-                        }
-                        &:nth-of-type(5){
-                            left: 50%;
-                        }
-                        &:nth-of-type(6){
-                            left: 62.5%;
-                        }
-                        &:nth-of-type(7){
-                            left: 75%;
-                        }
-                        &:nth-of-type(8){
-                            left: 87.5%;
-                        }
-                        &:nth-of-type(9){
-                            left: 120%;
-                            color: crimson;
+                        &.line3 span {
+                            &:nth-of-type(1){
+                                left: 0;
+                                color: crimson;
+                            }
+                            &:nth-of-type(2){
+                                left: 12.5%;
+                            }
+                            &:nth-of-type(3){
+                                left: 25%;
+                            }
+                            &:nth-of-type(4){
+                                left: 37.5%;
+                            }
+                            &:nth-of-type(5){
+                                left: 50%;
+                            }
+                            &:nth-of-type(6){
+                                left: 62.5%;
+                            }
+                            &:nth-of-type(7){
+                                left: 75%;
+                            }
+                            &:nth-of-type(8){
+                                left: 87.5%;
+                            }
+                            &:nth-of-type(9){
+                                left: 120%;
+                                color: crimson;
+                            }
                         }
                     }
                 }
             }
 
             .faqHeaderSection {
-                padding: 50px 0 250px;
                 background: #333;
-                text-align: center;
+                .inner {
+                    padding: 50px 0 250px;
+                    text-align: center;
 
-                h2 {
-                    margin-bottom: 25px;
-                    font: 300 40px/1 'Koh Santepheap';
-                    color: #fff;
-                }
+                    h2 {
+                        margin-bottom: 25px;
+                        font: 300 40px/1 'Koh Santepheap';
+                        color: #fff;
+                    }
 
-                p {
-                    font:  24px/1.2 'Advent Pro';
-                    color: #fff;
+                    p {
+                        font:  24px/1.2 'Advent Pro';
+                        color: #fff;
+                    }
                 }
             }
+
             .faqBodySection {
                 padding-bottom: 150px;
 
@@ -195,11 +216,18 @@
                             strong {}
 
                             ul {
+                                margin-bottom: 70px;
                                 border-top: 2px solid #333;
                                 border-bottom: 2px solid #333;
                                 
                                 li {
                                     border-top: 1px solid #ccc;
+
+                                    &.on {
+                                        .con {
+                                            display: block;
+                                        }
+                                    }
                                     
                                     &:first-of-type {
                                         border-top: none;
@@ -246,31 +274,48 @@
                                         }
                                         p {
                                             display: inline-block;
-                                            font: 16px/5 'Nanum Gothic';
+                                            overflow: hidden;
+                                            text-overflow: ellipsis;
+                                            white-space: nowrap;
+                                            width: 50%;
+                                            font: 700 16px/5 'Nanum Gothic';
                                             vertical-align: middle;
                                             color: #555;
                                         }
-                                        div {
-                                            display: none;
+                                    }
+                                    div {
+                                        display: none;
+                                        position: relative;
+                                        padding: 25px 50px 25px 80px;
+                                        background: #eee;
+                                        font: 17px/1.3 'arial';
+                                        color: #555;
+
+                                        &::before {
+                                            position: absolute;
+                                            top: 20px; left: 25px;
+                                            content: 'A';
+                                            width: 35px;
+                                            height: 35px;
+                                            margin-right: 20px;
+                                            color: #fff;
+                                            background: crimson;
+                                            border-radius: 50%;
+                                            text-align: center;
+                                            font: 16px/35px 'arial';
                                         }
                                     }
-                                    
                                 }
                             }
                         }
 
                     }
                     table {
-                        margin: 0 0 70px;
+                        margin-bottom: 70px;
                         width: 100%;
                         border-top: 2px solid #000;
                         border-collapse: collapse;
 
-                        caption {
-                            margin-bottom: 60px;
-                            font: 26px/1 'Koh Santepheap' ;
-                        }
-                    
                         th, td {
                             border-bottom: 1px solid #999;
                             padding: 25px 20px;
@@ -334,4 +379,168 @@
     0% {stroke-dashoffset: 160; opacity: 0;}
     1% {opacity: 1;}
     100% {stroke-dashoffset: 0;}
+}
+
+@media screen and (max-width: 1179px){
+    #header_sub {
+        nav {
+            display: none;
+        }
+        .hambergur {
+            display: block;
+        }
+    }
+    
+    #community {
+        .content {
+            .sub_visual {
+                .inner {
+                    width: 100%;
+
+                    h1 { left: 10px; }
+
+                    img {
+                        right: 10px;
+                        min-height: 450px;
+                        object-fit: cover;
+                    }
+                }
+
+            }
+    
+            .sub_content{
+                .slogunSection {
+                    .inner {
+                        width: 100%;
+                        padding: 0 10px;
+                        
+                        .slogun {
+                            &.line3 span {
+                                &:nth-of-type(9){
+                                    left: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+    
+                .faqHeaderSection {
+                    .inner {
+                        width: 100%;
+                        padding: 50px 10px 250px;
+                    }
+                }
+                
+                .faqBodySection {
+                    .inner {
+                        width: 100%;
+                        padding: 0 10px;
+
+                        #tab {
+                            dd {
+                                display: none;
+                                ul {
+                                    li {
+                                        a {
+                                            span {
+                                                margin-right: 170px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        table {
+                            th, td {
+                                border-bottom: 1px solid #999;
+                                padding: 25px 20px;
+                                
+                            }
+    
+                            th {
+                                font: bold 17px/1 'arial';
+                                color: #444;
+    
+                                &:nth-of-type(2) {
+                                    width: 70%;
+                                }
+                            }
+    
+                            td {
+                                text-align: center;
+                                font: normal 15px/1 'arial';
+                                color: #777;
+                                
+                                &:nth-of-type(2) {
+                                    text-align: left;
+                                    color: #444;
+                                }
+                            }
+                        }
+    
+                        .paging {
+                            display: flex;
+                            justify-content: center;
+                            font-size: 0;
+    
+                            a {
+                                display:inline-block;
+                                margin-left: -1px;
+                                width: 30px;
+                                height: 30px;
+                                border: 1px solid #888;
+                                color: #444;
+                                text-align: center;
+                                font: normal 13px/30px 'arial';
+    
+                                &.on {
+                                    background: #555;
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+    
+    #footer_sub {
+    
+        .inner {
+            width: 100%;
+            padding: 50px 20px;
+            
+            .connect {
+            
+                input{
+                    width: 49%;
+                    margin-bottom: 20px;
+
+                    &:nth-of-type(2){
+                        margin-right: 0;
+                    }
+                }
+                
+                button {
+                    width: 49%;
+                }
+            }
+    
+            address {
+                flex-wrap: wrap;
+    
+                div {
+                    width: 50%;
+                    margin-bottom: 50px;
+    
+                    &:last-of-type {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
 }

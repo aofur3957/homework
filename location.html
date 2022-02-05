@@ -33,130 +33,149 @@
                     </div>
             </div>
             <div class="sub_content">
-                <div class="inner">
-                    <div class="company">
-                        <h2>Contact Us</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, necessitatibus?</p>
+                <div class="company">
+                    <div class="inner">
                         <div class="info">
+                            <h2>Contact Us</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ut perferendis deleniti totam magnam?</p>
                             <article>
                                 <h3>Call Us</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt unde quam vitae veniam accusamus fuga, voluptatibus voluptas?
+                                </p>
                                 <span>
                                     <i class="fas fa-phone"></i>
                                     700 - 1234 - 6573
                                 </span>
                             </article>
-                           <article>
+                            <article>
                                 <h3>Visit Us</h3>
                                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
                                 <span>
                                     <i class="fas fa-map-marker-alt"></i>
                                     Highend St. Abrillon VA 32101. USA
                                 </span>
-                           </article>
-                           <article>
+                            </article>
+                            <article>
                                 <h3>Live Chat</h3>
                                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure!</p>
                                 <span>
                                     <i class="fas fa-headset"></i>
                                     Zoom
                                 </span>
-                           </article>
-                        </div>  
+                            </article>
+                        </div>
+                        <div class="pic">
+                            <article><img src="img/business1.jpg" alt=""></article>
+                            <article><img src="img/business2.png" alt=""></article>
+                        </div>
+                    </div>  
+                </div>
+                
+                <div id="mapWrap">
+                    <div id="map"></div>
+                    <div class="zoomControl">
+                        <span onclick="zoomIn()"><i class="fas fa-plus"></i></span>
+                        <span onclick="zoomOut()"><i class="fas fa-minus"></i></span>
+                    </div>
+                </div>
 
-                        <div class="customer">
+                <div class="store">
+                    <div class="inner">
+                        <h2>Store Info.</h2>
+                        <div class="wrap">
+                            <article>
+                                <img src="img/city.jpg" alt="">
+                                <strong>A. Bucheon</strong>
+                                <dl>
+                                    <div>
+                                        <dt>address</dt>
+                                        <dd>Lorem ipsum dolor sit amet.</dd>
+                                    </div>
+                                    <div>
+                                        <dt>phone</dt>
+                                        <dd>02-5323-1929</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Open/Close</dt>
+                                        <dd>AM 10:30 ~ PM 9:00</dd>
+                                    </div>
+                                </dl>
+                            </article>
+                            <article>
+                                <img src="img/city.jpg" alt="">
+                                <strong>A. Hongdae</strong>
+                                <dl>
+                                    <div>
+                                        <dt>address</dt>
+                                        <dd>Lorem ipsum dolor sit amet.</dd>
+                                    </div>
+                                    <div>
+                                        <dt>phone</dt>
+                                        <dd>02-5323-1929</dd>
+                                    </div>
+                                    <div>
+                                        <dt>open/close</dt>
+                                        <dd>AM 10:30 ~ PM 9:00</dd>
+                                    </div>
+                                </dl>
+                            </article>
+                            <article>
+                                <img src="img/city.jpg" alt="">
+                                <strong>A. Gundae</strong>
+                                <dl>
+                                    <div>
+                                        <dt>address</dt>
+                                        <dd>Lorem ipsum dolor sit amet.</dd>
+                                    </div>
+                                    <div>
+                                        <dt>phone</dt>
+                                        <dd>02-5323-1929</dd>
+                                    </div>
+                                    <div>
+                                        <dt>open/close</dt>
+                                        <dd>AM 10:30 ~ PM 9:00</dd>
+                                    </div>
+                                </dl>
+                            </article>
+                            <article>
+                                <img src="img/city.jpg" alt="">
+                                <strong>A. Anyang</strong>
+                                <dl>
+                                    <div>
+                                        <dt>address</dt>
+                                        <dd>Lorem ipsum dolor sit amet.</dd>
+                                    </div>
+                                    <div>
+                                        <dt>phone</dt>
+                                        <dd>02-5323-1929</dd>
+                                    </div>
+                                    <div>
+                                        <dt>open</dt>
+                                        <dd>AM 10:30 ~ PM 9:00</dd>
+                                    </div>
+                                </dl>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="customer">
+                    <div class="inner">
                         <h2>Get In Touch</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro laboriosam, dolores impedit totam officiis doloribus.</p>
-                        <form id="Info">
+                        <form id="info">
                             <fieldset>
-                                <legend>Indivisual Info Insert</legend>
-                              
-                                <input type="text" name="name">
-                                <input type="text" name="company">
-                                <input type="email" name="email">
-                                <input type="phone" name="text">
-                                <textarea name="message" id=""></textarea>
+                                <legend class="hidden">Indivisual Info Insert</legend>
+                                
+                                <input type="text" name="name" placeholder="Name*">
+                                <input type="text" name="company" placeholder="Company*">
+                                <input type="email" name="email" placeholder="Email*">
+                                <input type="phone" name="text" placeholder="Phione*">
+                                <textarea name="message" placeholder="Message*"></textarea>
                                 <button>SEND</button>
                             </fieldset>
                         </form>
-                    </div class="">
-                    
-                    <div id="map"></div>
-
-                    <h3>Store Info.</h3>
-                    <div class="wrap">
-                        <article>
-                            <img src="img/city.jpg" alt="">
-                            <strong>A. Bucheon</strong>
-                            <dl>
-                                <div>
-                                    <dt>address</dt>
-                                    <dd>Lorem ipsum dolor sit amet.</dd>
-                                </div>
-                                <div>
-                                    <dt>phone</dt>
-                                    <dd>02-5323-1929</dd>
-                                </div>
-                                <div>
-                                    <dt>Open/Close</dt>
-                                    <dd>AM 10:30 ~ PM 9:00</dd>
-                                </div>
-                            </dl>
-                        </article>
-                        <article>
-                            <img src="img/city.jpg" alt="">
-                            <strong>A. Hongdae</strong>
-                            <dl>
-                                <div>
-                                    <dt>address</dt>
-                                    <dd>Lorem ipsum dolor sit amet.</dd>
-                                </div>
-                                <div>
-                                    <dt>phone</dt>
-                                    <dd>02-5323-1929</dd>
-                                </div>
-                                <div>
-                                    <dt>open/close</dt>
-                                    <dd>AM 10:30 ~ PM 9:00</dd>
-                                </div>
-                            </dl>
-                        </article>
-                        <article>
-                            <img src="img/city.jpg" alt="">
-                            <strong>A. Gundae</strong>
-                            <dl>
-                                <div>
-                                    <dt>address</dt>
-                                    <dd>Lorem ipsum dolor sit amet.</dd>
-                                </div>
-                               <div>
-                                    <dt>phone</dt>
-                                    <dd>02-5323-1929</dd>
-                               </div>
-                                <div>
-                                    <dt>open/close</dt>
-                                    <dd>AM 10:30 ~ PM 9:00</dd>
-                                </div>
-                            </dl>
-                        </article>
-                        <article>
-                            <img src="img/city.jpg" alt="">
-                            <strong>A. Anyang</strong>
-                            <dl>
-                                <div>
-                                    <dt>address</dt>
-                                    <dd>Lorem ipsum dolor sit amet.</dd>
-                                </div>
-                                <div>
-                                    <dt>phone</dt>
-                                    <dd>02-5323-1929</dd>
-                                </div>
-                                <div>
-                                    <dt>open</dt>
-                                    <dd>AM 10:30 ~ PM 9:00</dd>
-                                </div>
-                            </dl>
-                        </article>
                     </div>
                 </div>
             </div>
