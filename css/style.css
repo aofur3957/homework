@@ -941,46 +941,10 @@ section .content .sub_content .inner {
     display: none;
   }
   #community .content .sub_content .faqBodySection .inner #tab dd ul li a span {
-    margin-right: 170px;
-  }
-  #community .content .sub_content .faqBodySection .inner table th, #community .content .sub_content .faqBodySection .inner table td {
-    border-bottom: 1px solid #999;
-    padding: 25px 20px;
-  }
-  #community .content .sub_content .faqBodySection .inner table th {
-    font: bold 17px/1 "arial";
-    color: #444;
+    margin-right: 20vw;
   }
   #community .content .sub_content .faqBodySection .inner table th:nth-of-type(2) {
-    width: 70%;
-  }
-  #community .content .sub_content .faqBodySection .inner table td {
-    text-align: center;
-    font: normal 15px/1 "arial";
-    color: #777;
-  }
-  #community .content .sub_content .faqBodySection .inner table td:nth-of-type(2) {
-    text-align: left;
-    color: #444;
-  }
-  #community .content .sub_content .faqBodySection .inner .paging {
-    display: flex;
-    justify-content: center;
-    font-size: 0;
-  }
-  #community .content .sub_content .faqBodySection .inner .paging a {
-    display: inline-block;
-    margin-left: -1px;
-    width: 30px;
-    height: 30px;
-    border: 1px solid #888;
-    color: #444;
-    text-align: center;
-    font: normal 13px/30px "arial";
-  }
-  #community .content .sub_content .faqBodySection .inner .paging a.on {
-    background: #555;
-    color: #fff;
+    width: 50%;
   }
 
   #footer_sub .inner {
@@ -1006,6 +970,51 @@ section .content .sub_content .inner {
   }
   #footer_sub .inner address div:last-of-type {
     text-align: left;
+  }
+}
+@media screen and (max-width: 768px) {
+  #community .content .sub_visual .inner img {
+    right: 0;
+  }
+  #community .content .sub_content .slogunSection {
+    padding: 100px 0 200px;
+  }
+  #community .content .sub_content .slogunSection .inner .slogun {
+    width: 100%;
+  }
+  #community .content .sub_content .slogunSection .inner .slogun.line3 span:nth-of-type(9) {
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #community .content .sub_content .faqBodySection .inner #tab dt {
+    width: 50%;
+  }
+  #community .content .sub_content .faqBodySection .inner #tab dt button svg {
+    width: 35%;
+  }
+  #community .content .sub_content .faqBodySection .inner #tab dt:nth-of-type(1) {
+    left: 0%;
+  }
+  #community .content .sub_content .faqBodySection .inner #tab dt:nth-of-type(2) {
+    left: 50%;
+  }
+  #community .content .sub_content .faqBodySection .inner #tab dt:nth-of-type(3) {
+    transform: translateY(100%);
+    left: 0%;
+  }
+  #community .content .sub_content .faqBodySection .inner #tab dt:nth-of-type(4) {
+    transform: translateY(100%);
+    left: 50%;
+  }
+  #community .content .sub_content .faqBodySection .inner #tab dd ul li a span {
+    margin-right: 15vw;
+  }
+  #community .content .sub_content .faqBodySection .inner table th:nth-of-type(5) {
+    display: none;
+  }
+  #community .content .sub_content .faqBodySection .inner table td:nth-of-type(5) {
+    display: none;
   }
 }
 #gallery .content .sub_content .gallery {
