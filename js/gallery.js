@@ -11,6 +11,8 @@ https://live.staticflickr.com/{server-id}/{id}_{secret}_{size-suffix}.jpg
 const container = document.querySelector('#gallery')
 const gallery = document.querySelector('.gallery');
 const loading = document.querySelector('.loading');
+const input = document.querySelector('#search');
+const btnSearch = document.querySelector('.btnSearch'); 
 
 const base = 'https://www.flickr.com/services/rest/?';
 const method = 'flickr.interestingness.getList';
@@ -21,13 +23,52 @@ const format = 'json';
 
 let url1 = `${base}method=${method}&api_key=${api_key}&per_page=${per_page}&format=${format}&nojsoncallback=1`;
 
-let url2 = ``
+callData(url1);
 
-fetch(url1)
-.then(data=>{
-    return data.json();
+container.addEventListener('click', e=>{
+    e.preventDefault();
+
+    if(!e.target.closest('a')) return;
+    
+    const imgBigSrc = e.target.closest('a').getAttribute('href');
+    const pop = document.createElement('aside');
+    pop.classList.add('pop');
+    let htmls = `
+                       <img src=${imgBigSrc} alt="">
+                       <span class="btnClose">close</span> 
+                    `
+    pop.innerHTML = htmls;
+    gallery.after(pop);
 })
-.then(json=>{
+
+container.addEventListener('click', e=>{
+    const pop = document.querySelector('.pop');
+    const btnClose = pop.querySelector('.btnClose');
+
+    if(e.target === btnClose) pop.remove();
+})
+
+btnSearch.addEventListener('click', e=>{
+    let tag = input.value;
+    tag = tag.trim();
+
+    let url2 = `${base}method=${method2}&api_key=${api_key}&per_page=${per_page}&privacy_filter=1&format=${format}&nojsoncallback=1&tags=${tag}`;
+
+    callData(url2);
+})
+
+function callData(url){
+    fetch(url)
+    .then(data=>{
+        return data.json();
+    })
+    .then(json=>{
+        createList(json);
+        delayLoading();
+    })
+}
+
+function createList(json){
     let items = json.photos.photo;
 
     let htmls = '';
@@ -58,7 +99,9 @@ fetch(url1)
 
     })
     gallery.innerHTML = htmls;
+}
 
+function delayLoading(){
     const imgs = gallery.querySelectorAll('img');
     const len = imgs.length;
     let count = 0;
@@ -72,30 +115,4 @@ fetch(url1)
             }
         }
     }
-
-
-})
-
-
-container.addEventListener('click', e=>{
-    e.preventDefault();
-
-    if(!e.target.closest('a')) return;
-    
-    const imgBigSrc = e.target.closest('a').getAttribute('href');
-    const pop = document.createElement('aside');
-    pop.classList.add('pop');
-    let htmls = `
-                       <img src=${imgBigSrc} alt="">
-                       <span class="btnClose">close</span> 
-                    `
-    pop.innerHTML = htmls;
-    gallery.after(pop);
-})
-
-container.addEventListener('click', e=>{
-    const pop = document.querySelector('.pop');
-    const btnClose = pop.querySelector('.btnClose');
-
-    if(e.target === btnClose) pop.remove();
-})
+}

@@ -79,7 +79,9 @@ section {
             }
         }
         .sub_content {
-
+            position: relative;
+            z-index: 100;
+            
             .inner {
                 width: 1180px;
                 margin: 0 auto;
