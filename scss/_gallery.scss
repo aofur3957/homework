@@ -200,3 +200,124 @@
         }
     }
 }
+
+@media screen and (max-width: 768px){
+    #gallery {
+        .content {
+            .sub_visual {
+                .inner{
+                    img {
+                        width: 100%;
+                        right: 0;
+                    }
+                }
+            }
+    
+            .sub_content {
+                .inner {
+                    width: 100%;
+                    padding: 0 10px;
+
+                    .gallery {
+                        article {
+                            width: 48%;
+                            .wrap {
+                                p {
+                                    width: 70%;
+                                    font: 16px/1 'arial';
+
+                                    &:last-of-type {
+                                        display: none;
+                                    }
+                                }
+                            }
+                            a {
+                                font: 18px/1 'Advent Pro';
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 539px){
+    #gallery {
+        .content {
+            .sub_visual {
+                .inner{
+                    h1 {
+                        font: bold 50px/1 'arial';
+                    }
+                    img {
+                        width: 100%;
+                        min-height: auto;
+                        bottom: -100px;
+                    }
+                }
+            }
+    
+            .sub_content {
+                .inner {
+                    width: 100%;
+                    padding: 0 10px;
+
+                    .searchBox {
+                        input[type="text"] {
+                            width: 100%;
+                            margin-right: 0;
+                            margin-bottom: 15px;
+                        }
+        
+                        button {
+                            width: 100%;
+                        }
+                    }
+
+                    .gallery {
+                        article {
+                            width: 100%;
+                            padding-bottom: 50px;
+                            margin-bottom: 50px;
+                            border-bottom: 1px solid #333;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #footer_sub {
+    
+        .inner {
+            .connect {
+            
+                input{
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+                
+                button {
+                    width: 100%;
+                }
+            }
+    
+            address {
+                flex-direction: column;
+    
+                div {
+                    width: 100%;
+                    display: flex;
+                    margin-bottom: 50px;
+                    justify-content: space-between;
+                    strong { 
+                        line-height: 1.7; 
+                    }
+                    p { 
+                    }
+                }
+            }
+        }
+    }
+}
