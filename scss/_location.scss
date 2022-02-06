@@ -1,265 +1,506 @@
 #location {
-    .company {
-        margin: 150px 0;
-        height: 600px;
-        position: relative;
-       
-        &::before {
-            content: 'LOCATION';
-            position: absolute;
-            top: -5vh; left: 40%;
-            transform: rotate(90deg);
-            transform-origin: left bottom;
-            font: 80px/1 'Koh Santepheap';
-            color: #aaa;
-
+    .content {
+        .sub_visual {
+            .inner {
+                img {
+                    position: absolute;
+                    bottom: -1100px;
+                    right: 0;
+                    width: 100%;
+                    height: auto;
+                }
+            }
         }
 
-        .inner {
-            height: 100%;
+        .sub_content {
+            background: #fafafa;
 
-            &::after {
-                content: '';
-                display: block;
-                clear: both;
+            .company {
+                padding: 150px 0;
+                height: 600px;
+                position: relative;
+                box-sizing: content-box;
+               
+                &::before {
+                    content: 'LOCATION';
+                    position: absolute;
+                    top: 7vh; left: 43%;
+                    transform: rotate(90deg);
+                    transform-origin: left bottom;
+                    font: 80px/1 'Koh Santepheap';
+                    color: #aaa;
+                }
+        
+                .inner {
+                    height: 100%;
+        
+                    &::after {
+                        content: '';
+                        display: block;
+                        clear: both;
+                    }
+        
+                    .info {
+                        width: 50%;
+                        float: left;
+            
+                        h2 {
+                            margin-bottom: 20px;
+                            font: 50px/1 'Koh Santepheap';
+                        }
+                
+                        >p {
+                            margin-bottom: 35px;
+                            font: 17px/1.4 'arial';
+                        }
+        
+                        article {
+                            width: 60%;
+                            margin-bottom: 35px;
+        
+                            h3 {
+                                margin-bottom: 10px;
+                                font: 400 18px/1 'Koh Santepheap';
+                            }
+        
+                            p {
+                                margin-bottom: 12px;
+                                font: 15px/1.3 'arial';
+                            }
+        
+                            span {
+                                i {
+                                    width: 28px;
+                                    height: 28px;
+                                    margin-right: 10px;
+                                    background: #eee;
+                                    border-radius: 50%;
+                                    text-align: center;
+                                    font-size: 14px;
+                                    line-height: 28px;
+        
+                                }
+                                font: 14px/1 'arial';
+                                color: crimson;
+                            }
+                        }
+                    }
+            
+                    .pic {
+                        float: right;
+                        width: 50%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: space-between;
+        
+                        article {
+                            float: left;
+                            overflow: hidden;
+                            width: 48%;
+                            border-radius: 20px;
+        
+                            &:first-of-type {
+                                align-self: flex-end;
+                                margin-bottom: 30px;
+                                height: 55%;
+                            }
+                            &:last-of-type {
+                                align-self: flex-start;
+                                margin-top: 30px;
+                                height: 70%;
+                            }
+                        }
+                    }
+                }
+                
             }
-
-            .info {
-                width: 50%;
-                float: left;
-    
+            
+            .customer {
+                padding: 150px 0;
+                background:  #333;
+        
                 h2 {
                     margin-bottom: 20px;
+                    text-align: center;
                     font: 50px/1 'Koh Santepheap';
+                    color: #fff;
                 }
         
-                >p {
-                    margin-bottom: 35px;
-                    font: 17px/1.4 'arial';
+                p {
+                    width: 50%;
+                    margin: 0 auto 50px;
+                    text-align: center;
+                    color: #fff;
                 }
-
-                article {
+        
+                #info {
                     width: 60%;
-                    margin-bottom: 35px;
-
-                    h3 {
-                        margin-bottom: 10px;
-                        font: 400 18px/1 'Koh Santepheap';
-                    }
-
-                    p {
-                        margin-bottom: 12px;
-                        font: 15px/1.3 'arial';
-                    }
-
-                    span {
-                        i {
-                            width: 28px;
-                            height: 28px;
-                            margin-right: 10px;
-                            background: #eee;
-                            border-radius: 50%;
-                            text-align: center;
-                            font-size: 14px;
-                            line-height: 28px;
-
-                        }
-                        font: 14px/1 'arial';
-                        color: crimson;
-                    }
-                }
-            }
-    
-            .pic {
-                float: left;
-                width: 50%;
-                height: 100%;
-                display: flex;
-                justify-content: space-between;
-
-                article {
-                    float: left;
-                    overflow: hidden;
-                    width: 48%;
-                    border-radius: 20px;
-
-                    &:first-of-type {
-                        align-self: flex-end;
-                        margin-bottom: 30px;
-                        height: 55%;
-                    }
-                    &:last-of-type {
-                        align-self: flex-start;
-                        margin-top: 30px;
-                        height: 70%;
-                    }
-                }
-            }
-        }
-        
-    }
-    
-    .customer {
-        padding: 150px 0;
-        background:  #333;
-
-        h2 {
-            margin-bottom: 20px;
-            text-align: center;
-            font: 50px/1 'Koh Santepheap';
-            color: #fff;
-        }
-
-        p {
-            width: 50%;
-            margin: 0 auto 50px;
-            text-align: center;
-            color: #fff;
-        }
-
-        #info {
-            width: 60%;
-            height: 100%;
-            margin: 0 auto;
-            font-size: 0;
-            text-align: right;
-            
-            input {
-                width: 49%;
-                padding: 5px 10px;
-                margin-bottom: 20px;
-                margin-right: 2%;
-                height: 35px;
-
-                &::placeholder {
-                    font: 16px/1 'arial';
-                }
-
-                &:nth-of-type(even) {
-                    margin-right: 0;
-                }
-            }
-
-            textarea {
-                width: 100%;
-                height: 130px;
-                margin-bottom: 20px;
-                padding: 5px 10px;
-
-                &::placeholder {
-                    font: 16px/1 'arial';
-                }
-            }
-
-            button {
-                display: inline-block;
-                width: 150px;
-                height: 30px;
-                background: #bbb;
-                border-radius: 15px;
-                font: 14px/1 'arial';
-                color: #333;
-            }
-
-        }
-    }
-    #mapWrap {
-        position: relative;
-
-        #map {
-            width: 100%;
-            height: 600px;
-            border: 1px solid #333;
-            filter: grayscale(1);
-        }
-
-        .zoomControl {
-            overflow: hidden;
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            border-radius: 10px;
-
-            span {
-                display: block;
-                width: 45px;
-                height: 45px;
-                background: #333;
-                text-align: center;
-                line-height: 45px;
-                color: #fff;
-                cursor: pointer;
-                transition: 0.5s;
-
-                &:hover {
-                    background: #555;
-                }
-
-                &:first-of-type {
-                    border-bottom: 1px solid #000;
-                }
-            }
-        }
-    }
-    
-    .store {
-        padding: 150px 0;
-
-        h2 {
-            margin-bottom: 20px;
-            font: 23px/1 'Koh Santepheap';
-        }
-    
-        article {
-            width: 49%;
-            padding: 20px;
-            height: 250px;
-            margin-right: 2%;
-            margin-bottom: 2%;
-            float: left;
-            border: 1px solid #e5e5e5;
-            cursor: pointer;
-    
-            &:nth-of-type(even) {
-                margin-right: 0;
-            }
-    
-            img { 
-                width: 50%;
-                float: left; 
-            }
-            
-            dl, strong {
-                float: left;
-                padding-left: 30px;
-                font: 20px/1 'arial';
-            }
-    
-            dl {
-                width: 50%;
-                
-                div {
-                    &::after { content: ''; display: block; clear: both;}
-                    margin-bottom: 15px;
+                    height: 100%;
+                    margin: 0 auto;
+                    font-size: 0;
+                    text-align: right;
                     
-                    dt { 
-                        display: inline-block;
-                        padding-right: 10px;
-                        color: #333;
-                        font: 16px/1 'arial';
+                    input {
+                        width: 49%;
+                        padding: 5px 10px;
+                        margin-bottom: 20px;
+                        margin-right: 2%;
+                        height: 35px;
+        
+                        &::placeholder {
+                            font: 16px/1 'arial';
+                        }
+        
+                        &:nth-of-type(even) {
+                            margin-right: 0;
+                        }
                     }
-                    dd { 
+        
+                    textarea {
+                        width: 100%;
+                        height: 130px;
+                        margin-bottom: 20px;
+                        padding: 5px 10px;
+        
+                        &::placeholder {
+                            font: 16px/1 'arial';
+                        }
+                    }
+        
+                    button {
                         display: inline-block;
-                        color: #666;
+                        width: 150px;
+                        height: 30px;
+                        background: #bbb;
+                        border-radius: 15px;
                         font: 14px/1 'arial';
+                        color: #333;
                     }
-                   
+        
                 }
             }
-            strong {
-                margin-bottom: 15px;
+            #mapWrap {
+                position: relative;
+        
+                #map {
+                    width: 100%;
+                    height: 600px;
+                    border: 1px solid #333;
+                    filter: grayscale(1);
+                }
+        
+                .zoomControl {
+                    overflow: hidden;
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+                    border-radius: 10px;
+        
+                    span {
+                        display: block;
+                        width: 45px;
+                        height: 45px;
+                        background: #333;
+                        text-align: center;
+                        line-height: 45px;
+                        color: #fff;
+                        cursor: pointer;
+                        transition: 0.5s;
+        
+                        &:hover {
+                            background: #555;
+                        }
+        
+                        &:first-of-type {
+                            border-bottom: 1px solid #000;
+                        }
+                    }
+                }
+            }
+            
+            .store {
+                padding: 150px 0;
+                
+                h2 {
+                    margin-bottom: 20px;
+                    font: 23px/1 'Koh Santepheap';
+                }
+            
+                article {
+                    width: 49%;
+                    padding: 20px;
+                    height: 250px;
+                    margin-right: 2%;
+                    margin-bottom: 2%;
+                    float: left;
+                    border: 1px solid #e5e5e5;
+                    cursor: pointer;
+            
+                    &:nth-of-type(even) {
+                        margin-right: 0;
+                    }
+            
+                    img { 
+                        width: 50%;
+                        float: left; 
+                    }
+                    
+                    dl, strong {
+                        float: left;
+                        padding-left: 30px;
+                        font: 20px/1 'arial';
+                    }
+            
+                    dl {
+                        width: 50%;
+                        
+                        div {
+                            &::after { content: ''; display: block; clear: both;}
+                            margin-bottom: 15px;
+                            
+                            dt { 
+                                display: inline-block;
+                                padding-right: 10px;
+                                color: #333;
+                                font: 16px/1 'arial';
+                            }
+                            dd { 
+                                display: inline-block;
+                                color: #666;
+                                font: 14px/1 'arial';
+                            }
+                           
+                        }
+                    }
+                    strong {
+                        margin-bottom: 15px;
+                    }
+                }
             }
         }
     }
+}
+
+@media screen and (max-width: 1179px){
+    #location {
+        .content {
+            .sub_visual {
+                .inner {
+                    width: 100%;
+
+                    img {
+                        min-height: 1440px;
+                    }
+                }
+            }
     
+            .sub_content {
+                .company {
+                    &::before {
+                        left: 43%;
+                    }
+            
+                    .inner {
+                        width: 100%;
+                        padding: 0 10px;
+
+                        .info {
+                            width: 45%;
+                            article {
+                                width: 100%;
+                            }
+                        }
+                
+                        .pic {
+                            width: 55%;
+                        }
+                    }
+                    
+                }
+                
+                .store {
+                    .inner {
+                        width: 100%;
+                        padding: 0 10px;
+                    }
+                }
+
+                .customer {
+                    .inner {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    #location {
+        .content {
+            .sub_content {
+                .company {
+
+                    &::before {
+                        opacity: 0.4;
+                    }
+
+                    .inner {
+                        height: auto;
+
+                        .info {
+                            width: 100%;
+
+                            h2 {
+                                text-align: center;
+                            }
+                    
+                            >p {
+                                text-align: center;
+                            }
+
+                            article {
+                                width: 40%;
+                                height: 170px;
+                                &:nth-of-type(1) {
+                                    float: left;
+                                }
+                                &:nth-of-type(2) {
+                                    clear: both;
+                                    float: right;
+                                }
+                                &:nth-of-type(3) {
+                                    clear: both;
+                                    margin: 0 auto;
+                                }
+                            }
+                        }
+                
+                        .pic {
+                            float: none;
+                            width: 100%;
+                            height: 500px;
+                            position: absolute;
+                            top: 100px; left: 0;
+
+                            article {
+                                &:first-of-type {
+                                    margin-bottom: 110px;
+                                    height: 30%;
+                                }
+                                &:last-of-type {
+                                    margin-top: 60px;
+                                    height: 30%;
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+                
+                #mapWrap {
+                    #map {
+                        height: 400px;
+                    }
+                }
+
+                .store {
+                    .inner {
+                        h2 {
+                            text-align: center;
+                        }
+                    
+                        article {
+                            height: auto;
+                    
+                            img { 
+                                width: 100%;
+                                float: none; 
+                            }
+                            
+                            dl, strong {
+                                float: none;
+                                padding-left: 0;
+                            }
+                            
+                            dl {
+                                width: 100%;
+                            }
+                            strong {
+                                margin-bottom: 15px;
+                                margin-top: 10px;
+                                display: block;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+
+                .customer {
+                    .inner {
+                        p {
+                            width: 70%;
+                        }
+                
+                        #info {
+                            width: 80%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 539px){
+    #location {
+        .content {
+            .sub_visual {
+                .inner {
+                    h1 {
+                        font: bold 50px/1 'arial';
+                    }
+                }
+            }
+            .sub_content {
+                .company {
+
+                    .inner {
+                        .info {
+                            >p {
+                                min-height: 80px
+                            }
+
+                            article {
+                                width: 45%;
+                                min-height: 250px;
+                            }
+                        }
+                
+                        .pic {
+                            top: 150px;
+                            article {
+                                &:first-of-type {
+                                    margin-bottom: 30px;
+                                }
+                                &:last-of-type {
+                                    margin-top: 30px;
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+
+                .store {
+                    padding: 100px 0;
+                    .inner {
+                        article {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
