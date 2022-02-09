@@ -1,9 +1,11 @@
-const form = document.querySelector('#join_form');
-const btn = form.querySelector('button')
+const form = document.querySelector('#insertInfo');
+const btnCancel = form.querySelector('.cancel');
+const btnSubmit = form.querySelector('.submit');
 
-btn.addEventListener('click', e=>{
+btnSubmit.addEventListener('click', e=>{
+    if(!isAgree("agreement")) e.preventDefault();
+    if(!isTxt("name", 2)) e.preventDefault();
     if(!isTxt("id", 5)) e.preventDefault();
-    if(!isTxt("name", 5)) e.preventDefault();
     if(!isTxt("phone", 11)) e.preventDefault();
     if(!isPwd("pwd1", "pwd2", 8)) e.preventDefault();
     if(!isEmail("email")) e.preventDefault();
@@ -25,7 +27,7 @@ function isTxt(name, len){
         if(errMsgs.length>0) input.closest("td").querySelector("p").remove(); 
 
         const errMsg = document.createElement("p"); 
-        errMsg.append(`입력항목을 ${len}글자 이상 입력하세요`); 
+        errMsg.append(`해당항목을 ${len}글자 이상 입력하세요`); 
         input.closest("td").append(errMsg); 
 
         return false; 
@@ -56,8 +58,7 @@ function isCheck(name){
 
     let inputs = form.querySelectorAll(`[name=${name}]`); 
     let isChecked =false; 
-    //input 요소의 갯수만큼 반복을 돌면서 
-    //하나라도 체크되어 있는 게 있다면 isChecked 를 true로 변경 
+    
     for(let el of inputs){
         if(el.checked) isChecked = true; 
     }
@@ -67,7 +68,6 @@ function isCheck(name){
         if(errMsgs.length>0) inputs[0].closest("td").querySelector("p").remove(); 
         return true; 
     }else{
-
         const errMsgs = inputs[0].closest("td").querySelectorAll("p"); 
         if(errMsgs.length>0) inputs[0].closest("td").querySelector("p").remove(); 
 
@@ -81,23 +81,24 @@ function isCheck(name){
 
 function isAgree(name){
 
-    let input = form.querySelector(`[name=${name}]`); 
+    let inputs = document.querySelectorAll(`[name=${name}]`); 
     let isChecked =false; 
-    //input 요소의 갯수만큼 반복을 돌면서 
-    //하나라도 체크되어 있는 게 있다면 isChecked 를 true로 변경 
+   
+    for(let input of inputs){
+        if(input.checked) isChecked = true;
+    }
      
     if(isChecked){
-        const errMsgs = input.closest("td").querySelectorAll("p"); 
-        if(errMsgs.length>0) input.closest("td").querySelector("p").remove(); 
+        const errMsgs = inputs[0].closest(".agreement").querySelectorAll("strong"); 
+        if(errMsgs.length>0) inputs[0].closest(".agreement").querySelector("strong").remove(); 
         return true; 
     }else{
+        const errMsgs = inputs[0].closest(".agreement").querySelectorAll("strong"); 
+        if(errMsgs.length>0) inputs[0].closest(".agreement").querySelector("strong").remove(); 
 
-        const errMsgs = input.closest("div").querySelectorAll("p"); 
-        if(errMsgs.length>0) input.closest("div").querySelector("p").remove(); 
-
-        const errMsg = document.createElement("p"); 
+        const errMsg = document.createElement("strong"); 
         errMsg.append(`약관에 동의해 주세요`); 
-        input.closest("div").append(errMsg); 
+        inputs[0].closest(".agreement").append(errMsg); 
 
         return false; 
     }

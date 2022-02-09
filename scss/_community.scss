@@ -158,31 +158,15 @@
                                     margin: 0 auto;
                                     width: 60%;
                                     margin-bottom: 20px;
-
-                                    .cls-1 {
-                                        fill: #333;
-                                    }
-                                    .cls-2 {
+                                    
+                                    .line {
                                         fill: none;
-                                        stroke: #333;
-                                        stroke-width: 15px;
+                                        stroke: #000;
+                                        stroke-width: 3;
                                         stroke-miterlimit: 10;
-                                        stroke-dasharray: 830;
-                                        animation: face 1s linear 1 both;
+                                        stroke-dasharray: 750;
+                                        animation: line 1s linear 1 both;
                                         animation-play-state: paused;
-                                         
-                                    }
-                                    .cls-3 {
-                                        fill: none;
-                                        stroke: #333;
-                                        stroke-miterlimit: 10;
-                                        stroke-width: 15px;
-                                        stroke-dasharray: 160;
-                                        animation: mouth 1s linear 1s 1 both;
-                                        animation-play-state: paused;
-                                    }
-                                    .cls-4 {
-                                        fill: brown;
                                     }
                                 }
                             }
@@ -366,15 +350,11 @@
     
 }
 
-@keyframes face {
-    0% {stroke-dashoffset: 830}
-    100% {stroke-dashoffset: 0}
-}
-@keyframes mouth {
-    0% {stroke-dashoffset: 160; opacity: 0;}
-    1% {opacity: 1;}
-    100% {stroke-dashoffset: 0;}
-}
+// @keyframes line {
+//     0% {stroke-dashoffset: 750}
+//     100% {stroke-dashoffset: 0}
+// }
+
 
 @media screen and (max-width: 1179px){
     #header_sub {

@@ -10,11 +10,9 @@ window.addEventListener('scroll', e=>{
 
     if(scroll >= faqOffset + base){
         tabTitles.forEach((tabTitle, idx)=>{
-            let faceLine = tabTitle.querySelector('.cls-2');
-            let mouthLine = tabTitle.querySelector('.cls-3');
+            let Line = tabTitle.querySelector('.line');
             
-            faceLine.style.animationPlayState = 'running';
-            mouthLine.style.animationPlayState = 'running';
+            Line.style.animationPlayState = 'running';
         })
     }
 })

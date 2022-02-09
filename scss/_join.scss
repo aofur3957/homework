@@ -1,47 +1,206 @@
 #join {
+    .sub_visual {
+        .inner {
+            img {
+                width: 50%;
+                height: auto;
+                position: absolute;
+                bottom: -170px;
+                right: 0;
+            }
+        }
+    }
     .sub_content {
+        padding: 150px 0;
+        background: #f6f6f6;
         .inner {
             h2 {
-                margin-bottom: 50px;
-                text-align: center;
+                margin-bottom: 30px;
                 font: 40px/1 'Koh Santepheap';
             }
-            #join_form {
-                table {
-                    width: 60%;
-                    margin: 0 auto;
-                    border-top: 5px solid salmon;
 
-                    th { 
-                        width: 20%;
-                        padding: 30px 0;
-                        font: 16px/1 'arial';
+            >p {
+                margin-bottom: 50px;
+                font: 19px/1 'arial';
+                color: #666;
+            }
+
+            >div {
+                padding: 100px;
+                background: #fcfcfc;
+
+                .agreement {
+                    h3 {
+                        margin-bottom: 20px;
+                        padding-bottom: 20px;
+                        font: 22px/1 'Koh Santepheap';
+                        border-bottom: 2px solid crimson;
+                        color: #333;
                     }
-                    td {
-                        input[type="text"],
-                        input[type="password"] {
-                            width: 50%;
-                            height: 50px;
-                            border: 1px solid #aaa;
-                            border-radius: 5px;
-                            background: fff;
 
-                            &::placeholder {
-                                padding-left: 10px;
+                    .txt {
+                        overflow: auto;
+                        height: 300px;
+                        padding: 0 40px;
+                        border: 1px solid #ddd;
+                        background: #fff;
+
+                        h4 {
+                            margin-top: 30px;
+                            margin-bottom: 20px;
+                            font: 600 22px/1 'arial';
+                            color: #333;
+                        }
+
+                        p {
+                            font: 16px/1.4 'arial';
+                            color: #999;
+                        }
+
+                        strong {
+                            font: 16px/3.5 'arial';
+                            color: #999;
+                        }
+                    }
+
+                    .controls {
+                        margin: 35px 0;
+
+                        &::after {
+                            content: '';
+                            display: block;
+                            clear: both;
+                        }
+
+                        p {
+                            float: left;
+                            font: 16px/1 'arial';
+                            color: #666;
+                        }
+
+                        div {
+                            float: right;
+
+                            input[type="radio"] {
+                                width: 20px;
+                                height: 20px;
+                                vertical-align: middle;
+                                margin-right: 3px;
+                            }
+
+                            label {
+                                font: 16px/1 'arial';
+                                color: #666;
+                                vertical-align: bottom;
+                                margin-right: 20px;
+
+                                &:last-of-type {
+                                    margin-right: 0;
+                                }
                             }
                         }
-
-                        label[for="yes"] {
-                            margin-right: 10px;
-                        }
-
                     }
+                }
+            }
+            
+            #insertInfo {
+                table {
+                    width: 100%;
+
+                    caption {
+                        padding-bottom: 20px;
+                        text-align: left;
+                        font: 22px/1 'Koh Santepheap';
+                        border-bottom: 2px solid crimson;
+                        color: #333;
+                    }
+                    tr {
+                        border-bottom: 1px solid #ddd;
+                        &:last-of-type {
+                            border-bottom: none;
+
+                            th {
+                                text-align: center;
+                                
+                                button {
+                                    margin: 0 5px;
+                                }
+                            }
+                        }
+                        
+                        th { 
+                            width: 20%;
+                            padding: 30px 0;
+                            font: 16px/1.4 'arial';
+                            text-align: left;
+                            color: #666;
+    
+                            &:last-of-type {
+                            }
+                        }
+                        td {
+                            padding: 15px 0;
+                            input[type="text"],
+                            input[type="password"],
+                            input[type="email"] {
+                                width: 50%;
+                                height: 50px;
+                                padding-left: 15px;
+                                border: 1px solid #ddd;
+                                border-radius: 5px;
+                                background: #fff;
+                                font: 16px/1 'arial';
+                                color: #999;
+                                
+    
+                                &::placeholder {
+                                    font: 16px/1 'arial';
+                                    color: #999;
+                                    opacity: 1;
+                                    transition: 0.8s;
+                                }
+    
+                                &:focus {
+                                    &::placeholder {
+                                        opacity: 0;
+                                    }
+                                }
+                            }
+                            
+                            input[type="checkbox"] {
+                                width: 20px;
+                                height: 20px;
+                                vertical-align: middle;
+                                margin-left: 15px;
+
+                                &:first-of-type {
+                                    margin-left: 0;
+                                }
+                            }
+
+                            label[for="chkEmail"],
+                            label[for="chkPhone"],
+                            label[for="chkMail"],
+                            label[for="chkSms"] {
+                                vertical-align: middle;
+                                color: #999;
+                            }
+
+                            p {
+                                margin-top: 10px;
+                                font: 15px/1 'arial';
+                                color: crimson;
+                            }
+                        }
+                    }
+                    
 
                     button {
-                        width: 50%;
+                        width: 150px;
                         height: 50px;
                         background: #333;
                         color: #fff;
+                        border-radius: 30px;
                     }
                 }
             }
