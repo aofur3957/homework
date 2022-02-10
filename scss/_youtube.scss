@@ -58,16 +58,29 @@
 
             .videoSection1 {
                 padding-bottom: 150px;
-
+                position: relative;
                 article {
                     position: relative;
                     height: 480px;
 
                     a {
                         display: block;
+                        position: relative;
                         width: 65%;
                         height: 100%;
                         float: left;
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            width: 150px;
+                            height: 150px;
+                            margin-top: -75px;
+                            margin-left: -75px;
+                            background: url(../img/playB.svg) center/contain;
+                        }
                     }
                 }
                 .txt {
@@ -138,10 +151,23 @@
                     width: 22%;
                     background: #fcfcfc;
                     padding: 25px;
-
+                    position: relative;
+                    
                     .pic {
                         display: block;
                         height: 200px;
+                        position: relative;
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: 50%; left: 50%;
+                            background: url(../img/playB.svg) center/contain;
+                            width: 60px; height: 60px;
+                            margin-top: -30px;
+                            margin-left: -30px;
+                            border-radius: 50%;
+                        }
                     }
 
                     h4 {
@@ -172,6 +198,19 @@
                         width: 65%;
                         height: 100%;
                         float: right;
+                        position: relative;
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            width: 150px;
+                            height: 150px;
+                            margin-top: -75px;
+                            margin-left: -75px;
+                            background: url(../img/playB.svg) center/contain;
+                        }
                     }
                 }
                 .txt {

@@ -1355,6 +1355,7 @@ section .content .sub_content .inner {
 }
 #youtube .sub_content .inner .videoSection1 {
   padding-bottom: 150px;
+  position: relative;
 }
 #youtube .sub_content .inner .videoSection1 article {
   position: relative;
@@ -1362,9 +1363,21 @@ section .content .sub_content .inner {
 }
 #youtube .sub_content .inner .videoSection1 article a {
   display: block;
+  position: relative;
   width: 65%;
   height: 100%;
   float: left;
+}
+#youtube .sub_content .inner .videoSection1 article a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  margin-top: -75px;
+  margin-left: -75px;
+  background: url(../img/playB.svg) center/contain;
 }
 #youtube .sub_content .inner .videoSection1 .txt {
   width: 50%;
@@ -1423,10 +1436,24 @@ section .content .sub_content .inner {
   width: 22%;
   background: #fcfcfc;
   padding: 25px;
+  position: relative;
 }
 #youtube .sub_content .inner .videoSection2 article .pic {
   display: block;
   height: 200px;
+  position: relative;
+}
+#youtube .sub_content .inner .videoSection2 article .pic::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: url(../img/playB.svg) center/contain;
+  width: 60px;
+  height: 60px;
+  margin-top: -30px;
+  margin-left: -30px;
+  border-radius: 50%;
 }
 #youtube .sub_content .inner .videoSection2 article h4 {
   margin: 15px 0 15px;
@@ -1449,6 +1476,18 @@ section .content .sub_content .inner {
   width: 65%;
   height: 100%;
   float: right;
+  position: relative;
+}
+#youtube .sub_content .inner .videoSection3 article a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  margin-top: -75px;
+  margin-left: -75px;
+  background: url(../img/playB.svg) center/contain;
 }
 #youtube .sub_content .inner .videoSection3 .txt {
   width: 50%;
