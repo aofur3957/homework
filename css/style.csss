@@ -1675,9 +1675,9 @@ figure button {
 }
 #location .content .sub_visual .inner img {
   position: absolute;
-  bottom: -400px;
+  bottom: -1100px;
   right: 0;
-  width: 55%;
+  width: 80%;
   height: auto;
 }
 #location .content .sub_content {
@@ -3158,4 +3158,4 @@ footer .inner address div:last-of-type {
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.csss.map */
