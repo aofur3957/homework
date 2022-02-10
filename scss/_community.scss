@@ -152,21 +152,39 @@
                                 width: 100%;
                                 padding: 40px;
                                 font: bold 20px/1 'arial';
-
                                 svg {
-                                    display: block;
+                                    width: 70%;
                                     margin: 0 auto;
-                                    width: 60%;
+                                    display: block;
                                     margin-bottom: 20px;
-                                    
-                                    .line {
+                                }
+                                svg.note {
+                                    .st0{fill:none;stroke:#333;stroke-width:3;stroke-miterlimit:10;}
+
+                                    .st1{fill:none;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}
+                                }
+
+                                svg.product {
+                                    .st0 {
                                         fill: none;
-                                        stroke: #000;
-                                        stroke-width: 3;
-                                        stroke-miterlimit: 10;
-                                        stroke-dasharray: 750;
-                                        animation: line 1s linear 1 both;
-                                        animation-play-state: paused;
+                                        stroke:#1D1D1B;stroke-width:3;stroke-miterlimit:10;
+                                    }
+                                    
+                                    .st1{
+                                        fill:none; stroke:#1D1D1B;stroke-width:3;stroke-miterlimit:10;
+                                    }
+                                }
+
+                                svg.building {
+                                    .st0 {fill:none;}
+                                    .st1 {
+                                        fill:none;stroke:#000000;stroke-width:3;stroke-miterlimit:10;
+                                    }
+                                }
+
+                                svg.cost {
+                                    .st0{
+                                        fill: none; stroke:#1D1D1B;stroke-width:3;stroke-miterlimit:10;
                                     }
                                 }
                             }

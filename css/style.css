@@ -719,19 +719,49 @@ section .content .sub_content .inner {
   font: bold 20px/1 "arial";
 }
 #community .content .sub_content .faqBodySection .inner #tab dt button svg {
-  display: block;
+  width: 70%;
   margin: 0 auto;
-  width: 60%;
+  display: block;
   margin-bottom: 20px;
 }
-#community .content .sub_content .faqBodySection .inner #tab dt button svg .line {
+#community .content .sub_content .faqBodySection .inner #tab dt button svg.note .st0 {
   fill: none;
-  stroke: #000;
+  stroke: #333;
   stroke-width: 3;
   stroke-miterlimit: 10;
-  stroke-dasharray: 750;
-  animation: line 1s linear 1 both;
-  animation-play-state: paused;
+}
+#community .content .sub_content .faqBodySection .inner #tab dt button svg.note .st1 {
+  fill: none;
+  stroke: #000000;
+  stroke-width: 3;
+  stroke-miterlimit: 10;
+}
+#community .content .sub_content .faqBodySection .inner #tab dt button svg.product .st0 {
+  fill: none;
+  stroke: #1D1D1B;
+  stroke-width: 3;
+  stroke-miterlimit: 10;
+}
+#community .content .sub_content .faqBodySection .inner #tab dt button svg.product .st1 {
+  fill: none;
+  stroke: #1D1D1B;
+  stroke-width: 3;
+  stroke-miterlimit: 10;
+}
+#community .content .sub_content .faqBodySection .inner #tab dt button svg.building .st0 {
+  fill: none;
+}
+#community .content .sub_content .faqBodySection .inner #tab dt button svg.building .st1 {
+  fill: none;
+  stroke: #000000;
+  stroke-width: 3;
+  stroke-miterlimit: 10;
+}
+#community .content .sub_content .faqBodySection .inner #tab dt button svg.cost .st0 {
+  fill: none;
+  stroke: #1D1D1B;
+  stroke-width: 3;
+  stroke-miterlimit: 10;
 }
 #community .content .sub_content .faqBodySection .inner #tab dt.on {
   background: pink;
