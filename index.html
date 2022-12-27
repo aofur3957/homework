@@ -14,32 +14,34 @@
     <script defer src="js/swiper.js"></script>
 </head>
 <body>
+<!-- header -->
     <header id="header">
         <h1><a href="index.html">A</a></h1>
-        
         <div class="inner">
             <div class="wrap">
                 <nav>
                     <ul>
-                        <li><a href="department.html">DEPARTMENT</a></li>
-                        <li><a href="community.html">COMMUNITY</a></li>
-                        <li><a href="gallery.html">GALLERY</a></li>
-                        <li><a href="youtube.html">YOUTUBE</a></li>
-                        <li><a href="location.html">LOCATION</a></li>
+                        <li><a href="department.html">Department</a></li>
+                        <li><a href="community.html">Community</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="youtube.html">Youtube</a></li>
+                        <li><a href="location.html">Location</a></li>
                     </ul>
                 </nav>
+                <div class="login">
+                    <a href="#">
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                        LogIn
+                    </a>
+                    <a href="join.html">
+                        <i class="fa-regular fa-face-smile"></i> Join
+                    </a>
+                </div>
             </div>
         </div>
-        
-        <div class="login">
-            <a href="#">LogIn</a>
-            <a href="join.html">Join</a>
-        </div>
-        
         <button class="hambergur">
             <span>메뉴펼치기</span>
         </button>
-
         <nav class="menuMo">
             <h2>Menu.</h2>
             <ul>
@@ -53,13 +55,13 @@
                 <span>닫기</span>
             </button>
         </nav>
-    
     </header>
+<!-- header -->
     <section id="visual">
         <div class="inner">
-            <div class="slide">
+            <div class="slides">
                 <ul>
-                    <li>
+                    <li class="active" data-index = "1">
                         <div class="txt">
                             <h1>
                                 <span>/ RECENT PROJECT</span>
@@ -74,7 +76,7 @@
                             <img src="img/visual1.jpg" alt="">
                         </div>
                     </li>
-                    <li>
+                    <li data-index = "2">
                         <div class="txt">
                             <h1>
                                 <span>/RECENT PROJECT</span>
@@ -89,7 +91,7 @@
                             <img src="img/visual1.jpg" alt="">
                         </div>
                     </li>
-                    <li>
+                    <li data-index = "3">
                         <div class="txt">
                             <h1>
                                 <span>/RECENT PROJECT</span>
@@ -119,7 +121,6 @@
             </div>
         </div>
     </section>
-    
     <section id="introducing">
         <div class="inner">
             <article>

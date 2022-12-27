@@ -209,7 +209,6 @@ section .content .sub_content .inner {
   #header_sub .hambergur {
     display: block;
   }
-
   #footer_sub .inner {
     width: 100%;
     padding: 50px 20px;
@@ -724,34 +723,25 @@ section .content .sub_content .inner {
   display: block;
   margin-bottom: 20px;
 }
-#community .content .sub_content .faqBodySection .inner #tab dt button svg.note .st0 {
+#community .content .sub_content .faqBodySection .inner #tab dt button svg.note .strokeStyle {
   fill: none;
   stroke: #333;
   stroke-width: 3;
   stroke-miterlimit: 10;
+  stroke-dasharray: 228;
+  stroke-dashoffset: 228;
+  animation: strokeNote 3s both;
 }
-#community .content .sub_content .faqBodySection .inner #tab dt button svg.note .st1 {
+#community .content .sub_content .faqBodySection .inner #tab dt button svg.product .strokeStyle {
   fill: none;
-  stroke: #000000;
+  stroke: #333;
   stroke-width: 3;
   stroke-miterlimit: 10;
+  stroke-dasharray: 292;
+  stroke-dashoffset: 292;
+  animation: strokeProduct 3s both;
 }
-#community .content .sub_content .faqBodySection .inner #tab dt button svg.product .st0 {
-  fill: none;
-  stroke: #1D1D1B;
-  stroke-width: 3;
-  stroke-miterlimit: 10;
-}
-#community .content .sub_content .faqBodySection .inner #tab dt button svg.product .st1 {
-  fill: none;
-  stroke: #1D1D1B;
-  stroke-width: 3;
-  stroke-miterlimit: 10;
-}
-#community .content .sub_content .faqBodySection .inner #tab dt button svg.building .st0 {
-  fill: none;
-}
-#community .content .sub_content .faqBodySection .inner #tab dt button svg.building .st1 {
+#community .content .sub_content .faqBodySection .inner #tab dt button svg.building .strokeStyle {
   fill: none;
   stroke: #000000;
   stroke-width: 3;
@@ -913,6 +903,22 @@ section .content .sub_content .inner {
   color: #fff;
 }
 
+@keyframes strokeNote {
+  0% {
+    stroke-dashoffset: 228;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes strokeProduct {
+  0% {
+    stroke-dashoffset: 292;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
 @media screen and (max-width: 1179px) {
   #header_sub nav {
     display: none;
@@ -920,7 +926,6 @@ section .content .sub_content .inner {
   #header_sub .hambergur {
     display: block;
   }
-
   #community .content .sub_visual .inner {
     width: 100%;
   }
@@ -956,7 +961,6 @@ section .content .sub_content .inner {
   #community .content .sub_content .faqBodySection .inner table th:nth-of-type(2) {
     width: 50%;
   }
-
   #footer_sub .inner {
     width: 100%;
     padding: 50px 20px;
@@ -1191,7 +1195,6 @@ section .content .sub_content .inner {
   #header_sub .hambergur {
     display: block;
   }
-
   #gallery .content .sub_visual .inner {
     width: 100%;
   }
@@ -1206,7 +1209,6 @@ section .content .sub_content .inner {
     width: 100%;
     padding: 0 10px;
   }
-
   #footer_sub .inner {
     width: 100%;
     padding: 50px 20px;
@@ -1282,7 +1284,6 @@ section .content .sub_content .inner {
     margin-bottom: 50px;
     border-bottom: 1px solid #333;
   }
-
   #footer_sub .inner .connect input {
     width: 100%;
     margin-bottom: 20px;
@@ -2224,12 +2225,12 @@ figure button {
 }
 
 #header {
-  padding: 2.5vh 0 2vh;
+  padding: 25px 20px;
   background: #fff;
 }
 #header h1 {
   position: absolute;
-  top: 2vh;
+  top: 16px;
   left: 5vw;
 }
 #header h1 a {
@@ -2250,9 +2251,9 @@ figure button {
   position: absolute;
   width: 250px;
   top: 130px;
-  left: 0%;
+  left: 0;
   font: 12px/1 "arial";
-  transform-origin: 8% top;
+  transform-origin: 7% top;
   transform: rotate(90deg);
   letter-spacing: 2px;
   color: #bbb;
@@ -2263,9 +2264,6 @@ figure button {
 }
 #header .inner nav {
   float: right;
-}
-#header .inner nav ul {
-  margin-top: 5px;
 }
 #header .inner nav ul::after {
   content: "";
@@ -2279,6 +2277,14 @@ figure button {
 #header .inner nav ul li a {
   font: 17px/1 "arial";
   color: #aaa;
+}
+#header .inner .login {
+  float: left;
+  margin: 0 0 0 292px;
+}
+#header .inner .login a {
+  color: #777;
+  padding: 0 0 0 12px;
 }
 #header .hambergur {
   display: none;
@@ -2317,16 +2323,6 @@ figure button {
   margin-top: -2px;
   background: #333;
   text-indent: -9999px;
-}
-#header .login {
-  position: absolute;
-  top: 1vh;
-  right: 5vw;
-}
-#header .login a {
-  color: #333;
-  font: 15px/1 "arial";
-  margin-left: 5px;
 }
 #header .menuMo {
   display: none;
@@ -2412,54 +2408,54 @@ figure button {
   width: 1180px;
   margin: 0 auto;
 }
-#visual .inner .slide {
+#visual .inner .slides {
   width: 100%;
   height: 600px;
   overflow: hidden;
   position: relative;
 }
-#visual .inner .slide ul {
+#visual .inner .slides ul {
   width: 300%;
   height: 100%;
 }
-#visual .inner .slide ul li {
+#visual .inner .slides ul li {
   width: 33.333%;
   height: 100%;
   float: left;
   position: relative;
 }
-#visual .inner .slide ul li .txt {
+#visual .inner .slides ul li .txt {
   width: 45%;
   position: absolute;
   top: 10%;
   left: 0;
 }
-#visual .inner .slide ul li .txt h1 {
+#visual .inner .slides ul li .txt h1 {
   margin-bottom: 20px;
   font: bold 60px/1.1 "Koh Santepheap";
 }
-#visual .inner .slide ul li .txt h1 span {
+#visual .inner .slides ul li .txt h1 span {
   display: block;
   margin-bottom: 20px;
   font: bold 14px/1 "Advent Pro";
   color: #666;
   letter-spacing: 1.5px;
 }
-#visual .inner .slide ul li .txt p {
+#visual .inner .slides ul li .txt p {
   margin-bottom: 15px;
   font: 15px/1.7 "arial";
 }
-#visual .inner .slide ul li .txt a {
+#visual .inner .slides ul li .txt a {
   font: 500 14px/1 "Advent Pro";
   color: #777;
   letter-spacing: 1px;
 }
-#visual .inner .slide ul li .pic {
+#visual .inner .slides ul li .pic {
   width: 75%;
   height: 100%;
   float: right;
 }
-#visual .inner .slide .paging {
+#visual .inner .slides .paging {
   position: absolute;
   bottom: 0;
   left: 25%;
@@ -2468,7 +2464,7 @@ figure button {
   background: #fff;
   font-size: 0;
 }
-#visual .inner .slide .paging > span {
+#visual .inner .slides .paging > span {
   position: relative;
   top: -3px;
   display: inline-block;
@@ -2478,17 +2474,17 @@ figure button {
   letter-spacing: 5px;
   color: #aaa;
 }
-#visual .inner .slide .paging button {
+#visual .inner .slides .paging button {
   display: inline-block;
   width: 33.3333%;
   height: 100%;
   color: #aaa;
   font-size: 20px;
 }
-#visual .inner .slide .paging button.prev {
+#visual .inner .slides .paging button.prev {
   text-align: right;
 }
-#visual .inner .slide .paging button.next {
+#visual .inner .slides .paging button.next {
   text-align: left;
 }
 
@@ -2860,7 +2856,6 @@ footer .inner address div:last-of-type {
   #header h1::after {
     display: none;
   }
-
   #project .inner .swiper .swiper-button-prev {
     justify-content: flex-start;
     margin-left: -100px;
@@ -2898,21 +2893,19 @@ footer .inner address div:last-of-type {
   #header .hambergur {
     display: block;
   }
-
   #visual .inner {
     width: 100%;
     padding: 0 10px;
   }
-  #visual .inner .slide ul li .txt {
+  #visual .inner .slides ul li .txt {
     width: 60%;
   }
-  #visual .inner .slide ul li .txt h1 {
+  #visual .inner .slides ul li .txt h1 {
     font: bold 50px/1.1 "Koh Santepheap";
   }
-  #visual .inner .slide ul li .txt p {
+  #visual .inner .slides ul li .txt p {
     font: 16px/1.7 "arial";
   }
-
   #introducing .inner {
     width: 100%;
     padding: 10px;
@@ -2939,7 +2932,6 @@ footer .inner address div:last-of-type {
   #introducing .inner article .txt a {
     color: #fff;
   }
-
   #project .inner .swiper {
     height: 600px;
   }
@@ -2956,7 +2948,6 @@ footer .inner address div:last-of-type {
   #project .inner .swiper .swiper-wrapper .swiper-slide .txt a {
     font: 14px/1 "arial";
   }
-
   #service .inner {
     width: 100%;
     padding: 0 10px;
@@ -2971,7 +2962,6 @@ footer .inner address div:last-of-type {
   #service .inner div a {
     font: 14px/1 "arial";
   }
-
   #news .inner {
     width: 100%;
   }
@@ -2982,7 +2972,6 @@ footer .inner address div:last-of-type {
     font: 12px/1 "arial";
     color: #888;
   }
-
   #member .inner {
     width: 100%;
     padding: 0 10px;
@@ -2990,7 +2979,6 @@ footer .inner address div:last-of-type {
   #member .inner > div article {
     width: 32%;
   }
-
   footer .inner {
     width: 100%;
     padding: 50px 20px;
@@ -3021,16 +3009,15 @@ footer .inner address div:last-of-type {
     width: 100%;
     padding: 0 10px;
   }
-  #visual .inner .slide ul li .txt {
+  #visual .inner .slides ul li .txt {
     width: 60%;
   }
-  #visual .inner .slide ul li .txt h1 {
+  #visual .inner .slides ul li .txt h1 {
     font: bold 50px/1.1 "Koh Santepheap";
   }
-  #visual .inner .slide ul li .txt p {
+  #visual .inner .slides ul li .txt p {
     font: 16px/1.7 "arial";
   }
-
   #introducing .inner article .txt {
     right: 10vw;
   }
@@ -3040,7 +3027,6 @@ footer .inner address div:last-of-type {
   #introducing .inner article .txt a {
     color: #fff;
   }
-
   #service .inner ul {
     width: 45%;
     display: block;
@@ -3048,7 +3034,6 @@ footer .inner address div:last-of-type {
   #service .inner ul li {
     width: 100%;
   }
-
   #member .inner > div {
     flex-direction: column;
     justify-content: flex-start;
@@ -3065,21 +3050,20 @@ footer .inner address div:last-of-type {
     width: 100%;
     padding: 0 10px;
   }
-  #visual .inner .slide ul li .txt {
+  #visual .inner .slides ul li .txt {
     width: 70%;
     left: 10%;
   }
-  #visual .inner .slide ul li .txt a {
+  #visual .inner .slides ul li .txt a {
     font-weight: 700;
     color: #333;
   }
-  #visual .inner .slide ul li .pic {
+  #visual .inner .slides ul li .pic {
     width: 100%;
   }
-  #visual .inner .slide .paging {
+  #visual .inner .slides .paging {
     left: 10%;
   }
-
   #introducing {
     padding: 50px 0;
   }
@@ -3108,7 +3092,6 @@ footer .inner address div:last-of-type {
     display: block;
     clear: both;
   }
-
   #service .inner {
     display: block;
   }
@@ -3123,7 +3106,6 @@ footer .inner address div:last-of-type {
   #service .inner ul li {
     width: 100%;
   }
-
   #news .inner {
     width: 100%;
   }
@@ -3136,7 +3118,6 @@ footer .inner address div:last-of-type {
   #news .inner article div h1 {
     font-size: 16px;
   }
-
   footer .inner .connect input {
     width: 100%;
     margin-bottom: 20px;

@@ -5,17 +5,17 @@ const faqOffset = document.querySelector('.faqHeaderSection').offsetTop;
 const base = -300;
 
 
-window.addEventListener('scroll', e=>{
-    let scroll = window.scrollY || window.pageYOffset;
+// window.addEventListener('scroll', e=>{
+//     let scroll = window.scrollY || window.pageYOffset;
 
-    if(scroll >= faqOffset + base){
-        tabTitles.forEach((tabTitle, idx)=>{
-            let Line = tabTitle.querySelector('.line');
+//     if(scroll >= faqOffset + base){
+//         tabTitles.forEach((tabTitle, idx)=>{
+//             let Line = tabTitle.querySelector('.line');
             
-            Line.style.animationPlayState = 'running';
-        })
-    }
-})
+//             Line.style.animationPlayState = 'running';
+//         })
+//     }
+// })
 
 
 tabTitles.forEach((tabTitle, idx)=>{

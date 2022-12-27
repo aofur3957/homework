@@ -137,6 +137,7 @@
                     .count {
                         padding: 200px 0 20px;
                     }
+
                     #tab {
                         position: relative;
                         
@@ -152,39 +153,44 @@
                                 width: 100%;
                                 padding: 40px;
                                 font: bold 20px/1 'arial';
+
                                 svg {
                                     width: 70%;
                                     margin: 0 auto;
                                     display: block;
                                     margin-bottom: 20px;
-                                }
-                                svg.note {
-                                    .st0{fill:none;stroke:#333;stroke-width:3;stroke-miterlimit:10;}
-
-                                    .st1{fill:none;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}
-                                }
-
-                                svg.product {
-                                    .st0 {
-                                        fill: none;
-                                        stroke:#1D1D1B;stroke-width:3;stroke-miterlimit:10;
+                                
+                                    &.note {
+                                        .strokeStyle{
+                                            fill: none;
+                                            stroke:#333;
+                                            stroke-width: 3;stroke-miterlimit: 10;
+                                            stroke-dasharray: 228;
+                                            stroke-dashoffset: 228;
+                                            animation: strokeNote 3s both;
+                                        }
                                     }
-                                    
-                                    .st1{
-                                        fill:none; stroke:#1D1D1B;stroke-width:3;stroke-miterlimit:10;
-                                    }
-                                }
 
-                                svg.building {
-                                    .st0 {fill:none;}
-                                    .st1 {
-                                        fill:none;stroke:#000000;stroke-width:3;stroke-miterlimit:10;
+                                    &.product {
+                                        .strokeStyle {
+                                            fill: none;
+                                            stroke:#333;stroke-width: 3;stroke-miterlimit: 10;
+                                            stroke-dasharray: 292;
+                                            stroke-dashoffset: 292;
+                                            animation: strokeProduct 3s both;
+                                        }
                                     }
-                                }
 
-                                svg.cost {
-                                    .st0{
-                                        fill: none; stroke:#1D1D1B;stroke-width:3;stroke-miterlimit:10;
+                                    &.building {
+                                        .strokeStyle {
+                                            fill:none;stroke:#000000;stroke-width:3;stroke-miterlimit:10;
+                                        }
+                                    }
+
+                                    &.cost {
+                                        .st0{
+                                            fill: none; stroke:#1D1D1B;stroke-width:3;stroke-miterlimit:10;
+                                        }
                                     }
                                 }
                             }
@@ -364,14 +370,19 @@
                 }
             }
         }
+          
     }
-    
 }
 
-// @keyframes line {
-//     0% {stroke-dashoffset: 750}
-//     100% {stroke-dashoffset: 0}
-// }
+@keyframes strokeNote {
+    0% {stroke-dashoffset: 228}
+    100% {stroke-dashoffset: 0}
+}
+
+@keyframes strokeProduct {
+    0% {stroke-dashoffset: 292}
+    100% {stroke-dashoffset: 0}
+}
 
 
 @media screen and (max-width: 1179px){
@@ -672,3 +683,4 @@
         }
     }
 }
+
