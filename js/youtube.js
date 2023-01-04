@@ -3,15 +3,13 @@ api key = AIzaSyB2c-vJPxv0T0B9qWab28kZJ3_xr_57jhs
 request = https://www.googleapis.com/youtube/v3/playlistItems
 
 */
-const key ='AIzaSyB2c-vJPxv0T0B9qWab28kZJ3_xr_57jhs'
+const key ='AIzaSyB2c-vJPxv0T0B9qWab28kZJ3_xr_57jhs';
 const part = 'snippet';
 const playlistId = [
     'PL5zLxdZ1y87WGSvybcffoLpZvr4_XJg_z',
     'PL5zLxdZ1y87VterXQCOaMjCwbf_KXj5Ve',
     'PL5zLxdZ1y87V9XJZu_jxpF3wkRqoHDMeW'
-]
-    
-
+];
 const videos = document.querySelectorAll('#video');
 const slogun = document.querySelector('.slogun');
 
@@ -72,7 +70,7 @@ setInterval(()=>{
     })
 }, delay)
 
-function callData(playlistId ,container ,num){
+function callData(playlistId, container, num){
     const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=${part}&key=${key}&playlistId=${playlistId}&maxResults=${num}`;
     
     fetch(url)

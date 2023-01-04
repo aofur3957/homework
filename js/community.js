@@ -1,64 +1,63 @@
 const tab = document.querySelector('#tab');
 const tabTitles = tab.querySelectorAll('dt');
+const tabButtons = tab.querySelectorAll('button');
 const tabContents = tab.querySelectorAll('dd');
-const faqOffset = document.querySelector('.faqHeaderSection').offsetTop;
-const base = -300;
+const faqs = tab.querySelectorAll('#faq');
+const faqHeader = document.querySelector('.faqHeaderSection');
+const strokes = tab.querySelectorAll('.strokeStyle');
 
+// 스크롤이 특정 위치에 도달하면 svg 애니메이션 실행
+window.addEventListener('scroll', e => {
+    const faqOffset = parseInt(faqHeader.getBoundingClientRect().y);
+    if(faqOffset <= 400 && faqOffset >= -500 ){
+        void faqHeader.offsetWidth;
+        strokes.forEach(stroke => {
+            stroke.classList.add('add');
+        })
+    }else if(faqOffset >= 1000 || faqOffset <= -500 ){
+        void faqHeader.offsetWidth;
+        strokes.forEach(stroke => {
+            stroke.classList.remove('add');
+        })
+    }  
+})
 
-// window.addEventListener('scroll', e=>{
-//     let scroll = window.scrollY || window.pageYOffset;
+// 이벤트 등록이 여러번(원인파악)
+// 탭 버튼에 이벤트 핸들러 등록
+tabButtons.forEach((tabButton, idx)=>{
+    tabButton.addEventListener('click', makeCloser(idx));
+})
 
-//     if(scroll >= faqOffset + base){
-//         tabTitles.forEach((tabTitle, idx)=>{
-//             let Line = tabTitle.querySelector('.line');
-            
-//             Line.style.animationPlayState = 'running';
-//         })
-//     }
-// })
-
-
-tabTitles.forEach((tabTitle, idx)=>{
-    tabTitle.addEventListener('click', e=>{
-        for(let el of tabTitles){
-            el.classList.remove('on');
-        }
-        for(let el of tabContents){
-            el.classList.remove('on');
-        }
-        tabTitles[idx].classList.add('on');
-        tabContents[idx].classList.add('on');
-
-        const faq = tabContents[idx].querySelector('#faq');
-        if(faq != null){
-            const lis = faq.querySelectorAll('li');
-            for(let li of lis){
-                li.addEventListener('click', e=>{
-                    e.preventDefault();
-                    const isOn = e.currentTarget.classList.contains('on');
-                    if(isOn){
-                        e.currentTarget.classList.remove('on');
-                        console.log('있음');
-                    }else {
-                        for(let el of lis){
-                            el.classList.remove('on');
-                        }
-                        e.currentTarget.classList.add('on');
-                        console.log('없음');
-                    }
-                })
+//  faq 아코디언 메뉴 
+faqs.forEach(faq => {
+    faq.addEventListener('click', e => {
+        e.preventDefault();
+        
+        const liElem = e.target.closest('li');
+        if(liElem.classList.contains('on')){
+            liElem.classList.remove('on')
+        }else{
+            for(let li of [...e.currentTarget.children]){
+                li.classList.remove('on');
             }
+            liElem.classList.add('on');
         }
     })
 })
 
-tabContents.forEach((tabContent, idx)=>{
-    let isOn = tabContent.classList.contains('on');
-    if(isOn){
-        const faq = tabContent.querySelector('#faq');
-        if(faq != null){
-            const li = faq.querySelectorAll('li');
+// 탭 메뉴 클릭에 따른 탭 콘텐츠 보여주기
+function makeCloser (idx){
+    const faq = tabContents[idx].querySelector('#faq');
+    
+    return showTabContents = e => {
+        for(let el of tabButtons){
+            el.classList.toggle('on', el === e.currentTarget);
         }
-
+        for(let el of tabContents){
+            el.classList.toggle('on', el === tabContents[idx]);
+        }
     }
-})
+}
+
+
+

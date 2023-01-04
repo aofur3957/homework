@@ -161,41 +161,68 @@
                                     margin-bottom: 20px;
                                 
                                     &.note {
-                                        .strokeStyle{
+                                        .strokeStyle {
                                             fill: none;
                                             stroke:#333;
-                                            stroke-width: 3;stroke-miterlimit: 10;
+                                            stroke-width: 3;
+                                            stroke-miterlimit: 10;
                                             stroke-dasharray: 228;
                                             stroke-dashoffset: 228;
-                                            animation: strokeNote 3s both;
+
+                                            &.add {
+                                                animation: strokeNote 3s both;
+                                            }
                                         }
                                     }
 
                                     &.product {
                                         .strokeStyle {
                                             fill: none;
-                                            stroke:#333;stroke-width: 3;stroke-miterlimit: 10;
+                                            stroke:#333;
+                                            stroke-width: 3;
+                                            stroke-miterlimit: 10;
                                             stroke-dasharray: 292;
                                             stroke-dashoffset: 292;
-                                            animation: strokeProduct 3s both;
+
+                                            &.add {
+                                                animation: strokeProduct 3s both;
+                                            }
                                         }
                                     }
 
                                     &.building {
                                         .strokeStyle {
-                                            fill:none;stroke:#000000;stroke-width:3;stroke-miterlimit:10;
+                                            fill: none;
+                                            stroke:#333;
+                                            stroke-width: 3;
+                                            stroke-miterlimit: 10;
+                                            stroke-dasharray: 249;
+                                            stroke-dashoffset: 249;
+                                            
+                                            &.add {
+                                                animation: strokeBuilding 3s both;
+                                            }
                                         }
                                     }
 
                                     &.cost {
-                                        .st0{
-                                            fill: none; stroke:#1D1D1B;stroke-width:3;stroke-miterlimit:10;
+                                        .strokeStyle{
+                                            fill: none; 
+                                            stroke:#333;
+                                            stroke-width:3;
+                                            stroke-miterlimit:10;
+                                            stroke-dasharray: 282;
+                                            stroke-dashoffset: 282;
+
+                                            &.add {
+                                                animation: strokeCost 3s both;
+                                            }
                                         }
                                     }
                                 }
-                            }
 
-                            &.on { background: pink; }
+                                &.on { background: #ddd;}
+                            }
 
                             &:nth-of-type(1) {
                                 left: calc((100 / 4) * 0%);
@@ -275,6 +302,7 @@
                                             vertical-align: middle;
                                             color: #0f204c;
                                         }
+
                                         p {
                                             display: inline-block;
                                             overflow: hidden;
@@ -286,7 +314,8 @@
                                             color: #555;
                                         }
                                     }
-                                    div {
+
+                                    .con {
                                         display: none;
                                         position: relative;
                                         padding: 25px 50px 25px 80px;
@@ -381,6 +410,16 @@
 
 @keyframes strokeProduct {
     0% {stroke-dashoffset: 292}
+    100% {stroke-dashoffset: 0}
+}
+
+@keyframes strokeBuilding {
+    0% {stroke-dashoffset: 249}
+    100% {stroke-dashoffset: 0}
+}
+
+@keyframes strokeCost {
+    0% {stroke-dashoffset: 282}
     100% {stroke-dashoffset: 0}
 }
 
