@@ -80,8 +80,14 @@
                 <div id="mapWrap">
                     <div id="map"></div>
                     <div class="zoomControl">
-                        <span onclick="zoomIn()"><i class="fas fa-plus"></i></span>
-                        <span onclick="zoomOut()"><i class="fas fa-minus"></i></span>
+                        <span onclick="zoomIn()">
+                            <i class="fas fa-plus"></i>
+                            <em class="hidden">확대</em>
+                        </span>
+                        <span onclick="zoomOut()">
+                            <i class="fas fa-minus"></i>
+                            <em class="hidden">축소</em>
+                        </span>
                     </div>
 
                     <div class="store">
@@ -125,7 +131,7 @@
                             </article>
                             <article>
                                 <img src="img/city.jpg" alt="">
-                                <strong>A. Gundae</strong>
+                                <strong>A. Gumdan</strong>
                                 <dl>
                                     <div>
                                         <dt>address</dt>
