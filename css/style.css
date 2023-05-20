@@ -202,7 +202,7 @@ section .content .sub_content .inner {
   text-align: right;
 }
 
-@media screen and (max-width: 1179px) {
+@media screen and (max-width: 1200px) {
   #header_sub nav {
     display: none;
   }
@@ -375,11 +375,6 @@ section .content .sub_content .inner {
   content: "";
   display: block;
   clear: both;
-}
-#department .sub_content .introMember h3 {
-  margin-bottom: 40px;
-  font: bold 20px/1 "arial";
-  color: #444;
 }
 #department .sub_content .introMember .role {
   width: 100%;
@@ -727,7 +722,6 @@ section .content .sub_content .inner {
   fill: none;
   stroke: #333;
   stroke-width: 3;
-  stroke-miterlimit: 10;
   stroke-dasharray: 228;
   stroke-dashoffset: 228;
 }
@@ -738,7 +732,6 @@ section .content .sub_content .inner {
   fill: none;
   stroke: #333;
   stroke-width: 3;
-  stroke-miterlimit: 10;
   stroke-dasharray: 292;
   stroke-dashoffset: 292;
 }
@@ -749,7 +742,6 @@ section .content .sub_content .inner {
   fill: none;
   stroke: #333;
   stroke-width: 3;
-  stroke-miterlimit: 10;
   stroke-dasharray: 249;
   stroke-dashoffset: 249;
 }
@@ -760,7 +752,6 @@ section .content .sub_content .inner {
   fill: none;
   stroke: #333;
   stroke-width: 3;
-  stroke-miterlimit: 10;
   stroke-dasharray: 282;
   stroke-dashoffset: 282;
 }
@@ -1209,6 +1200,11 @@ section .content .sub_content .inner {
   padding: 70px;
   z-index: 1000;
 }
+#gallery .content .sub_content .pop img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 #gallery .content .sub_content .pop span {
   position: absolute;
   top: 25px;
@@ -1339,42 +1335,49 @@ section .content .sub_content .inner {
   top: -35px;
   left: 25vw;
   font: bold 70px/1 "arial";
+  z-index: 100;
 }
-#youtube .sub_visual p {
-  position: absolute;
-  top: 100px;
-  left: 25vw;
-  width: 20%;
-  font: 19px/1.6 "arial";
-}
-#youtube .sub_visual img {
+#youtube .sub_visual .bg {
   position: absolute;
   bottom: -200px;
   right: 0;
-  width: 47%;
-  height: 700px;
+  max-width: 770px;
+  min-width: 700px;
+  width: 45%;
+}
+#youtube .sub_visual .bg div {
+  width: 100%;
+  padding-top: 122.6%;
+}
+#youtube .sub_visual .bg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 #youtube .sub_content {
-  padding: 0;
   background: #f6f6f6;
 }
 #youtube .sub_content .slogun {
   height: 630px;
   position: relative;
-  z-index: 1000;
 }
 #youtube .sub_content .slogun strong {
-  display: none;
   position: absolute;
   top: 0;
   left: 0;
+  display: flex;
   width: 100%;
-  font: 200px/630px "arial";
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  font: 200px/1 "arial";
   color: #fff;
-  text-align: center;
 }
 #youtube .sub_content .slogun strong.on {
-  display: block;
+  display: none;
 }
 #youtube .sub_content .inner {
   padding: 150px 0;
@@ -1386,31 +1389,30 @@ section .content .sub_content .inner {
 }
 #youtube .sub_content .inner .videoSection1 {
   padding-bottom: 150px;
-  position: relative;
+}
+#youtube .sub_content .inner .videoSection1 .m_txt {
+  display: none;
 }
 #youtube .sub_content .inner .videoSection1 article {
   position: relative;
   height: 480px;
 }
 #youtube .sub_content .inner .videoSection1 article a {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   width: 65%;
   height: 100%;
-  float: left;
 }
 #youtube .sub_content .inner .videoSection1 article a::before {
   content: "";
   position: absolute;
-  top: 50%;
-  left: 50%;
   width: 150px;
   height: 150px;
-  margin-top: -75px;
-  margin-left: -75px;
-  background: url(../img/playB.svg) center/contain;
+  background: url(../img/playB.svg) center/contain no-repeat;
 }
-#youtube .sub_content .inner .videoSection1 .txt {
+#youtube .sub_content .inner .videoSection1 article .txt {
   width: 50%;
   position: absolute;
   padding-top: 200px;
@@ -1420,22 +1422,22 @@ section .content .sub_content .inner {
   background: url(../img/pattern1.png) no-repeat right center/contain;
   height: 500px;
 }
-#youtube .sub_content .inner .videoSection1 .txt .container {
+#youtube .sub_content .inner .videoSection1 article .txt .container {
   width: 60%;
 }
-#youtube .sub_content .inner .videoSection1 .txt span {
+#youtube .sub_content .inner .videoSection1 article .txt .container span {
   display: block;
   margin-bottom: 20px;
   font: 700 14px/1 "Advent Pro";
   color: #666;
   letter-spacing: 1.5px;
 }
-#youtube .sub_content .inner .videoSection1 .txt h3 {
+#youtube .sub_content .inner .videoSection1 article .txt .container h3 {
   margin-bottom: 40px;
   font: 700 24px/1.3 "Koh Santepheap";
   color: #333;
 }
-#youtube .sub_content .inner .videoSection1 .txt p {
+#youtube .sub_content .inner .videoSection1 article .txt .container p {
   font: 15px/1.3 "arial";
   color: #444;
 }
@@ -1447,7 +1449,7 @@ section .content .sub_content .inner {
 #youtube .sub_content .inner .videoSection2 .txt {
   width: 22%;
 }
-#youtube .sub_content .inner .videoSection2 .txt span {
+#youtube .sub_content .inner .videoSection2 .txt > span {
   display: block;
   margin-bottom: 20px;
   font: 700 14px/1 "Advent Pro";
@@ -1463,47 +1465,54 @@ section .content .sub_content .inner {
   font: 15px/1.3 "arial";
   color: #444;
 }
+#youtube .sub_content .inner .videoSection2 .txt p span {
+  display: block;
+  padding-bottom: 20px;
+}
 #youtube .sub_content .inner .videoSection2 article {
   width: 22%;
   background: #fcfcfc;
   padding: 25px;
   position: relative;
 }
-#youtube .sub_content .inner .videoSection2 article .pic {
+#youtube .sub_content .inner .videoSection2 article div .pic {
   display: block;
   height: 200px;
   position: relative;
 }
-#youtube .sub_content .inner .videoSection2 article .pic::before {
+#youtube .sub_content .inner .videoSection2 article div .pic::before {
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
-  background: url(../img/playB.svg) center/contain;
+  transform: translate(-50%, -50%);
+  background: url(../img/playB.svg) center/contain no-repeat;
   width: 60px;
   height: 60px;
-  margin-top: -30px;
-  margin-left: -30px;
-  border-radius: 50%;
 }
-#youtube .sub_content .inner .videoSection2 article h4 {
+#youtube .sub_content .inner .videoSection2 article div h4 {
   margin: 15px 0 15px;
   font: 700 18px/1.3 "Koh Santepheap";
   color: #333;
 }
-#youtube .sub_content .inner .videoSection2 article p {
+#youtube .sub_content .inner .videoSection2 article div p {
   font: 15px/1.3 "arial";
   color: #444;
 }
 #youtube .sub_content .inner .videoSection3 {
   padding-bottom: 150px;
 }
+#youtube .sub_content .inner .videoSection3 .m_txt {
+  display: none;
+}
 #youtube .sub_content .inner .videoSection3 article {
   position: relative;
   height: 480px;
 }
 #youtube .sub_content .inner .videoSection3 article a {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 65%;
   height: 100%;
   float: right;
@@ -1512,13 +1521,9 @@ section .content .sub_content .inner {
 #youtube .sub_content .inner .videoSection3 article a::before {
   content: "";
   position: absolute;
-  top: 50%;
-  left: 50%;
   width: 150px;
   height: 150px;
-  margin-top: -75px;
-  margin-left: -75px;
-  background: url(../img/playB.svg) center/contain;
+  background: url(../img/playB.svg) center/contain no-repeat;
 }
 #youtube .sub_content .inner .videoSection3 .txt {
   width: 50%;
@@ -1533,19 +1538,19 @@ section .content .sub_content .inner {
 #youtube .sub_content .inner .videoSection3 .txt .container {
   width: 60%;
 }
-#youtube .sub_content .inner .videoSection3 .txt span {
+#youtube .sub_content .inner .videoSection3 .txt .container span {
   display: block;
   margin-bottom: 20px;
   font: 700 14px/1 "Advent Pro";
   color: #666;
   letter-spacing: 1.5px;
 }
-#youtube .sub_content .inner .videoSection3 .txt h3 {
+#youtube .sub_content .inner .videoSection3 .txt .container h3 {
   margin-bottom: 40px;
   font: 700 24px/1.3 "Koh Santepheap";
   color: #333;
 }
-#youtube .sub_content .inner .videoSection3 .txt p {
+#youtube .sub_content .inner .videoSection3 .txt .container p {
   font: 15px/1.3 "arial";
   color: #444;
 }
@@ -1636,21 +1641,161 @@ figure button {
 }
 
 @media screen and (max-width: 1179px) {
-  #youtube .sub_visual img {
-    position: absolute;
-    bottom: -200px;
-    right: 0;
-    width: 47%;
+  #youtube .sub_visual h1 {
+    left: 15vw;
+  }
+  #youtube .sub_visual .bg {
+    bottom: -100px;
+    min-width: 550px;
   }
   #youtube .sub_content .slogun {
     height: 600px;
   }
   #youtube .sub_content .slogun strong {
-    font: 110px/600px "arial";
+    font-size: 110px;
   }
   #youtube .sub_content .inner {
-    padding: 150px 10px;
+    padding: 12.8vw 20px;
     width: 100%;
+  }
+  #youtube .sub_content .inner .videoSection1 {
+    padding-bottom: 12.8vw;
+  }
+  #youtube .sub_content .inner .videoSection1 article {
+    height: 0;
+    padding-top: 43%;
+  }
+  #youtube .sub_content .inner .videoSection1 article a {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #youtube .sub_content .inner .videoSection1 article a::before {
+    width: 20.6%;
+    height: 0;
+    padding-top: 20.6%;
+  }
+  #youtube .sub_content .inner .videoSection1 article .txt {
+    top: -3%;
+    height: 104%;
+    padding-top: 17.8%;
+    padding-left: 17.8%;
+  }
+  #youtube .sub_content .inner .videoSection1 article .txt .container {
+    width: 70%;
+  }
+  #youtube .sub_content .inner .videoSection1 article .txt .container span {
+    font-size: 1.2vw;
+    margin-bottom: 1.4em;
+  }
+  #youtube .sub_content .inner .videoSection1 article .txt .container h3 {
+    font-size: 2vw;
+    margin-bottom: 1.7em;
+  }
+  #youtube .sub_content .inner .videoSection1 article .txt .container p {
+    font-size: 1.4vw;
+  }
+  #youtube .sub_content .inner .videoSection2 {
+    display: block;
+    padding-bottom: 12.8vw;
+  }
+  #youtube .sub_content .inner .videoSection2 .txt {
+    width: 100%;
+  }
+  #youtube .sub_content .inner .videoSection2 .txt > span {
+    font-size: 1.2vw;
+    margin-bottom: 1.4em;
+  }
+  #youtube .sub_content .inner .videoSection2 .txt h3 {
+    margin-bottom: 0.7em;
+    font-size: 2vw;
+  }
+  #youtube .sub_content .inner .videoSection2 .txt p {
+    margin-bottom: 1.25em;
+    font-size: 1.4vw;
+  }
+  #youtube .sub_content .inner .videoSection2 .txt p span {
+    padding-bottom: 0;
+    font-size: 1.4vw;
+  }
+  #youtube .sub_content .inner .videoSection2 article {
+    width: 32%;
+    margin-right: 2%;
+    padding: 0;
+    padding-top: 37%;
+    float: left;
+  }
+  #youtube .sub_content .inner .videoSection2 article:last-of-type {
+    margin-right: 0;
+  }
+  #youtube .sub_content .inner .videoSection2 article div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 25px;
+  }
+  #youtube .sub_content .inner .videoSection2 article div .pic {
+    height: 0;
+    padding-top: 81.3%;
+    z-index: 1;
+  }
+  #youtube .sub_content .inner .videoSection2 article div .pic img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+  #youtube .sub_content .inner .videoSection2 article div .pic::before {
+    z-index: 3;
+    width: 27%;
+    height: 0;
+    padding-top: 27%;
+  }
+  #youtube .sub_content .inner .videoSection2 article div h4 {
+    font-size: 1.5vw;
+    min-height: 2.6em;
+    margin: 1em 0 1em;
+  }
+  #youtube .sub_content .inner .videoSection2 article div p {
+    font-size: 1.4vw;
+  }
+  #youtube .sub_content .inner .videoSection3 {
+    padding-bottom: 12.8vw;
+  }
+  #youtube .sub_content .inner .videoSection3 article {
+    height: 0;
+    padding-top: 43%;
+  }
+  #youtube .sub_content .inner .videoSection3 article a {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  #youtube .sub_content .inner .videoSection3 article a::before {
+    width: 20.6%;
+    height: 0;
+    padding-top: 20.6%;
+  }
+  #youtube .sub_content .inner .videoSection3 article .txt {
+    padding-top: 17.8%;
+    padding-left: 17.8%;
+    top: -3%;
+    background: url(../img/pattern2.png) no-repeat left center/contain;
+    height: 104%;
+  }
+  #youtube .sub_content .inner .videoSection3 article .txt .container {
+    width: 70%;
+  }
+  #youtube .sub_content .inner .videoSection3 article .txt .container span {
+    font-size: 1.2vw;
+    margin-bottom: 1.4em;
+  }
+  #youtube .sub_content .inner .videoSection3 article .txt .container h3 {
+    font-size: 2vw;
+    margin-bottom: 1.7em;
+  }
+  #youtube .sub_content .inner .videoSection3 article .txt .container p {
+    font-size: 1.4vw;
   }
   #youtube .sub_content .inner .channel::after {
     content: "";
@@ -1683,25 +1828,259 @@ figure button {
   }
 }
 @media screen and (max-width: 768px) {
-  #youtube .sub_visual p {
-    width: 50%;
+  #youtube .sub_visual .bg {
+    min-width: 350px;
+    bottom: 0;
+    width: 60%;
   }
   #youtube .sub_content .slogun {
     height: 400px;
   }
   #youtube .sub_content .slogun strong {
-    font: 70px/400px "arial";
+    font-size: 70px;
   }
-  #youtube .sub_content .inner #video article .pic {
-    width: 48%;
+  #youtube .sub_content .inner h2 {
+    font-size: 28px;
   }
-  #youtube .sub_content .inner #video article p {
-    width: 48%;
-    padding: 0 7vw;
-    font: 30px/1.2 "Koh Santepheap";
+  #youtube .sub_content .inner .videoSection1 article .txt {
+    padding-top: 13%;
+    padding-left: 12%;
   }
-  #youtube .sub_content .inner #video article .btn {
+  #youtube .sub_content .inner .videoSection1 article .txt .container {
+    width: 80%;
+  }
+  #youtube .sub_content .inner .videoSection1 article .txt .container span {
+    font-size: 1.5vw;
+  }
+  #youtube .sub_content .inner .videoSection1 article .txt .container h3 {
+    font-size: 2.5vw;
+  }
+  #youtube .sub_content .inner .videoSection1 article .txt .container p {
+    font-size: 2vw;
+  }
+  #youtube .sub_content .inner .videoSection2 .txt span {
+    font-size: 1.5vw;
+  }
+  #youtube .sub_content .inner .videoSection2 .txt h3 {
+    font-size: 2.5vw;
+  }
+  #youtube .sub_content .inner .videoSection2 .txt p {
+    font-size: 2vw;
+  }
+  #youtube .sub_content .inner .videoSection2 .txt p span {
+    padding-bottom: 0;
+    font-size: 2vw;
+  }
+  #youtube .sub_content .inner .videoSection2 article {
+    padding-top: 44%;
+  }
+  #youtube .sub_content .inner .videoSection2 article div {
+    padding: 10px 15px;
+  }
+  #youtube .sub_content .inner .videoSection2 article div h4 {
+    font-size: 2vw;
+  }
+  #youtube .sub_content .inner .videoSection2 article div p {
+    font-size: 1.7vw;
+  }
+  #youtube .sub_content .inner .videoSection3 article .txt {
+    padding-top: 13%;
+    padding-left: 12%;
+  }
+  #youtube .sub_content .inner .videoSection3 article .txt .container {
+    width: 80%;
+  }
+  #youtube .sub_content .inner .videoSection3 article .txt .container span {
+    font-size: 1.5vw;
+  }
+  #youtube .sub_content .inner .videoSection3 article .txt .container h3 {
+    font-size: 2.5vw;
+  }
+  #youtube .sub_content .inner .videoSection3 article .txt .container p {
+    font-size: 2vw;
+  }
+  #youtube .sub_content .inner .channel::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  #youtube .sub_content .inner .channel .imac {
+    width: 85%;
+    height: 0;
+    padding-top: 100%;
+    margin-bottom: 50px;
+  }
+  #youtube .sub_content .inner .channel .imac .screen {
+    width: 67.5%;
+    height: 31%;
+  }
+  #youtube .sub_content .inner .channel .sns {
+    position: static;
+    width: 30%;
+    margin-right: 5%;
+    float: left;
+  }
+  #youtube .sub_content .inner .channel .sns.sns2 {
+    transform: translateX(0);
+    text-align: left;
+  }
+  #youtube .sub_content .inner .channel .sns.sns3 {
+    text-align: left;
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 539px) {
+  #youtube .sub_visual h1 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    font-size: 50px;
+  }
+  #youtube .sub_content .slogun {
+    height: 400px;
+  }
+  #youtube .sub_content .slogun strong {
+    font-size: 70px;
+  }
+  #youtube .sub_content .inner h2 {
+    font-size: 25px;
+  }
+  #youtube .sub_content .inner .videoSection1 .m_txt {
+    display: block;
+  }
+  #youtube .sub_content .inner .videoSection1 .m_txt .container {
+    width: 80%;
+  }
+  #youtube .sub_content .inner .videoSection1 .m_txt .container span {
+    display: block;
+    font: 700 3vw/1 "Advent Pro";
+    color: #666;
+    letter-spacing: 1.5px;
+    margin-bottom: 1.4em;
+  }
+  #youtube .sub_content .inner .videoSection1 .m_txt .container h3 {
+    font: 700 4.5vw/1.3 "Koh Santepheap";
+    color: #333;
+    margin-bottom: 0.7em;
+  }
+  #youtube .sub_content .inner .videoSection1 .m_txt .container p {
+    font: 3.3vw/1.3 "arial";
+    color: #444;
+    margin-bottom: 1.25em;
+  }
+  #youtube .sub_content .inner .videoSection1 article {
+    padding-top: 65%;
+  }
+  #youtube .sub_content .inner .videoSection1 article .txt {
     display: none;
+  }
+  #youtube .sub_content .inner .videoSection1 article a {
+    width: 100%;
+  }
+  #youtube .sub_content .inner .videoSection2 .txt {
+    width: 80%;
+  }
+  #youtube .sub_content .inner .videoSection2 .txt span {
+    font-size: 3vw;
+  }
+  #youtube .sub_content .inner .videoSection2 .txt h3 {
+    font-size: 4.5vw;
+  }
+  #youtube .sub_content .inner .videoSection2 .txt p {
+    font-size: 3.3vw;
+  }
+  #youtube .sub_content .inner .videoSection2 .txt p span {
+    font-size: 3.3vw;
+  }
+  #youtube .sub_content .inner .videoSection2 article {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 7.6vw;
+    padding-top: 85%;
+  }
+  #youtube .sub_content .inner .videoSection2 article:last-of-type {
+    margin-bottom: 0;
+  }
+  #youtube .sub_content .inner .videoSection2 article div {
+    width: 100%;
+    padding: 0;
+  }
+  #youtube .sub_content .inner .videoSection2 article div .pic {
+    padding-top: 65%;
+  }
+  #youtube .sub_content .inner .videoSection2 article div .pic::before {
+    width: 20.6%;
+    padding-top: 20.6%;
+  }
+  #youtube .sub_content .inner .videoSection2 article div h4 {
+    font-size: 4vw;
+    min-height: 0;
+    margin: 1em 0 0.3em;
+  }
+  #youtube .sub_content .inner .videoSection2 article div p {
+    font-size: 3vw;
+  }
+  #youtube .sub_content .inner .videoSection3 .m_txt {
+    display: block;
+  }
+  #youtube .sub_content .inner .videoSection3 .m_txt .container {
+    width: 80%;
+  }
+  #youtube .sub_content .inner .videoSection3 .m_txt .container span {
+    display: block;
+    font: 700 3vw/1 "Advent Pro";
+    color: #666;
+    letter-spacing: 1.5px;
+    margin-bottom: 1.4em;
+  }
+  #youtube .sub_content .inner .videoSection3 .m_txt .container h3 {
+    font: 700 4.5vw/1.3 "Koh Santepheap";
+    color: #333;
+    margin-bottom: 0.6em;
+  }
+  #youtube .sub_content .inner .videoSection3 .m_txt .container p {
+    font: 3.3vw/1.3 "arial";
+    color: #444;
+    margin-bottom: 1em;
+  }
+  #youtube .sub_content .inner .videoSection3 article {
+    padding-top: 65%;
+  }
+  #youtube .sub_content .inner .videoSection3 article .txt {
+    display: none;
+  }
+  #youtube .sub_content .inner .videoSection3 article a {
+    width: 100%;
+  }
+  #youtube .sub_content .inner .channel::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  #youtube .sub_content .inner .channel .imac {
+    width: 85%;
+    height: 0;
+    padding-top: 100%;
+    margin-bottom: 50px;
+  }
+  #youtube .sub_content .inner .channel .imac .screen {
+    width: 67.5%;
+    height: 31%;
+  }
+  #youtube .sub_content .inner .channel .sns {
+    position: static;
+    width: 30%;
+    margin-right: 5%;
+    float: left;
+  }
+  #youtube .sub_content .inner .channel .sns.sns2 {
+    transform: translateX(0);
+    text-align: left;
+  }
+  #youtube .sub_content .inner .channel .sns.sns3 {
+    text-align: left;
+    margin-right: 0;
   }
 }
 #location .content .sub_visual .inner img {
@@ -1784,7 +2163,6 @@ figure button {
   justify-content: space-between;
 }
 #location .content .sub_content .company .inner .pic article {
-  float: left;
   overflow: hidden;
   width: 48%;
   border-radius: 20px;
@@ -1855,6 +2233,7 @@ figure button {
 }
 #location .content .sub_content #mapWrap {
   position: relative;
+  overflow: hidden;
 }
 #location .content .sub_content #mapWrap #map {
   width: 100%;
@@ -1880,26 +2259,38 @@ figure button {
   cursor: pointer;
   transition: 0.5s;
 }
+#location .content .sub_content #mapWrap .zoomControl span.zoom_in .icon_plus::before {
+  content: "+";
+  font: var(--fa-font-solid);
+}
+#location .content .sub_content #mapWrap .zoomControl span.zoom_out .icon_minus::before {
+  content: "\f068";
+  font: var(--fa-font-solid);
+}
 #location .content .sub_content #mapWrap .zoomControl span:hover {
   background: #555;
 }
 #location .content .sub_content #mapWrap .zoomControl span:first-of-type {
   border-bottom: 1px solid #000;
 }
-#location .content .sub_content #mapWrap .store {
+#location .content .sub_content #mapWrap .store.pc {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: -700px;
   padding: 20px 30px;
   width: 700px;
-  transform: translate(-87%, -50%);
+  transform: translate(0, -50%);
   background: rgba(255, 255, 255, 0.8);
+  transition: all 0.7s;
 }
-#location .content .sub_content #mapWrap .store h2 {
+#location .content .sub_content #mapWrap .store.pc.on {
+  left: 0;
+}
+#location .content .sub_content #mapWrap .store.pc h2 {
   margin-bottom: 20px;
   font: 23px/1 "Koh Santepheap";
 }
-#location .content .sub_content #mapWrap .store article {
+#location .content .sub_content #mapWrap .store.pc article {
   width: 49%;
   padding: 20px;
   height: 250px;
@@ -1909,53 +2300,143 @@ figure button {
   border: 1px solid #e5e5e5;
   cursor: pointer;
 }
-#location .content .sub_content #mapWrap .store article:nth-of-type(even) {
+#location .content .sub_content #mapWrap .store.pc article:nth-of-type(even) {
   margin-right: 0;
 }
-#location .content .sub_content #mapWrap .store article img {
+#location .content .sub_content #mapWrap .store.pc article img {
   width: 50%;
   float: left;
 }
-#location .content .sub_content #mapWrap .store article dl, #location .content .sub_content #mapWrap .store article strong {
+#location .content .sub_content #mapWrap .store.pc article dl, #location .content .sub_content #mapWrap .store.pc article strong {
   float: left;
   padding-left: 30px;
   font: 20px/1 "arial";
 }
-#location .content .sub_content #mapWrap .store article dl {
+#location .content .sub_content #mapWrap .store.pc article dl {
   width: 50%;
 }
-#location .content .sub_content #mapWrap .store article dl div {
+#location .content .sub_content #mapWrap .store.pc article dl div {
   margin-bottom: 15px;
 }
-#location .content .sub_content #mapWrap .store article dl div::after {
+#location .content .sub_content #mapWrap .store.pc article dl div::after {
   content: "";
   display: block;
   clear: both;
 }
-#location .content .sub_content #mapWrap .store article dl div dt {
+#location .content .sub_content #mapWrap .store.pc article dl div dt {
   display: inline-block;
   padding-right: 10px;
   color: #333;
   font: 16px/1 "arial";
 }
-#location .content .sub_content #mapWrap .store article dl div dd {
+#location .content .sub_content #mapWrap .store.pc article dl div dd {
   display: inline-block;
   color: #666;
   font: 14px/1 "arial";
 }
-#location .content .sub_content #mapWrap .store article strong {
+#location .content .sub_content #mapWrap .store.pc article strong {
   margin-bottom: 15px;
 }
+#location .content .sub_content #mapWrap .store.pc button {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 35px;
+  height: 35px;
+  background: #333;
+}
+#location .content .sub_content #mapWrap .store.pc button.open_store_selection.on {
+  display: block;
+}
+#location .content .sub_content #mapWrap .store.pc button.open_store_selection::before {
+  content: "\f054";
+  font: var(--fa-font-solid);
+  color: #fff;
+}
+#location .content .sub_content #mapWrap .store.pc button.close_store_selection.on {
+  display: block;
+}
+#location .content .sub_content #mapWrap .store.pc button.close_store_selection::before {
+  content: "\f053";
+  font: var(--fa-font-solid);
+  color: #fff;
+}
+#location .content .sub_content #mapWrap .store.m {
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transition: all 0.7s;
+}
+#location .content .sub_content #mapWrap .store.m .swiper .swiper-wrapper .swiper-slide {
+  width: 400px;
+  height: 230px;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 2%;
+  border: 1px solid #333;
+  cursor: pointer;
+}
+#location .content .sub_content #mapWrap .store.m .swiper .swiper-wrapper .swiper-slide img {
+  width: 50%;
+  float: left;
+}
+#location .content .sub_content #mapWrap .store.m .swiper .swiper-wrapper .swiper-slide strong {
+  float: left;
+  font: 20px/1 "arial";
+  padding: 0 0 20px 20px;
+}
+#location .content .sub_content #mapWrap .store.m .swiper .swiper-wrapper .swiper-slide dl {
+  float: left;
+  width: 49%;
+  padding-left: 20px;
+}
+#location .content .sub_content #mapWrap .store.m .swiper .swiper-wrapper .swiper-slide dl dt {
+  border-bottom: 1px solid #333;
+  font: 16px/1 "arial";
+}
+#location .content .sub_content #mapWrap .store.m .swiper .swiper-wrapper .swiper-slide dl dd {
+  padding: 10px 0;
+  font: 14px/1 "arial";
+}
+#location .content .sub_content #mapWrap .store.m button {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  background: #333;
+}
+#location .content .sub_content #mapWrap .store.m button.open_store_selection i::before {
+  content: "\f077";
+  font: var(--fa-font-solid);
+  color: #fff;
+}
+#location .content .sub_content #mapWrap .store.m button.open_store_selection.on {
+  display: block;
+}
+#location .content .sub_content #mapWrap .store.m button.close_store_selection {
+  display: none;
+}
+#location .content .sub_content #mapWrap .store.m button.close_store_selection i::before {
+  content: "\f078";
+  font: var(--fa-font-solid);
+  color: #fff;
+}
+#location .content .sub_content #mapWrap .store.m button.close_store_selection.on {
+  display: block;
+}
+#location .content .sub_content #mapWrap .store.m.on {
+  top: calc(100% - 230px);
+}
 
-@media screen and (max-width: 1179px) {
+@media screen and (max-width: 1200px) {
   #location .content .sub_visual .inner {
     width: 100%;
   }
   #location .content .sub_visual .inner img {
-    min-height: 1440px;
-  }
-  #location .content .sub_content .company::before {
-    left: 43%;
+    min-width: 600px;
   }
   #location .content .sub_content .company .inner {
     width: 100%;
@@ -1970,15 +2451,18 @@ figure button {
   #location .content .sub_content .company .inner .pic {
     width: 55%;
   }
-  #location .content .sub_content .store .inner {
-    width: 100%;
-    padding: 0 10px;
-  }
   #location .content .sub_content .customer .inner {
     width: 100%;
   }
+  #location .content .sub_content #mapWrap .store .inner {
+    width: 100%;
+    padding: 0 10px;
+  }
 }
 @media screen and (max-width: 768px) {
+  #location .content .sub_content .company {
+    height: auto;
+  }
   #location .content .sub_content .company::before {
     opacity: 0.4;
   }
@@ -1996,7 +2480,6 @@ figure button {
   }
   #location .content .sub_content .company .inner .info article {
     width: 40%;
-    height: 170px;
   }
   #location .content .sub_content .company .inner .info article:nth-of-type(1) {
     float: left;
@@ -2012,44 +2495,17 @@ figure button {
   #location .content .sub_content .company .inner .pic {
     float: none;
     width: 100%;
-    height: 500px;
     position: absolute;
-    top: 100px;
+    top: 0;
     left: 0;
   }
   #location .content .sub_content .company .inner .pic article:first-of-type {
-    margin-bottom: 110px;
-    height: 30%;
+    margin-bottom: 130px;
+    height: 25%;
   }
   #location .content .sub_content .company .inner .pic article:last-of-type {
-    margin-top: 60px;
-    height: 30%;
-  }
-  #location .content .sub_content #mapWrap #map {
-    height: 400px;
-  }
-  #location .content .sub_content .store .inner h2 {
-    text-align: center;
-  }
-  #location .content .sub_content .store .inner article {
-    height: auto;
-  }
-  #location .content .sub_content .store .inner article img {
-    width: 100%;
-    float: none;
-  }
-  #location .content .sub_content .store .inner article dl, #location .content .sub_content .store .inner article strong {
-    float: none;
-    padding-left: 0;
-  }
-  #location .content .sub_content .store .inner article dl {
-    width: 100%;
-  }
-  #location .content .sub_content .store .inner article strong {
-    margin-bottom: 15px;
-    margin-top: 10px;
-    display: block;
-    text-align: center;
+    margin-top: 140px;
+    height: 25%;
   }
   #location .content .sub_content .customer .inner p {
     width: 70%;
@@ -2057,32 +2513,59 @@ figure button {
   #location .content .sub_content .customer .inner #info {
     width: 80%;
   }
+  #location .content .sub_content #mapWrap #map {
+    height: 0;
+    min-height: 570px;
+    padding-top: 110%;
+  }
+  #location .content .sub_content #mapWrap .store.pc {
+    display: none;
+  }
+  #location .content .sub_content #mapWrap .store.m {
+    display: block;
+  }
 }
 @media screen and (max-width: 539px) {
   #location .content .sub_visual .inner h1 {
     font: bold 50px/1 "arial";
   }
-  #location .content .sub_content .company .inner .info > p {
-    min-height: 80px;
+  #location .content .sub_visual .inner img {
+    bottom: 0;
+    min-width: 300px;
   }
-  #location .content .sub_content .company .inner .info article {
-    width: 45%;
-    min-height: 250px;
-  }
-  #location .content .sub_content .company .inner .pic {
-    top: 150px;
-  }
-  #location .content .sub_content .company .inner .pic article:first-of-type {
-    margin-bottom: 30px;
-  }
-  #location .content .sub_content .company .inner .pic article:last-of-type {
-    margin-top: 30px;
-  }
-  #location .content .sub_content .store {
+  #location .content .sub_content .company {
     padding: 100px 0;
   }
-  #location .content .sub_content .store .inner article {
-    width: 100%;
+  #location .content .sub_content .company .inner .info article {
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px 10%;
+    text-align: center;
+    border-bottom: 1px solid #333;
+  }
+  #location .content .sub_content .company .inner .info article:nth-of-type(1) {
+    float: none;
+  }
+  #location .content .sub_content .company .inner .info article:nth-of-type(2) {
+    float: none;
+  }
+  #location .content .sub_content .company .inner .info article:nth-of-type(3) {
+    border-bottom: none;
+  }
+  #location .content .sub_content .company .inner .pic {
+    display: none;
+  }
+  #location .content .sub_content #mapWrap .store.m .swiper .swiper-wrapper .swiper-slide {
+    width: 90vw;
+  }
+  #location .content .sub_content #mapWrap .store.m .swiper .swiper-wrapper .swiper-slide strong {
+    font-size: 18px;
+  }
+  #location .content .sub_content #mapWrap .store.m .swiper .swiper-wrapper .swiper-slide dl dt {
+    font-size: 16px;
+  }
+  #location .content .sub_content #mapWrap .store.m .swiper .swiper-wrapper .swiper-slide dl dd {
+    font-size: 13px;
   }
 }
 #join .sub_visual .inner img {
@@ -2135,6 +2618,7 @@ figure button {
 }
 #join .sub_content .inner > div .agreement .txt strong {
   font: 16px/3.5 "arial";
+  white-space: nowrap;
   color: #999;
 }
 #join .sub_content .inner > div .agreement .controls {
@@ -2147,7 +2631,7 @@ figure button {
 }
 #join .sub_content .inner > div .agreement .controls p {
   float: left;
-  font: 16px/1 "arial";
+  font: 16px/1.6 "arial";
   color: #666;
 }
 #join .sub_content .inner > div .agreement .controls div {
@@ -2191,7 +2675,7 @@ figure button {
   margin: 0 5px;
 }
 #join .sub_content .inner #insertInfo table tr th {
-  width: 20%;
+  width: 25%;
   padding: 30px 0;
   font: 16px/1.4 "arial";
   text-align: left;
@@ -2225,19 +2709,21 @@ figure button {
 #join .sub_content .inner #insertInfo table tr td input[type=email]:focus::placeholder {
   opacity: 0;
 }
-#join .sub_content .inner #insertInfo table tr td input[type=checkbox] {
+#join .sub_content .inner #insertInfo table tr td span {
+  font-size: 0;
+  margin-right: 20px;
+}
+#join .sub_content .inner #insertInfo table tr td span input[type=checkbox] {
   width: 20px;
   height: 20px;
   vertical-align: middle;
-  margin-left: 15px;
+  margin-right: 10px;
 }
-#join .sub_content .inner #insertInfo table tr td input[type=checkbox]:first-of-type {
-  margin-left: 0;
-}
-#join .sub_content .inner #insertInfo table tr td label[for=chkEmail],
-#join .sub_content .inner #insertInfo table tr td label[for=chkPhone],
-#join .sub_content .inner #insertInfo table tr td label[for=chkMail],
-#join .sub_content .inner #insertInfo table tr td label[for=chkSms] {
+#join .sub_content .inner #insertInfo table tr td span label[for=chkEmail],
+#join .sub_content .inner #insertInfo table tr td span label[for=chkPhone],
+#join .sub_content .inner #insertInfo table tr td span label[for=chkMail],
+#join .sub_content .inner #insertInfo table tr td span label[for=chkSms] {
+  font: 16px/1 "arial";
   vertical-align: middle;
   color: #999;
 }
@@ -2254,6 +2740,169 @@ figure button {
   border-radius: 30px;
 }
 
+@media screen and (max-width: 1200px) {
+  #join .sub_visual .inner {
+    width: 100%;
+  }
+  #join .sub_visual .inner img {
+    min-width: 570px;
+  }
+  #join .sub_content .inner {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #join .sub_visual .inner img {
+    min-width: 350px;
+    bottom: 0;
+  }
+  #join .sub_content .inner h2 {
+    font-size: 30px;
+  }
+  #join .sub_content .inner p {
+    width: 70%;
+    font-size: 18px;
+  }
+  #join .sub_content .inner > div {
+    padding: 40px;
+  }
+  #join .sub_content .inner > div .agreement h3 {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    font-size: 18px;
+  }
+  #join .sub_content .inner > div .agreement .txt {
+    height: 150px;
+    padding: 0 20px;
+  }
+  #join .sub_content .inner > div .agreement .txt h4 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  #join .sub_content .inner > div .agreement .txt p {
+    line-height: 1;
+    font-size: 14px;
+  }
+  #join .sub_content .inner > div .agreement .controls {
+    margin: 25px 0;
+  }
+  #join .sub_content .inner > div .agreement .controls p {
+    font-size: 14px;
+  }
+  #join .sub_content .inner > div .agreement .controls div input[type=radio] {
+    width: 15px;
+    height: 15px;
+  }
+  #join .sub_content .inner > div .agreement .controls div label {
+    margin-right: 10px;
+    font-size: 14px;
+  }
+  #join .sub_content .inner #insertInfo table caption {
+    padding-bottom: 15px;
+    font-size: 18px;
+  }
+  #join .sub_content .inner #insertInfo table tr th {
+    width: 40%;
+    padding: 15px 0;
+    font-size: 14px;
+  }
+  #join .sub_content .inner #insertInfo table tr td input[type=text],
+  #join .sub_content .inner #insertInfo table tr td input[type=password],
+  #join .sub_content .inner #insertInfo table tr td input[type=email] {
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+  }
+  #join .sub_content .inner #insertInfo table tr td input[type=text]::placeholder,
+  #join .sub_content .inner #insertInfo table tr td input[type=password]::placeholder,
+  #join .sub_content .inner #insertInfo table tr td input[type=email]::placeholder {
+    font-size: 14px;
+  }
+  #join .sub_content .inner #insertInfo table tr td span {
+    display: block;
+    margin-right: 0;
+    padding-bottom: 5px;
+  }
+  #join .sub_content .inner #insertInfo table tr td span input[type=checkbox] {
+    width: 15px;
+    height: 15px;
+  }
+  #join .sub_content .inner #insertInfo table tr td span label[for=chkEmail],
+  #join .sub_content .inner #insertInfo table tr td span label[for=chkPhone],
+  #join .sub_content .inner #insertInfo table tr td span label[for=chkMail],
+  #join .sub_content .inner #insertInfo table tr td span label[for=chkSms] {
+    font-size: 14px;
+  }
+  #join .sub_content .inner #insertInfo table tr td p {
+    margin-top: 10px;
+    font: 15px/1 "arial";
+    color: crimson;
+  }
+  #join .sub_content .inner #insertInfo table button {
+    width: 150px;
+    height: 50px;
+    background: #333;
+    color: #fff;
+    border-radius: 30px;
+  }
+}
+@media screen and (max-width: 539px) {
+  #join .sub_visual .inner img {
+    min-width: 300px;
+    bottom: 0;
+  }
+  #join .sub_content .inner h2 {
+    text-align: center;
+  }
+  #join .sub_content .inner p {
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+  }
+  #join .sub_content .inner > div {
+    padding: 20px;
+  }
+  #join .sub_content .inner > div .agreement h3 {
+    font-size: 16px;
+  }
+  #join .sub_content .inner > div .agreement .txt h4 {
+    font-size: 16px;
+  }
+  #join .sub_content .inner > div .agreement .txt strong {
+    font-size: 14px;
+  }
+  #join .sub_content .inner > div .agreement .controls p {
+    float: none;
+  }
+  #join .sub_content .inner > div .agreement .controls div {
+    float: none;
+  }
+  #join .sub_content .inner #insertInfo table caption {
+    font-size: 16px;
+  }
+  #join .sub_content .inner #insertInfo table tr td input[type=text],
+  #join .sub_content .inner #insertInfo table tr td input[type=password],
+  #join .sub_content .inner #insertInfo table tr td input[type=email] {
+    padding-left: 8px;
+    font-size: 12px;
+  }
+  #join .sub_content .inner #insertInfo table tr td input[type=text]::placeholder,
+  #join .sub_content .inner #insertInfo table tr td input[type=password]::placeholder,
+  #join .sub_content .inner #insertInfo table tr td input[type=email]::placeholder {
+    font-size: 12px;
+  }
+  #join .sub_content .inner #insertInfo table tr td span label[for=chkEmail],
+  #join .sub_content .inner #insertInfo table tr td span label[for=chkPhone],
+  #join .sub_content .inner #insertInfo table tr td span label[for=chkMail],
+  #join .sub_content .inner #insertInfo table tr td span label[for=chkSms] {
+    font-size: 12px;
+  }
+  #join .sub_content .inner #insertInfo table button {
+    width: 40%;
+  }
+}
 #header {
   padding: 25px 20px;
   background: #fff;

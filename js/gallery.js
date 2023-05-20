@@ -52,18 +52,16 @@ function callPhoto(url){
     fetch(url)
     .then(data=>data.json())
     .then(json=>{
-        getPhotoInfo(json);
+        getPhotoSize(json);
         // 이 위치에서 delayLoading 함수를 호출하면 아직 이미지가 비동기에 의해 로드되지 않은 상태이기 때문에 로딩 이미지가 보일 뿐 이미지가 로드된 화면은 보이지 않음
     })
 }
 
-function getPhotoInfo(json){
+function getPhotoSize(json){
     let items = json.photos.photo;
-
     let htmls = '';
     items.map(item=>{
-        console.log(item);
-        fetch(`https://www.flickr.com/services/rest/?method=flickr.photos.getInfo&api_key=6695bb82cf9a3db1962df3f386dd83e8&photo_id=${item.id}&format=json&nojsoncallback=1`)
+        fetch(`https://www.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=6695bb82cf9a3db1962df3f386dd83e8&photo_id=${item.id}&format=json&nojsoncallback=1`)
         .then(data=>data.json())
         .then(json=>{
             htmls += createList(json);
@@ -74,11 +72,18 @@ function getPhotoInfo(json){
 }
 
 function createList(json){
-    const photo = json.photo;
-            let imgSrc = `https://live.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}_w.jpg`
-            let imgBigSrc = photo.originalsecret ? `https://live.staticflickr.com/${photo.server}/${photo.id}_${photo.originalsecret}_4k.jpg` : `https://live.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}_b.jpg`
-
-            return  `
+    const sizes = json.sizes.size;
+            let imgSrc;
+            let imgBigSrc;
+            sizes.forEach(size=>{
+                let width = 0;
+                if(2048 >= size.width > width){
+                    width = size.width
+                    imgSrc = size.source;
+                    imgBigSrc = size.source;
+                }
+            })
+            return   `
                         <article>
                             <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam, similique!</h1>
                             <div class="wrap">
@@ -97,7 +102,6 @@ function createList(json){
                             <a href="${imgBigSrc}">view more</a>
                         </article>
                     `;
-            
 }
 
 function delayLoading(){

@@ -29,12 +29,13 @@ function initial(){
 function makeSliding(dir, duration){
     let start = null;
     const currentValue = -(100 / slidesLeng);
+    console.log(currentValue);
     const goalValue = dir === 'next' ? currentValue * 2 : 0;  
     // 슬라이드 애니메이션을 구현하는 클로저
     return function sliding (timestamp){
         if(!start) start = timestamp;
         // 0 ~ 1 사이의 진행률
-        let progress = (performance.now() - start) / duration; 
+        let progress = (performance.now() - start) / duration;
         // 콜백 함수 내부에 requestAnimationFrame 메서드를 재귀호출 (fps는 모니터주사율)
         const rafId = requestAnimationFrame(sliding);
         // (goalValue - currentValue) --> 이동할 거리
@@ -48,13 +49,12 @@ function makeSliding(dir, duration){
             }
             if(dir === 'next') {
                 slides.lastElementChild.classList.add('active'); 
-                slides.appendChild(slides.firstElementChild);
-                slides.style.transform = `translateX(-33.333%)`;
+                slides.insertAdjacentElement('beforeend', slides.firstElementChild);
             } else {
                 slides.firstElementChild.classList.add('active');
-                slides.insertBefore(slides.lastElementChild, slides.firstElementChild);
-                slides.style.transform = `translateX(-33.333%)`;
+                slides.insertAdjacentElement('afterbegin', slides.lastElementChild);
             }
+            slides.style.transform = `translateX(${currentValue}%)`
             // 페이지네이션 변경
             const active = slides.querySelector('.active');
             paging.textContent = `${active.dataset.index}/${slidesLeng}`

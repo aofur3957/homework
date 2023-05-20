@@ -94,7 +94,6 @@
                         justify-content: space-between;
         
                         article {
-                            float: left;
                             overflow: hidden;
                             width: 48%;
                             border-radius: 20px;
@@ -182,6 +181,7 @@
             
             #mapWrap {
                 position: relative;
+                overflow: hidden;
         
                 #map {
                     width: 100%;
@@ -196,7 +196,6 @@
                     top: 20px;
                     right: 20px;
                     border-radius: 10px;
-        
                     span {
                         display: block;
                         width: 45px;
@@ -207,7 +206,22 @@
                         color: #fff;
                         cursor: pointer;
                         transition: 0.5s;
-        
+                        &.zoom_in {
+                            .icon_plus {
+                                &::before {
+                                    content: "\2b";
+                                    font: var(--fa-font-solid);
+                                }
+                            }
+                        }
+                        &.zoom_out {
+                            .icon_minus {
+                                &::before {
+                                    content: '\f068';
+                                    font: var(--fa-font-solid);
+                                }
+                            }
+                        }
                         &:hover {
                             background: #555;
                         }
@@ -219,70 +233,186 @@
                 }
 
                 .store {
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    padding: 20px 30px;
-                    width: 700px;
-                    transform: translate(-87%, -50%);
-                    background: rgba(255,255,255,0.8);
-                    
-                    h2 {
-                        margin-bottom: 20px;
-                        font: 23px/1 'Koh Santepheap';
-                    }
-                
-                    article {
-                        width: 49%;
-                        padding: 20px;
-                        height: 250px;
-                        margin-right: 2%;
-                        margin-bottom: 2%;
-                        float: left;
-                        border: 1px solid #e5e5e5;
-                        cursor: pointer;
-                
-                        &:nth-of-type(even) {
-                            margin-right: 0;
-                        }
-                
-                        img { 
-                            width: 50%;
-                            float: left; 
+                    &.pc {
+                        position: absolute;
+                        top: 50%;
+                        left: -700px;
+                        padding: 20px 30px;
+                        width: 700px;
+                        transform: translate(0, -50%);
+                        background: rgba(255,255,255,0.8);
+                        transition: all 0.7s;
+
+                        &.on {
+                            left: 0;
                         }
                         
-                        dl, strong {
-                            float: left;
-                            padding-left: 30px;
-                            font: 20px/1 'arial';
+                        h2 {
+                            margin-bottom: 20px;
+                            font: 23px/1 'Koh Santepheap';
                         }
-                
-                        dl {
-                            width: 50%;
+                    
+                        article {
+                            width: 49%;
+                            padding: 20px;
+                            height: 250px;
+                            margin-right: 2%;
+                            margin-bottom: 2%;
+                            float: left;
+                            border: 1px solid #e5e5e5;
+                            cursor: pointer;
+                    
+                            &:nth-of-type(even) {
+                                margin-right: 0;
+                            }
+                    
+                            img { 
+                                width: 50%;
+                                float: left; 
+                            }
                             
-                            div {
-                                &::after { content: ''; display: block; clear: both;}
-                                margin-bottom: 15px;
+                            dl, strong {
+                                float: left;
+                                padding-left: 30px;
+                                font: 20px/1 'arial';
+                            }
+                    
+                            dl {
+                                width: 50%;
                                 
-                                dt { 
-                                    display: inline-block;
-                                    padding-right: 10px;
-                                    color: #333;
-                                    font: 16px/1 'arial';
+                                div {
+                                    &::after { content: ''; display: block; clear: both;}
+                                    margin-bottom: 15px;
+                                    
+                                    dt { 
+                                        display: inline-block;
+                                        padding-right: 10px;
+                                        color: #333;
+                                        font: 16px/1 'arial';
+                                    }
+                                    dd { 
+                                        display: inline-block;
+                                        color: #666;
+                                        font: 14px/1 'arial';
+                                    }
+                                
                                 }
-                                dd { 
-                                    display: inline-block;
-                                    color: #666;
-                                    font: 14px/1 'arial';
-                                }
-                               
+                            }
+                            strong {
+                                margin-bottom: 15px;
                             }
                         }
-                        strong {
-                            margin-bottom: 15px;
+
+                        button {
+                            display: none;
+                            position: absolute;
+                            top: 0;
+                            left: 100%;
+                            width: 35px;
+                            height: 35px;
+                            background: #333;
+                            &.open_store_selection{
+                                &.on {
+                                    display: block;
+                                }
+                                &::before {
+                                    content: '\f054';
+                                    font: var(--fa-font-solid);
+                                    color: #fff;
+                                }
+                            }
+                            &.close_store_selection{
+                                &.on {
+                                    display: block;
+                                }
+                                &::before {
+                                    content: '\f053';
+                                    font: var(--fa-font-solid);
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+                    &.m {
+                        display: none;
+                        width: 100%;
+                        position: absolute;
+                        top: 100%; left: 0;
+                        transition: all 0.7s;
+                        .swiper {
+                            .swiper-wrapper {
+                                .swiper-slide {
+                                    width: 400px;
+                                    height: 230px;
+                                    background: rgba(255, 255, 255, 0.7);
+                                    padding: 2%;
+                                    border: 1px solid #333;
+                                    cursor: pointer;
+                                    img {
+                                        width: 50%;
+                                        float: left;
+                                    }
+                                    strong {
+                                        float: left;
+                                        font: 20px/1 'arial';
+                                        padding: 0 0 20px 20px;
+                                    }
+                                    dl {
+                                        float: left;
+                                        width: 49%;
+                                        padding-left: 20px;
+                                        dt {
+                                            border-bottom: 1px solid #333;
+                                            font:  16px/1 'arial';
+                                        }
+                                        dd {
+                                            padding: 10px 0;
+                                            font: 14px/1 'arial';
+                                        }
+                                    }
+                                } 
+                            }
+                        }
+                        button {
+                            width: 35px;
+                            height: 35px;
+                            position: absolute;
+                            bottom: 100%;
+                            left: 50%;
+                            background: #333;
+                            &.open_store_selection {
+                                i {
+                                    &::before {
+                                        content: '\f077';
+                                        font: var(--fa-font-solid);
+                                        color: #fff;
+                                    }
+                                }
+                                &.on {
+                                    display: block;
+                                }
+                            }
+                            &.close_store_selection {
+                                display: none;
+                                i {
+                                    &::before {
+                                        content: '\f078';
+                                        font: var(--fa-font-solid);
+                                        color: #fff;
+                                    }
+                                }
+                                &.on {
+                                    display: block;
+                                }
+                            }
+                        }
+                        &.on {
+                            top: calc(100% - 230px);
                         }
                     }
                 }
+
+                
             }
             
             
@@ -290,25 +420,20 @@
     }
 }
 
-@media screen and (max-width: 1179px){
+@media screen and (max-width: 1200px){
     #location {
         .content {
             .sub_visual {
                 .inner {
                     width: 100%;
-
                     img {
-                        min-height: 1440px;
+                        min-width: 600px;
                     }
                 }
             }
     
             .sub_content {
                 .company {
-                    &::before {
-                        left: 43%;
-                    }
-            
                     .inner {
                         width: 100%;
                         padding: 0 10px;
@@ -326,17 +451,19 @@
                     }
                     
                 }
-                
-                .store {
-                    .inner {
-                        width: 100%;
-                        padding: 0 10px;
-                    }
-                }
 
                 .customer {
                     .inner {
                         width: 100%;
+                    }
+                }
+
+                #mapWrap {
+                    .store {
+                        .inner {
+                            width: 100%;
+                            padding: 0 10px;
+                        }
                     }
                 }
             }
@@ -349,14 +476,13 @@
         .content {
             .sub_content {
                 .company {
-
+                    height: auto;
                     &::before {
                         opacity: 0.4;
                     }
 
                     .inner {
                         height: auto;
-
                         .info {
                             width: 100%;
 
@@ -370,7 +496,6 @@
 
                             article {
                                 width: 40%;
-                                height: 170px;
                                 &:nth-of-type(1) {
                                     float: left;
                                 }
@@ -388,18 +513,17 @@
                         .pic {
                             float: none;
                             width: 100%;
-                            height: 500px;
                             position: absolute;
-                            top: 100px; left: 0;
+                            top: 0; left: 0;
 
                             article {
                                 &:first-of-type {
-                                    margin-bottom: 110px;
-                                    height: 30%;
+                                    margin-bottom: 130px;
+                                    height: 25%;
                                 }
                                 &:last-of-type {
-                                    margin-top: 60px;
-                                    height: 30%;
+                                    margin-top: 140px;
+                                    height: 25%;
                                 }
                             }
                         }
@@ -407,44 +531,6 @@
                     
                 }
                 
-                #mapWrap {
-                    #map {
-                        height: 400px;
-                    }
-                }
-
-                .store {
-                    .inner {
-                        h2 {
-                            text-align: center;
-                        }
-                    
-                        article {
-                            height: auto;
-                    
-                            img { 
-                                width: 100%;
-                                float: none; 
-                            }
-                            
-                            dl, strong {
-                                float: none;
-                                padding-left: 0;
-                            }
-                            
-                            dl {
-                                width: 100%;
-                            }
-                            strong {
-                                margin-bottom: 15px;
-                                margin-top: 10px;
-                                display: block;
-                                text-align: center;
-                            }
-                        }
-                    }
-                }
-
                 .customer {
                     .inner {
                         p {
@@ -453,6 +539,23 @@
                 
                         #info {
                             width: 80%;
+                        }
+                    }
+                }
+
+                #mapWrap {
+                    #map {
+                        height: 0;
+                        min-height: 570px;
+                        padding-top: 110%;
+                    }
+
+                    .store {
+                        &.pc {
+                            display: none;
+                        }
+                        &.m {
+                            display: block;
                         }
                     }
                 }
@@ -469,43 +572,63 @@
                     h1 {
                         font: bold 50px/1 'arial';
                     }
+                    img {
+                        bottom: 0;
+                        min-width: 300px;
+                    }
                 }
             }
             .sub_content {
                 .company {
-
+                    padding: 100px 0;
                     .inner {
                         .info {
-                            >p {
-                                min-height: 80px
-                            }
-
                             article {
-                                width: 45%;
-                                min-height: 250px;
+                                width: 80%;
+                                margin: 0 auto;
+                                padding: 30px 10%;
+                                text-align: center;
+                                border-bottom: 1px solid #333;
+                                &:nth-of-type(1) {
+                                    float: none;
+                                }
+                                &:nth-of-type(2) {
+                                    float: none;
+                                }
+                                &:nth-of-type(3){
+                                    border-bottom: none;
+                                }
                             }
                         }
                 
                         .pic {
-                            top: 150px;
-                            article {
-                                &:first-of-type {
-                                    margin-bottom: 30px;
-                                }
-                                &:last-of-type {
-                                    margin-top: 30px;
-                                }
-                            }
+                            display: none;
                         }
                     }
                     
                 }
 
-                .store {
-                    padding: 100px 0;
-                    .inner {
-                        article {
-                            width: 100%;
+                #mapWrap {
+                    .store {
+                        &.m {
+                            .swiper {
+                                .swiper-wrapper {
+                                    .swiper-slide {
+                                        width: 90vw;
+                                        strong {
+                                            font-size: 18px;
+                                        }
+                                        dl {
+                                            dt {
+                                                font-size: 16px;
+                                            }
+                                            dd {
+                                                font-size: 13px;
+                                            }
+                                        }
+                                    } 
+                                }
+                            }
                         }
                     }
                 }

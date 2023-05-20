@@ -1,54 +1,58 @@
 #youtube {
     .sub_visual {
-        
         h1 {
             position: absolute;
             top: -35px;
             left: 25vw;
             font: bold 70px/1 'arial';
+            z-index: 100;
         }
 
-        p {
-            position: absolute;
-            top: 100px;
-            left: 25vw;
-            width: 20%;
-            font: 19px/1.6 'arial';
-        }
-
-        img {
+        .bg {
             position: absolute;
             bottom: -200px; right: 0;
-            width: 47%;
-            height: 700px;
-        }
-    }
-    .sub_content {
-        padding: 0;
-        background: #f6f6f6;
-        .slogun {
-            height: 630px;
-            position: relative;
-            z-index: 1000;
-           
-            strong {
-                display: none;
+            max-width: 770px;
+            min-width: 700px;
+            width: 45%;
+            div {
+                width: 100%;
+                padding-top: 122.6%;
+            }
+            img { //
                 position: absolute;
                 top: 0; left: 0;
                 width: 100%;
-                font: 200px/630px 'arial';
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    .sub_content {
+        background: #f6f6f6;
+
+        .slogun {
+            height: 630px;
+            position: relative;
+           
+            strong {
+                position: absolute;
+                top: 0; left: 0;
+                display: flex;
+                width: 100%;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+                font: 200px/1 'arial';
                 color: #fff;
-                text-align: center;
 
                 &.on {
-                    display: block;
+                    display: none;
                 }
             }
         }
+
         .inner {
             padding: 150px 0;
-
-           
 
             h2 {
                 margin-bottom: 50px;
@@ -58,64 +62,64 @@
 
             .videoSection1 {
                 padding-bottom: 150px;
-                position: relative;
+                .m_txt {
+                   display: none; 
+                }
                 article {
                     position: relative;
                     height: 480px;
 
                     a {
-                        display: block;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                         position: relative;
                         width: 65%;
                         height: 100%;
-                        float: left;
 
                         &::before {
                             content: '';
                             position: absolute;
-                            top: 50%;
-                            left: 50%;
                             width: 150px;
                             height: 150px;
-                            margin-top: -75px;
-                            margin-left: -75px;
-                            background: url(../img/playB.svg) center/contain;
+                            background: url(../img/playB.svg) center/contain no-repeat;
                         }
                     }
-                }
-                .txt {
-                    width: 50%;
-                    position: absolute;
-                    padding-top: 200px;
-                    padding-left: 200px;
-                    top: -10px;
-                    right: 0;
-                    background: url(../img/pattern1.png) no-repeat right center/contain;
-                    height: 500px;
 
-                    .container {
-                        width: 60%;
+                    .txt {
+                        width: 50%;
+                        position: absolute;
+                        padding-top: 200px;
+                        padding-left: 200px;
+                        top: -10px;
+                        right: 0;
+                        background: url(../img/pattern1.png) no-repeat right center/contain;
+                        height: 500px;
+    
+                        .container {
+                            width: 60%;
+
+                            span {
+                                display: block;
+                                margin-bottom: 20px;
+                                font: 700 14px/1 'Advent Pro';
+                                color: #666;
+                                letter-spacing: 1.5px;
+                            }
+        
+                            h3 {
+                                margin-bottom: 40px;
+                                font: 700 24px/1.3 'Koh Santepheap';
+                                color: #333;
+                            }
+        
+                            p {
+                                font: 15px/1.3 'arial';
+                                color: #444;
+                            }
+                        }
+    
                     }
-
-                    span {
-                        display: block;
-                        margin-bottom: 20px;
-                        font: 700 14px/1 'Advent Pro';
-                        color: #666;
-                        letter-spacing: 1.5px;
-                    }
-
-                    h3 {
-                        margin-bottom: 40px;
-                        font: 700 24px/1.3 'Koh Santepheap';
-                        color: #333;
-                    }
-
-                    p {
-                        font: 15px/1.3 'arial';
-                        color: #444;
-                    }
-
                 }
             }
             
@@ -127,7 +131,7 @@
                 .txt {
                     width: 22%;
 
-                    span {
+                    > span {
                         display: block;
                         margin-bottom: 20px;
                         font: 700 14px/1 'Advent Pro';
@@ -144,6 +148,10 @@
                     p {
                         font: 15px/1.3 'arial';
                         color: #444;
+                        span {
+                            display: block;
+                            padding-bottom: 20px;
+                        }
                     }
                 }
 
@@ -153,48 +161,50 @@
                     padding: 25px;
                     position: relative;
                     
-                    .pic {
-                        display: block;
-                        height: 200px;
-                        position: relative;
+                    div {
+                        .pic {
+                            display: block;
+                            height: 200px;
+                            position: relative;
+    
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                top: 50%; left: 50%;
+                                transform: translate(-50%, -50%);
+                                background: url(../img/playB.svg) center/contain no-repeat;
+                                width: 60px; height: 60px;
+                            }
+                        }
 
-                        &::before {
-                            content: '';
-                            position: absolute;
-                            top: 50%; left: 50%;
-                            background: url(../img/playB.svg) center/contain;
-                            width: 60px; height: 60px;
-                            margin-top: -30px;
-                            margin-left: -30px;
-                            border-radius: 50%;
+                        h4 {
+                            margin: 15px 0 15px;
+                            font: 700 18px/1.3 'Koh Santepheap';
+                            color: #333;
+                        }
+
+                        p {
+                            font: 15px/1.3 'arial';
+                            color: #444;
                         }
                     }
-
-                    h4 {
-                        margin: 15px 0 15px;
-                        font: 700 18px/1.3 'Koh Santepheap';
-                        color: #333;
-                    }
-
-                    p {
-                        font: 15px/1.3 'arial';
-                        color: #444;
-                    }
-
-                
                 }
 
             }
 
             .videoSection3 {
                 padding-bottom: 150px;
-
+                .m_txt {
+                    display: none;
+                }
                 article {
                     position: relative;
                     height: 480px;
 
                     a {
-                        display: block;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                         width: 65%;
                         height: 100%;
                         float: right;
@@ -203,13 +213,9 @@
                         &::before {
                             content: '';
                             position: absolute;
-                            top: 50%;
-                            left: 50%;
                             width: 150px;
                             height: 150px;
-                            margin-top: -75px;
-                            margin-left: -75px;
-                            background: url(../img/playB.svg) center/contain;
+                            background: url(../img/playB.svg) center/contain no-repeat;
                         }
                     }
                 }
@@ -225,25 +231,24 @@
 
                     .container {
                         width: 60%;
-                    }
-
-                    span {
-                        display: block;
-                        margin-bottom: 20px;
-                        font: 700 14px/1 'Advent Pro';
-                        color: #666;
-                        letter-spacing: 1.5px;
-                    }
-
-                    h3 {
-                        margin-bottom: 40px;
-                        font: 700 24px/1.3 'Koh Santepheap';
-                        color: #333;
-                    }
-
-                    p {
-                        font: 15px/1.3 'arial';
-                        color: #444;
+                        span {
+                            display: block;
+                            margin-bottom: 20px;
+                            font: 700 14px/1 'Advent Pro';
+                            color: #666;
+                            letter-spacing: 1.5px;
+                        }
+    
+                        h3 {
+                            margin-bottom: 40px;
+                            font: 700 24px/1.3 'Koh Santepheap';
+                            color: #333;
+                        }
+    
+                        p {
+                            font: 15px/1.3 'arial';
+                            color: #444;
+                        }
                     }
 
                 }
@@ -335,23 +340,192 @@ figure {
 @media screen and (max-width: 1179px){
 #youtube{
     .sub_visual {
-        img {
-            position: absolute;
-            bottom: -200px; right: 0;
-            width: 47%;
+        h1 {
+            left: 15vw;
+        }
+
+        .bg {
+            bottom: -100px;
+            min-width: 550px;
         }
     }
     .sub_content {
         .slogun {
             height: 600px;
             strong {
-                font: 110px/600px 'arial';
+                font-size: 110px;
             }
         }
+        
         .inner {
-            padding: 150px 10px;
+            padding: 12.8vw 20px;
             width: 100%;
+
+            .videoSection1 {
+                padding-bottom: 12.8vw;
+                article {
+                    height: 0;
+                    padding-top: 43%;
+
+                    a {
+                        position: absolute;
+                        top: 0; left: 0;
+
+                        &::before {
+                            width: 20.6%;
+                            height: 0;
+                            padding-top: 20.6%;
+                        }
+                    }
+
+                    .txt {
+                        top: -3%;
+                        height: 104%;
+                        padding-top: 17.8%;
+                        padding-left: 17.8%;
+    
+                        .container {
+                            width: 70%;
+                            span {
+                                font-size: 1.2vw;
+                                margin-bottom: 1.4em;
+                            }
+        
+                            h3 {
+                                font-size: 2vw;
+                                margin-bottom: 1.7em;
+                            }
+        
+                            p {
+                                font-size: 1.4vw;
+                            }
+                        }
+    
+                    }
+                }
+            }
             
+            .videoSection2 {
+                display: block;
+                padding-bottom: 12.8vw;                
+                .txt {
+                    width: 100%;
+                    > span {
+                        font-size: 1.2vw;
+                        margin-bottom: 1.4em;
+                    }
+                    
+                    h3 {
+                        margin-bottom: 0.7em;
+                        font-size: 2vw;
+                    }
+
+                    p {
+                        margin-bottom: 1.25em;
+                        font-size: 1.4vw;
+                        span {
+                            padding-bottom: 0;
+                            font-size: 1.4vw;
+                        }
+                    }
+                }
+
+                article {
+                    width: 32%;
+                    margin-right: 2%;
+                    padding: 0;
+                    padding-top: 37%;
+                    float: left;
+
+                    &:last-of-type{
+                        margin-right: 0;
+                    }
+
+                    div {
+                        position: absolute;
+                        top: 0; left: 0;
+                        padding: 20px 25px;
+
+                        .pic {
+                            height: 0;
+                            padding-top: 81.3%;
+                            z-index: 1;
+
+                            img {
+                                position: absolute;
+                                top: 0; left: 0;
+                                z-index: 2;
+                            }
+    
+                            &::before {
+                                z-index: 3;
+                                width: 27%; height: 0;
+                                padding-top: 27%;
+                                
+                            }
+                        }
+
+                        h4 {
+                            font-size: 1.5vw;
+                            min-height: 2.6em;
+                            margin: 1em 0 1em;
+                        }
+
+                        p {
+                            font-size: 1.4vw;
+                        }
+                    }
+
+                
+                }
+
+            }
+
+            .videoSection3 {
+                padding-bottom: 12.8vw;
+                article {
+                    height: 0;
+                    padding-top: 43%;
+
+                    a {
+                        position: absolute;
+                        top: 0; right: 0;
+
+                        &::before {
+                            width: 20.6%;
+                            height: 0;
+                            padding-top: 20.6%;
+                        }
+                    }
+
+                    .txt {
+                        padding-top: 17.8%;
+                        padding-left: 17.8%;
+                        top: -3%;
+                        background: url(../img/pattern2.png) no-repeat left center/contain;
+                        height: 104%;
+    
+                        .container {
+                            width: 70%;
+                            span {
+                                font-size: 1.2vw;
+                                margin-bottom: 1.4em;
+                            }
+        
+                            h3 {
+                                font-size: 2vw;
+                                margin-bottom: 1.7em;
+                            }
+        
+                            p {
+                                font-size: 1.4vw;
+                            }
+                        }
+    
+                    }
+                }
+            }
+
             .channel {
 
                 &::after {
@@ -392,36 +566,339 @@ figure {
     }
 }
 }
+
 @media screen and (max-width: 768px){
     #youtube{
         .sub_visual {
-            p {
-                width: 50%;
+            .bg {
+                min-width: 350px;
+                bottom: 0;
+                width: 60%;
             }
         }
         .sub_content {
             .slogun {
                 height: 400px;
                 strong {
-                    font: 70px/400px 'arial';
+                    font-size: 70px;
                 }
             }
             .inner {
-                #video {
+                h2 {
+                    font-size: 28px;
+                }
+                .videoSection1 {
                     article {
+                        .txt {
+                            padding-top: 13%;
+                            padding-left: 12%;
         
-                        .pic {
-                            width: 48%;
+                            .container {
+                                width: 80%;
+                                span {
+                                    font-size: 1.5vw;
+                                }
+            
+                                h3 {
+                                    font-size: 2.5vw;
+                                }
+            
+                                p {
+                                    font-size: 2vw;
+                                }
+                            }
+        
                         }
-        
+                    }
+                }
+                
+                .videoSection2 {
+                    .txt {
+                        span {
+                            font-size: 1.5vw;
+                        }
+                        
+                        h3 {
+                            font-size: 2.5vw;
+                        }
+    
                         p {
-                            width: 48%;
-                            padding: 0 7vw;
-                            font: 30px/1.2 'Koh Santepheap';
+                            font-size: 2vw;
+                            span {
+                                padding-bottom: 0;
+                                font-size: 2vw;
+                            }
                         }
+                    }
+    
+                    article {
+                        padding-top: 44%;
+    
+                        div {
+                            padding: 10px 15px;
+    
+                            h4 {
+                                font-size: 2vw;
+                            }
+    
+                            p {
+                                font-size: 1.7vw;
+                            }
+                        }
+    
+                    
+                    }
+    
+                }
+    
+                .videoSection3 {
+                    article {
+                        .txt {
+                            padding-top: 13%;
+                            padding-left: 12%;
+                            .container {
+                                width: 80%;
+                                span {
+                                    font-size: 1.5vw;
+                                }
+            
+                                h3 {
+                                    font-size: 2.5vw;
+                                }
+            
+                                p {
+                                    font-size: 2vw;
+                                }
+                            }
         
-                        .btn {
+                        }
+                    }
+                }
+    
+                .channel {
+    
+                    &::after {
+                        content: '';
+                        display: block;
+                        clear: both;
+                    }
+    
+                    .imac {
+                        width: 85%;
+                        height: 0;
+                        padding-top:100%; 
+                        margin-bottom: 50px;
+    
+                        .screen {
+                            width: 67.5%;
+                            height: 31%;
+                        }
+                    }
+    
+                    .sns {
+                        position: static;
+                        width: 30%;
+                        margin-right: 5%;
+                        float: left;
+                        
+                        &.sns2 { 
+                            transform: translateX(0);
+                            text-align: left;
+                        }
+                        &.sns3 { 
+                            text-align: left;  
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 539px){
+    #youtube{
+        .sub_visual {
+            h1 {
+                display: block;
+                width: 100%;
+                text-align: center;
+                left: 0;
+                font-size: 50px;
+            }
+        }
+        .sub_content {
+            .slogun {
+                height: 400px;
+                strong {
+                    font-size: 70px;
+                }
+            }
+            .inner {
+                h2 {
+                    font-size: 25px;
+                }
+                .videoSection1 {
+                    .m_txt {
+                        display: block;
+                        .container {
+                            width: 80%;
+                            span {
+                                display: block;
+                                font: 700 3vw/1 'Advent Pro';
+                                color: #666;
+                                letter-spacing: 1.5px;
+                                margin-bottom: 1.4em;
+                            }
+        
+                            h3 {
+                                font: 700 4.5vw/1.3 'Koh Santepheap';
+                                color: #333;
+                                margin-bottom: 0.7em;
+                            }
+        
+                            p {
+                                font: 3.3vw/1.3 'arial';
+                                color: #444;
+                                margin-bottom: 1.25em;
+                            }
+                        }
+                    }
+                    article {
+                        padding-top: 65%;
+                        .txt {
                             display: none;
+                        }
+                        a {
+                            width: 100%;
+                        }
+                    }
+                }
+                
+                .videoSection2 {
+                    .txt {
+                        width: 80%;
+                        span {
+                            font-size: 3vw;
+                        }
+                        
+                        h3 {
+                            font-size: 4.5vw;
+                        }
+    
+                        p {
+                            font-size: 3.3vw;
+                            span {
+                                font-size: 3.3vw;
+                            }
+                        }
+                    }
+    
+                    article {
+                        width: 100%;
+                        margin-right: 0;
+                        margin-bottom: 7.6vw;
+                        padding-top: 85%;
+                        &:last-of-type{
+                            margin-bottom: 0;
+                        }
+                        div {
+                            width: 100%;
+                            padding: 0;
+                            .pic{
+                                padding-top: 65%;
+                                &::before {
+                                    width: 20.6%;
+                                    padding-top: 20.6%;
+                                }
+                            }
+    
+                            h4 {
+                                font-size: 4vw;
+                                min-height: 0;
+                                margin: 1em 0 0.3em;
+                            }
+    
+                            p {
+                                font-size: 3vw;
+                            }
+                        }
+    
+                    
+                    }
+    
+                }
+    
+                .videoSection3 {
+                    .m_txt {
+                        display: block;
+                        .container {
+                            width: 80%;
+                            span {
+                                display: block;
+                                font: 700 3vw/1 'Advent Pro';
+                                color: #666;
+                                letter-spacing: 1.5px;
+                                margin-bottom: 1.4em;
+                            }
+        
+                            h3 {
+                                font: 700 4.5vw/1.3 'Koh Santepheap';
+                                color: #333;
+                                margin-bottom: 0.6em;
+                            }
+        
+                            p {
+                                font: 3.3vw/1.3 'arial';
+                                color: #444;
+                                margin-bottom: 1em;
+                            }
+                        }
+                    }
+                    article {
+                        padding-top: 65%;
+                        .txt {
+                            display: none;
+                        }
+                        a{
+                            width: 100%;
+                        }
+                    }
+                }
+    
+                .channel {
+    
+                    &::after {
+                        content: '';
+                        display: block;
+                        clear: both;
+                    }
+    
+                    .imac {
+                        width: 85%;
+                        height: 0;
+                        padding-top:100%; 
+                        margin-bottom: 50px;
+    
+                        .screen {
+                            width: 67.5%;
+                            height: 31%;
+                        }
+                    }
+    
+                    .sns {
+                        position: static;
+                        width: 30%;
+                        margin-right: 5%;
+                        float: left;
+                        
+                        &.sns2 { 
+                            transform: translateX(0);
+                            text-align: left;
+                        }
+                        &.sns3 { 
+                            text-align: left;  
+                            margin-right: 0;
                         }
                     }
                 }

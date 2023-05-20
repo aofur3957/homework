@@ -59,6 +59,7 @@
 
                         strong {
                             font: 16px/3.5 'arial';
+                            white-space: nowrap;
                             color: #999;
                         }
                     }
@@ -74,7 +75,7 @@
 
                         p {
                             float: left;
-                            font: 16px/1 'arial';
+                            font: 16px/1.6 'arial';
                             color: #666;
                         }
 
@@ -129,7 +130,7 @@
                         }
                         
                         th { 
-                            width: 20%;
+                            width: 25%;
                             padding: 30px 0;
                             font: 16px/1.4 'arial';
                             text-align: left;
@@ -152,7 +153,6 @@
                                 font: 16px/1 'arial';
                                 color: #999;
                                 
-    
                                 &::placeholder {
                                     font: 16px/1 'arial';
                                     color: #999;
@@ -166,26 +166,24 @@
                                     }
                                 }
                             }
-                            
-                            input[type="checkbox"] {
-                                width: 20px;
-                                height: 20px;
-                                vertical-align: middle;
-                                margin-left: 15px;
-
-                                &:first-of-type {
-                                    margin-left: 0;
+                            span {
+                                font-size: 0;
+                                margin-right: 20px;
+                                input[type="checkbox"] {
+                                    width: 20px;
+                                    height: 20px;
+                                    vertical-align: middle;
+                                    margin-right: 10px;
+                                }
+                                label[for="chkEmail"],
+                                label[for="chkPhone"],
+                                label[for="chkMail"],
+                                label[for="chkSms"] {
+                                    font: 16px/1 'arial';
+                                    vertical-align: middle;
+                                    color: #999;
                                 }
                             }
-
-                            label[for="chkEmail"],
-                            label[for="chkPhone"],
-                            label[for="chkMail"],
-                            label[for="chkSms"] {
-                                vertical-align: middle;
-                                color: #999;
-                            }
-
                             p {
                                 margin-top: 10px;
                                 font: 15px/1 'arial';
@@ -208,4 +206,229 @@
         }
     }
     
+}
+
+@media screen and (max-width: 1200px){
+    #join {
+        .sub_visual {
+            .inner {
+                width: 100%;
+                img {
+                    min-width: 570px;
+                }
+            }
+        }
+        .sub_content {
+            .inner {
+                width: 100%;
+                padding: 0 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    #join {
+        .sub_visual {
+            .inner {
+                img {
+                    min-width: 350px;
+                    bottom: 0;
+                }
+            }
+        }
+        .sub_content {
+            .inner {
+                h2 {
+                    font-size: 30px;
+                }
+                p {
+                    width: 70%;
+                    font-size: 18px;
+                }
+                >div {
+                    padding: 40px;
+                    .agreement {
+                        h3 {
+                            margin-bottom: 15px;
+                            padding-bottom: 15px;
+                            font-size: 18px;
+                        }
+                        .txt {
+                            height: 150px;
+                            padding: 0 20px;
+    
+                            h4 {
+                                margin-top: 15px;
+                                margin-bottom: 10px;
+                                font-size: 18px;
+                            }
+    
+                            p {
+                                line-height: 1;
+                                font-size: 14px;
+                            }
+                        }
+    
+                        .controls {
+                            margin: 25px 0;
+                            p {
+                                font-size: 14px;
+                            }
+                            div {
+                                input[type="radio"]{
+                                    width: 15px;
+                                    height: 15px;
+                                }
+                                label {
+                                    margin-right: 10px;
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                }
+                #insertInfo {
+                    table {
+                        caption {
+                            padding-bottom: 15px;
+                            font-size: 18px;
+                        }
+                        tr {
+                            th { 
+                                width: 40%;
+                                padding: 15px 0;
+                                font-size: 14px;
+                            }
+                            td {
+                                input[type="text"],
+                                input[type="password"],
+                                input[type="email"] {
+                                    width: 100%;
+                                    height: 40px;
+                                    font-size: 14px;
+        
+                                    &::placeholder {
+                                        font-size: 14px;
+                                    }
+                                }
+                                
+                                span {
+                                    display: block;
+                                    margin-right: 0;
+                                    padding-bottom: 5px;
+                                    input[type="checkbox"] {
+                                        width: 15px;
+                                        height: 15px;
+                                    }
+                                    label[for="chkEmail"],
+                                    label[for="chkPhone"],
+                                    label[for="chkMail"],
+                                    label[for="chkSms"] {
+                                        font-size: 14px;
+                                    }
+                                }
+    
+                                p {
+                                    margin-top: 10px;
+                                    font: 15px/1 'arial';
+                                    color: crimson;
+                                }
+                            }
+                        }
+                        
+    
+                        button {
+                            width: 150px;
+                            height: 50px;
+                            background: #333;
+                            color: #fff;
+                            border-radius: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 539px){
+    #join {
+        .sub_visual {
+            .inner {
+                img {
+                    min-width: 300px;
+                    bottom: 0;
+                }
+            }
+        }
+        .sub_content {
+            .inner {
+                h2 {
+                    text-align: center;
+                }
+                p {
+                    width: 100%;
+                    font-size: 16px;
+                    text-align: center;
+                }
+                >div {
+                    padding: 20px;
+                    .agreement {
+                        h3 {
+                            font-size: 16px;
+                        }
+                        .txt {
+                            h4 {
+                                font-size: 16px;
+                            }
+                            strong {
+                                font-size: 14px;
+                            }
+                        }
+    
+                        .controls {
+                            p {
+                                float: none;
+                            }
+                            div {
+                                float: none;
+                            }
+                        }
+                    }
+                }
+                #insertInfo {
+                    table {
+                        caption {
+                            font-size: 16px;
+                        }
+                        tr {
+                            td {
+                                input[type="text"],
+                                input[type="password"],
+                                input[type="email"] {
+                                    padding-left: 8px;
+                                    font-size: 12px;
+                                    &::placeholder {
+                                        font-size: 12px;
+                                    }
+                                }
+                                span {
+                                    label[for="chkEmail"],
+                                    label[for="chkPhone"],
+                                    label[for="chkMail"],
+                                    label[for="chkSms"] {
+                                        font-size: 12px;
+                                    }
+                                }
+                            }
+                        }
+                        button {
+                            width: 40%;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

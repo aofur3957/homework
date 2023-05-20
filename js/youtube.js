@@ -4,7 +4,6 @@ const channelId = 'UC_bAkCExw5ZgU1cTgrcZFTg';
 const videos = document.querySelectorAll('.video');
 const slogun = document.querySelector('.slogun');
 const sloguns = slogun.querySelectorAll('strong');
-console.log(sloguns);
 const delay = 2000;
 
 callPlayLists(channelId);
@@ -20,10 +19,10 @@ function callPlayLists(channelId){
         const items = json.items;
         const filteredItems = items.filter(item=>{
             return item.snippet.title === 'The best house of the year' ? true : 
-                      item.snippet.title === 'Various Projects' ? true :
-                      item.snippet.title === '2 million hits on YouTube' ? true : false;
+            item.snippet.title === 'Various Projects' ? true :
+            item.snippet.title === '2 million hits on YouTube' ? true : false;
         })
-
+        // 목록 순서 변경
         const deleted = filteredItems.splice(0, 1)[0];
         filteredItems.splice(2, 0, deleted);
 
@@ -46,7 +45,6 @@ function callData(playlistId, container){
     .then(response=>response.json())
     .then(json=>{
         const items = json.items;
-        console.log(items);
         items.forEach((item, idx)=>{
             const articles = container.querySelectorAll('article');
             let htmls;
@@ -56,11 +54,13 @@ function callData(playlistId, container){
                 const des = item.snippet.description
 
                 htmls =  `
-                    <a class="pic" href="${item.snippet.resourceId.videoId}">
-                        <img src=${item.snippet.thumbnails.high.url} alt="">
-                    </a>
-                    <h4>${textSlice(tit, 30)}</h4>
-                    <p>${textSlice(des, 50)}</p>
+                    <div>
+                        <a class="pic" href="${item.snippet.resourceId.videoId}">
+                            <img src=${item.snippet.thumbnails.high.url} alt="">
+                        </a>
+                        <h4>${textSlice(tit, 30)}</h4>
+                        <p>${textSlice(des, 50)}</p>
+                    </div>
                 `
             }else{
                 htmls = `
@@ -76,9 +76,11 @@ function callData(playlistId, container){
 
 // text가 길어질 경우 text를 length만큼 자르고 말줄임표(...)를 추가
 function textSlice(txt, length){
-    const sliced = txt.substring(0, length);
-    const ellipsis = [...sliced].concat('...').join('');
-    return ellipsis;
+    if(txt.length >= length){
+        const sliced = txt.substring(0, length);
+        const ellipsis = [...sliced].concat('...').join('');
+        return ellipsis;
+    }
 }
 
 for(let video of videos){
@@ -88,7 +90,7 @@ for(let video of videos){
 
     if(!e.target.closest('.pic')) return;
 
-    let vidUrl = e.target.closest('.pic').getAttribute('href');
+    const vidUrl = e.target.closest('.pic').getAttribute('href');
     const figure = document.createElement('figure');    
     figure.innerHTML = `
         <iframe src="https://www.youtube.com/embed/${vidUrl}" width= "1000"  height= "600" frameborder="0" allowfullscreen></iframe>
@@ -98,9 +100,9 @@ for(let video of videos){
     });
 
     video.addEventListener('click', e=>{
-        let figure = document.querySelector('figure');
+        const figure = document.querySelector('figure');
         if(figure !== null){
-            let btnClose = figure.querySelector('button');
+            const btnClose = figure.querySelector('button');
             if(e.target === btnClose) figure.remove();
         }
     })

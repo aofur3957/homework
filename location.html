@@ -6,9 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Location</title>
     <script src="https://kit.fontawesome.com/f5c7cb42b6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+/>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9c03dc4ca7f0907cbe4777780120f513"></script>
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/location.js"></script>
+    <script defer src="js/swiper.js"></script>
 </head>
 <body>
     <header id="header_sub">
@@ -80,20 +84,19 @@
                 <div id="mapWrap">
                     <div id="map"></div>
                     <div class="zoomControl">
-                        <span onclick="zoomIn()">
-                            <i class="fas fa-plus"></i>
+                        <span class="zoom_in" onclick="zoomIn()">
+                            <i class="icon_plus" aria-hidden="true"></i>
                             <em class="hidden">확대</em>
                         </span>
-                        <span onclick="zoomOut()">
-                            <i class="fas fa-minus"></i>
+                        <span class="zoom_out" onclick="zoomOut()">
+                            <i class="icon_minus" aria-hidden="true"></i>
                             <em class="hidden">축소</em>
                         </span>
                     </div>
-
-                    <div class="store">
+                    <div class="store pc">
                         <h2>Store Info.</h2>
                         <div class="wrap">
-                            <article>
+                            <article class="active">
                                 <img src="img/city.jpg" alt="">
                                 <strong>A. Bucheon</strong>
                                 <dl>
@@ -166,10 +169,103 @@
                                 </dl>
                             </article>
                         </div>
+                        <button class="open_store_selection on">
+                            <i class="icon_arror_right" aria-hidden="true"></i>
+                            <span class="hidden">지점 선택 열기</span>
+                        </button>
+                        <button class="close_store_selection">
+                            <i class="icon_arror_left" aria-hidden="true"></i>
+                            <span class="hidden">지점 선택 닫기</span>
+                        </button>
+                    </div>
+                    <div class="store m">
+                        <div class="swiper mapSwiper">
+                            <div class="swiper-wrapper">
+                                <article class="swiper-slide slide1">
+                                    <img src="img/city.jpg" alt="">
+                                    <strong>A. Bucheon</strong>
+                                    <dl>
+                                        <div>
+                                            <dt>* Address</dt>
+                                            <dd>Lorem ipsum dolor sit amet.</dd>
+                                        </div>
+                                        <div>
+                                            <dt>* Phone</dt>
+                                            <dd>02-5323-1929</dd>
+                                        </div>
+                                        <div>
+                                            <dt>* Open/Close</dt>
+                                            <dd>AM 10:30 ~ PM 9:00</dd>
+                                        </div>
+                                    </dl>
+                                </article>
+                                <article class="swiper-slide slide2">
+                                    <img src="img/city.jpg" alt="">
+                                    <strong>A. Hongdae</strong>
+                                    <dl>
+                                        <div>
+                                            <dt>* Address</dt>
+                                            <dd>Lorem ipsum dolor sit amet.</dd>
+                                        </div>
+                                        <div>
+                                            <dt>* Phone</dt>
+                                            <dd>02-5323-1929</dd>
+                                        </div>
+                                        <div>
+                                            <dt>* Open/Close</dt>
+                                            <dd>AM 10:30 ~ PM 9:00</dd>
+                                        </div>
+                                    </dl>
+                                </article>
+                                <article class="swiper-slide slide3">
+                                    <img src="img/city.jpg" alt="">
+                                    <strong>A. Gumdan</strong>
+                                    <dl>
+                                        <div>
+                                            <dt>* Address</dt>
+                                            <dd>Lorem ipsum dolor sit amet.</dd>
+                                        </div>
+                                        <div>
+                                            <dt>* Phone</dt>
+                                            <dd>02-5323-1929</dd>
+                                        </div>
+                                        <div>
+                                            <dt>* Open/Close</dt>
+                                            <dd>AM 10:30 ~ PM 9:00</dd>
+                                        </div>
+                                    </dl>
+                                </article>
+                                <article class="swiper-slide slide3">
+                                    <img src="img/city.jpg" alt="">
+                                    <strong>A. Anyang</strong>
+                                    <dl>
+                                        <div>
+                                            <dt>* Address</dt>
+                                            <dd>Lorem ipsum dolor sit amet.</dd>
+                                        </div>
+                                        <div>
+                                            <dt>* Phone</dt>
+                                            <dd>02-5323-1929</dd>
+                                        </div>
+                                        <div>
+                                            <dt>* Open/Close</dt>
+                                            <dd>AM 10:30 ~ PM 9:00</dd>
+                                        </div>
+                                    </dl>
+                                </article>
+                            </div>
+                        </div>
+                        <button class="open_store_selection on">
+                            <i aria-hidden="true"></i>
+                            <span class="hidden">지점 선택 열기</span>
+                        </button>
+                        <button class="close_store_selection">
+                            <i aria-hidden="true"></i>
+                            <span class="hidden">지점 선택 닫기</span>
+                        </button>
                     </div>
                 </div>
-
-
+                
                 <div class="customer">
                     <div class="inner">
                         <h2>Get In Touch</h2>

@@ -2,6 +2,8 @@ const form = document.querySelector('#insertInfo');
 const btnCancel = form.querySelector('.cancel');
 const btnSubmit = form.querySelector('.submit');
 
+// submit의 디폴트 기능은 새로운 페이지를 불러오는 것이며, 만약 submit 버튼을 눌렀을 때
+// 유효성 검사 함수들 중 하나라도 false를 리턴하면 새로운 페이지로 넘어가는 것을 방지함
 btnSubmit.addEventListener('click', e=>{
     if(!isAgree("agreement")) e.preventDefault();
     if(!isTxt("name", 2)) e.preventDefault();
@@ -17,7 +19,7 @@ function isTxt(name, len){
     let input = form.querySelector(`[name=${name}]`); 
     let txt = input.value;
 
-    if(txt.length >=len){
+    if(txt.length >= len){
         const errMsgs = input.closest("td").querySelectorAll("p"); 
         if(errMsgs.length>0) input.closest("td").querySelector("p").remove(); 
 

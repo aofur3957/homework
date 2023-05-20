@@ -5,12 +5,10 @@ fetch('data/members.json')
     return data.json();
 })
 .then(json=>{
-    console.log(json);
     const profiles = json.data;
-
     let tags = '';
 
-    profiles.map((profile)=>{
+    profiles.map(profile=>{
         tags +=`
                 <article class="profile">
                     <div class="pic">

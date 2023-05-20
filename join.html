@@ -57,9 +57,9 @@
                             <div class="controls">
                                 <p>Do you agree with the users agreement?</p>
                                 <div>
-                                    <input type="radio" id="yes" name="agreement">
+                                    <input type="radio" id="yes" name="agreement" value="yes">
                                     <label for="yes">Yes</label>
-                                    <input type="radio" id="no" name="agreement">
+                                    <input type="radio" id="no" name="agreement" value="no">
                                     <label for="no">No</label>
                                 </div>
                             </div>
@@ -70,61 +70,69 @@
                                 <table>
                                     <caption>BASIC INFO.</caption>
                                     <tr>
-                                        <th><label for="name">NAME*</label></th>
+                                        <th scope="row"><label for="name">NAME*</label></th>
                                         <td>
                                             <input type="text" id="name" name="name"  placeholder="Insert Your Name" required>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th><label for="id">USER ID*</label></th>
+                                        <th scope="row"><label for="id">USER ID*</label></th>
                                         <td>
                                             <input type="text" id="id" name="id"  placeholder="Insert Your Id" required>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th><label for="pwd1">PASSWORD*</label></th>
+                                        <th scope="row"><label for="pwd1">PASSWORD*</label></th>
                                         <td>
                                             <input type="password" id="pwd1" name="pwd1"  placeholder="Insert Your Password" required>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th><label for="pwd2">RE-PASSWORD*</label></th>
+                                        <th scope="row"><label for="pwd2">RE-PASSWORD*</label></th>
                                         <td>
                                             <input type="password" id="pwd2" name="pwd2"  placeholder="Reinsert Your Password" required>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th><label for="email">EMAIL*</label></th>
+                                        <th scope="row"><label for="email">EMAIL*</label></th>
                                         <td>
                                             <input type="email" id="email" name="email"  placeholder="Insert Your Email" required>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th><label for="phone">PHONE*</label></th>
+                                        <th scope="row"><label for="phone">PHONE*</label></th>
                                         <td>
                                             <input type="text" id="phone" name="phone"  placeholder="Insert Your Phone Number" required>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th>
+                                        <th scope="row">
                                             EVENT INFO <br>
-                                            RECEPTION*
+                                            RECEPTION *
                                         </th>
                                         <td>
-                                            <input type="checkbox" id="chkEmail" name="reception" value="chkEmail"> 
-                                            <label for="chkEmail">E-MAIL</label>
-                                            <input type="checkbox" id="chkPhone" name="reception" value="chkPhone">
-                                            <label for="chkPhone">PHONE</label>
-                                            <input type="checkbox" id="chkMail" name="reception" value="chkMail">
-                                            <label for="chkMail">MAIL</label>
-                                            <input type="checkbox" id="chkSms" name="reception" value="chkSms">
-                                            <label for="chkSms">SMS MESSAGE</label>
+                                            <span>
+                                                <input type="checkbox" id="chkEmail" name="reception" value="chkEmail"> 
+                                                <label for="chkEmail">E-MAIL</label>
+                                            </span>
+                                            <span>
+                                                <input type="checkbox" id="chkPhone" name="reception" value="chkPhone">
+                                                <label for="chkPhone">PHONE</label>
+                                            </span>
+                                            <span>
+                                                <input type="checkbox" id="chkMail" name="reception" value="chkMail">
+                                                <label for="chkMail">MAIL</label>
+                                            </span>
+                                            <span>
+                                                <input type="checkbox" id="chkSms" name="reception" value="chkSms">
+                                                <label for="chkSms">SMS</label>
+                                            </span>
                                         </td>
                                     </tr>
                                     <tr>
                                         <th colspan="2">
-                                            <button class="cancel">취소</button>
-                                            <button class="submit">확인</button>
+                                            <button class="cancel" type="reset">cancel</button>
+                                            <button class="submit">confirm</button>
                                         </th>
                                     </tr>
                                 </table>
